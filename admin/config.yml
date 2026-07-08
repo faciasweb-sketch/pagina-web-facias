@@ -2,7 +2,6 @@ backend:
   name: github
   repo: faciasweb-sketch/pagina-web-facias
   branch: main
-  base_url: https://decap-cms-oauth-provider.vercel.app # <--- Este puente gratuito
 
 media_folder: "Assets"
 public_folder: "/Assets"
