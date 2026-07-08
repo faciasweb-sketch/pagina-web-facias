@@ -2,6 +2,7 @@ backend:
   name: github
   repo: faciasweb-sketch/pagina-web-facias
   branch: main
+  local_backend: true
 
 media_folder: "Assets"
 public_folder: "/Assets"
