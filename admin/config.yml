@@ -1,7 +1,7 @@
 backend:
-  name: github
-  repo: faciasweb-sketch/pagina-web-facias
-  branch: main
+ name: git_gateway
+ repo: faciasweb-sketch/pagina-web-facias
+ branch: main
 
 media_folder: "Assets"
 public_folder: "/Assets"
