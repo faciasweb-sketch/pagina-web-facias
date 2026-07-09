@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <title>Conectando Panel...</title>
-  <!-- El widget de Netlify es obligatorio acá para capturar el token del mail -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel de Administración</title>
+  <!-- Cargamos el script de Netlify Identity -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script>
-    // Si por error Hostinger intenta abrir este archivo, 
-    // lo redirigimos de inmediato al index.php dinámico.
-    if (!window.location.hostname.includes('netlify.app')) {
-      window.location.href = 'index.php';
-    }
-  </script>
 </head>
 <body>
-  <p style="text-align: center; margin-top: 50px; font-family: sans-serif; color: #666;">
-    Procesando invitación de administración...
-  </p>
+  <!-- Cargamos el script de Decap CMS -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+  <script>
+    // Vinculamos el formulario de Hostinger con tu cuenta de Netlify
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.init({
+          APIUrl: 'https://precious-donut-ae4543.netlify.app/.netlify/identity'
+        });
+      }
+    });
+  </script>
 </body>
 </html>
