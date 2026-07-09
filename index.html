@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Conectando Panel...</title>
+  <!-- El widget de Netlify es obligatorio acá para capturar el token del mail -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    // Si por error Hostinger intenta abrir este archivo, 
+    // lo redirigimos de inmediato al index.php dinámico.
+    if (!window.location.hostname.includes('netlify.app')) {
+      window.location.href = 'index.php';
+    }
+  </script>
+</head>
+<body>
+  <p style="text-align: center; margin-top: 50px; font-family: sans-serif; color: #666;">
+    Procesando invitación de administración...
+  </p>
+</body>
+</html>
