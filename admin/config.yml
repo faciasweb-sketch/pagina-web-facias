@@ -17,7 +17,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Título de la Novedad", name: "title", widget: "string" }
-      - { label: "Categoría", name: "categoria", widget: "select", options: ["AMBIENTE", "SALUD", "INSTITUCIONAL"] }
+      - { label: "Categoría", name: "categoria", widget: "select", options: ["Estudiantes", "Academica", "Dpto. Docente"] }
       - { label: "Fecha de Publicación", name: "fecha", widget: "date", format: "DD de MMMM, YYYY" }
       - { label: "Imagen de Portada", name: "imagen", widget: "image" }
       - { label: "Contenido/Cuerpo", name: "body", widget: "text" }

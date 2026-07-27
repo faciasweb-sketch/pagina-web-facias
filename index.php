@@ -16,42 +16,42 @@ if (empty($existing_files)) {
     $novedades_ejemplo = [
         '2026-06-28-monitoreo-ambiental' => [
             'title' => 'Monitoreo Ambiental en la Cuenca del Limay: Proyecto de Investigación Estudiantil',
-            'categoria' => 'AMBIENTE',
+            'categoria' => 'Estudiantes',
             'fecha' => '28 de Junio, 2026',
             'imagen' => 'assets/news_ambiente.png',
             'body' => "Estudiantes avanzados de la Licenciatura en Saneamiento y Protección Ambiental llevaron adelante un nuevo muestreo periódico de aguas en distintos puntos del río Limay.\n\nEl proyecto, coordinado por el Laboratorio de Toxicología Ambiental (LTA) de FACIAS, busca evaluar la presencia de microplásticos y trazas de agroquímicos en los sedimentos de la costa. Las tareas se concentraron en las zonas balnearias de Neuquén Capital y Plottier.\n\nLos resultados preliminares indican que el río mantiene niveles aceptables de aptitud recreativa, aunque se observa una tendencia al alza en la presencia de fibras plásticas de origen urbano. Estos datos serán presentados oficialmente ante la Subsecretaría de Medioambiente provincial en el mes de Julio.\n\nInvestigación a cargo de la cátedra de Ecología General y Toxicología. Colaboración inter-institucional UNCo - AIC."
         ],
         '2026-06-22-nuevos-simuladores' => [
             'title' => 'Nuevos Simuladores de Alta Fidelidad para la carrera de Licenciatura en Enfermería',
-            'categoria' => 'SALUD',
+            'categoria' => 'Estudiantes',
             'fecha' => '22 de Junio, 2026',
             'imagen' => 'assets/news_salud.png',
             'body' => "La facultad adquirió dos nuevos maniquíes inteligentes de simulación clínica para su laboratorio en el campus de Allen y Neuquén.\n\nLos equipos permiten simular respuestas fisiológicas realistas, tales como paro cardiorrespiratorio, variaciones de presión arterial, y respuesta a fármacos en tiempo real. Esto permitirá a los estudiantes de Licenciatura en Enfermería y Enfermería Profesional realizar prácticas profesionales supervisadas en un entorno controlado y seguro antes de sus rotaciones hospitalarias.\n\n\"Esta incorporación pone a nuestra facultad a la vanguardia de la enseñanza en salud en la región. La simulación de alta fidelidad disminuye el margen de error clínico y brinda una confianza inigualable a los alumnos\", destacó la Decana en el acto de presentación."
         ],
         '2026-06-15-inauguracion-biblioteca' => [
             'title' => 'Inauguración de la nueva Sede de Biblioteca y Aulas Tecnológicas de FACIAS',
-            'categoria' => 'INSTITUCIONAL',
+            'categoria' => 'Academica',
             'fecha' => '15 de Junio, 2026',
             'imagen' => 'assets/news_campus.png',
             'body' => "Con la presencia de autoridades rectorales y del gobierno provincial, quedaron formalmente habilitadas las nuevas salas del campus.\n\nLa obra edilicia de 450 metros cuadrados cuenta con una sala silenciosa de lectura con capacidad para 80 estudiantes, una hemeroteca actualizada y un aula informática con 30 puestos equipados con software de Sistemas de Información Geográfica (SIG) orientados al análisis ambiental.\n\nEl espacio estará abierto al público de lunes a viernes en el horario corrido de 8:00 a 20:00 hs. Contará también con sistema de Wi-Fi libre para todos los estudiantes y docentes de la universidad."
         ],
         '2026-06-10-apertura-inscripciones' => [
             'title' => 'Apertura de inscripciones para el segundo cuatrimestre ciclo lectivo 2026',
-            'categoria' => 'INSTITUCIONAL',
+            'categoria' => 'Academica',
             'fecha' => '10 de Junio, 2026',
             'imagen' => 'assets/news_campus.png',
             'body' => "La secretaría académica de FACIAS informa las fechas de reincorporación y matriculación a materias del segundo periodo anual.\n\nEl proceso se realizará del 3 al 14 de Agosto del corriente año a través del portal SIU Guaraní. Está destinado a aquellos alumnos que deseen retomar sus planes de estudio o cursar asignaturas electivas anuales y cuatrimestrales.\n\nEs requisito indispensable contar con el legajo al día y tener aprobadas las materias correlativas correspondientes según plan de estudio. Las clases presenciales iniciarán el lunes 17 de Agosto en las tres sedes de la facultad."
         ],
         '2026-06-05-seminario-regional' => [
             'title' => '1° Seminario Regional de Salud Ambiental y Energías Renovables',
-            'categoria' => 'AMBIENTE',
+            'categoria' => 'Estudiantes',
             'fecha' => '05 de Junio, 2026',
             'imagen' => 'assets/news_ambiente.png',
             'body' => "Un espacio de debate y exposición sobre la matriz energética y los riesgos sanitarios en el Alto Valle.\n\nEl evento se llevará a cabo los días 24 y 25 de Septiembre en el Aula Magna de la UNCo Neuquén. Contará con la participación de destacados expertos nacionales y representantes de ONGs ambientales de la provincia.\n\nLos temas centrales serán la transición energética patagónica, el impacto de los parques eólicos, y la gestión integrada de la salud en áreas hidrocarbulíferas. La entrada es libre y gratuita para toda la comunidad universitaria previa inscripción en nuestro sitio web."
         ],
         '2026-06-02-campana-vacunacion' => [
             'title' => 'Campaña de Vacunación contra la Gripe en el campus Neuquén organizada por estudiantes',
-            'categoria' => 'SALUD',
+            'categoria' => 'Estudiantes',
             'fecha' => '02 de Junio, 2026',
             'imagen' => 'assets/news_salud.png',
             'body' => "El proyecto de extensión de la Licenciatura en Enfermería inmunizó a más de 300 personas de la comunidad universitaria.\n\nLa campaña, planificada de forma conjunta con el Ministerio de Salud de Neuquén, permitió que los alumnos de último año de enfermería realicen sus prácticas de inmunología en campo. Se priorizó a los grupos de riesgo, adultos mayores y personal nodocente de la sede central.\n\n\"Es una forma directa de devolver a la comunidad y aplicar los conocimientos aprendidos directamente en el territorio\", señalaron desde el centro de estudiantes."
@@ -349,9 +349,15 @@ if ($files) {
                         <?php
                         $count = 0;
                         $categoria_map = [
-                            'AMBIENTE' => 'Ambiente',
-                            'SALUD' => 'Salud',
-                            'INSTITUCIONAL' => 'Institucional'
+                            'AMBIENTE' => 'Estudiantes',
+                            'SALUD' => 'Estudiantes',
+                            'INSTITUCIONAL' => 'Académica',
+                            'Estudiantes' => 'Estudiantes',
+                            'Academica' => 'Académica',
+                            'Dpto. Docente' => 'Dpto. Docente',
+                            'ESTUDIANTES' => 'Estudiantes',
+                            'ACADEMICA' => 'Académica',
+                            'DPTO_DOCENTE' => 'Dpto. Docente'
                         ];
                         foreach ($novedades as $item):
                             if ($count >= 3) break;
@@ -359,14 +365,16 @@ if ($files) {
                             $count++;
                         ?>
                             <article class="news-card">
-                                <div class="news-img-wrapper">
-                                    <img src="<?php echo htmlspecialchars($item['imagen']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>" class="news-img" loading="lazy">
-                                    <span class="news-badge"><?php echo htmlspecialchars($cat_pretty); ?></span>
-                                </div>
+                                <a href="noticia.php?id=<?php echo urlencode($item['id']); ?>" target="_blank" rel="noopener noreferrer" style="display: block; overflow: hidden; border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;">
+                                    <div class="news-img-wrapper">
+                                        <img src="<?php echo htmlspecialchars($item['imagen']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>" class="news-img" loading="lazy">
+                                        <span class="news-badge"><?php echo htmlspecialchars($cat_pretty); ?></span>
+                                    </div>
+                                </a>
                                 <div class="news-body">
                                     <span class="news-date"><?php echo htmlspecialchars($item['fecha']); ?></span>
                                     <h3 class="news-card-title"><?php echo htmlspecialchars($item['title']); ?></h3>
-                                    <a href="#noticia-<?php echo htmlspecialchars($item['id']); ?>" class="news-link modal-trigger" data-noticia="<?php echo htmlspecialchars($item['id']); ?>">
+                                    <a href="noticia.php?id=<?php echo urlencode($item['id']); ?>" target="_blank" rel="noopener noreferrer" class="news-link">
                                         Leer más 
                                         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
                                     </a>
@@ -482,10 +490,9 @@ if ($files) {
                     <!-- Botonera de Filtro -->
                     <div class="filter-container">
                         <button class="filter-btn active" data-filter="all">Todas</button>
-                        <button class="filter-btn" data-filter="Ambiente">Ambiente</button>
-                        <button class="filter-btn" data-filter="Salud">Salud</button>
-                        <button class="filter-btn" data-filter="Institucional">Institucional</button>
-                        <button class="filter-btn" data-filter="Academica">Académica</button>
+                        <button class="filter-btn" data-filter="Estudiantes">Estudiantes</button>
+                        <button class="filter-btn" data-filter="Académica">Académica</button>
+                        <button class="filter-btn" data-filter="Dpto. Docente">Dpto. Docente</button>
                     </div>
 
                     <!-- Grilla Completa de Novedades -->
@@ -495,14 +502,16 @@ if ($files) {
                             $cat_pretty = isset($categoria_map[$item['categoria']]) ? $categoria_map[$item['categoria']] : ucfirst(strtolower($item['categoria']));
                         ?>
                             <article class="news-card" data-category="<?php echo htmlspecialchars($cat_pretty); ?>">
-                                <div class="news-img-wrapper">
-                                    <img src="<?php echo htmlspecialchars($item['imagen']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>" class="news-img" loading="lazy">
-                                    <span class="news-badge"><?php echo htmlspecialchars($cat_pretty); ?></span>
-                                </div>
+                                <a href="noticia.php?id=<?php echo urlencode($item['id']); ?>" target="_blank" rel="noopener noreferrer" style="display: block; overflow: hidden; border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;">
+                                    <div class="news-img-wrapper">
+                                        <img src="<?php echo htmlspecialchars($item['imagen']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>" class="news-img" loading="lazy">
+                                        <span class="news-badge"><?php echo htmlspecialchars($cat_pretty); ?></span>
+                                    </div>
+                                </a>
                                 <div class="news-body">
                                     <span class="news-date"><?php echo htmlspecialchars($item['fecha']); ?></span>
                                     <h3 class="news-card-title"><?php echo htmlspecialchars($item['title']); ?></h3>
-                                    <a href="#noticia-<?php echo htmlspecialchars($item['id']); ?>" class="news-link modal-trigger" data-noticia="<?php echo htmlspecialchars($item['id']); ?>">
+                                    <a href="noticia.php?id=<?php echo urlencode($item['id']); ?>" target="_blank" rel="noopener noreferrer" class="news-link">
                                         Leer más 
                                         <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
                                     </a>
@@ -986,6 +995,6 @@ if ($files) {
     </script>
 
     <!-- Script de interactividad -->
-    <script src="script.js?v=1.6"></script>
+    <script src="script.js?v=1.7"></script>
 </body>
 </html>
