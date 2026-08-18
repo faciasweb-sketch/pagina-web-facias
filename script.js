@@ -129,6 +129,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const dropdownItems = document.querySelectorAll('.dropdown-item');
     dropdownItems.forEach(item => {
         item.addEventListener('click', (e) => {
+            const href = item.getAttribute('href');
+            if (href && !href.startsWith('#')) {
+                // Si apunta a una página real (como dpto-docente.php), permitir la navegación normal
+                return;
+            }
             e.preventDefault();
             const action = item.getAttribute('data-action');
             

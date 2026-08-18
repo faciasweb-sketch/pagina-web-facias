@@ -92,7 +92,7 @@ if ($files) {
     <meta name="author" content="Universidad Nacional del Comahue">
     
     <!-- Hojas de estilo -->
-    <link rel="stylesheet" href="styles.css?v=1.1">
+    <link rel="stylesheet" href="styles.css?v=1.2">
 </head>
 <body>
 
@@ -148,7 +148,7 @@ if ($files) {
                             <li><a href="#academica-carreras" class="dropdown-item" data-action="carreras">Nuestras carreras</a></li>
                             <li><a href="#academica-calendario" class="dropdown-item" data-action="calendario">Calendario académico</a></li>
                             <li><a href="#academica-departamentos" class="dropdown-item" data-action="departamentos">Departamentos</a></li>
-                            <li><a href="dpto-docente.php" class="dropdown-link">Dpto. Docente</a></li>
+                            <li><a href="dpto-docente.php" class="dropdown-item">Dpto. Docente</a></li>
                         </ul>
                     </li>
                     <!-- Secretarías -->
@@ -995,6 +995,6 @@ if ($files) {
     </script>
 
     <!-- Script de interactividad -->
-    <script src="script.js?v=1.7"></script>
+    <script src="script.js?v=1.8"></script>
 </body>
 </html>
