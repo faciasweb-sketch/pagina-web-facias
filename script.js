@@ -177,35 +177,48 @@ document.addEventListener('DOMContentLoaded', () => {
                             <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                             FECHAS DEL TRÁMITE
                         </h4>
-                        <p style="font-size: 1.1rem; font-weight: 700; color: var(--color-primary); margin: 0;">Desde el 09/03/2026 al 31/03/2026 de 10:00 a 13:00 hs.</p>
+                        <p style="font-size: 1.1rem; font-weight: 700; color: var(--color-primary); margin: 0;">Desde 27/07/2026 al 14/08/2026 de 10:00 a 14:00 hs.</p>
                     </div>
 
                     <h4 style="font-weight: 700; margin-bottom: 0.75rem; color: var(--color-primary); font-size: 1.2rem;">Modalidad de Presentación</h4>
                     <p style="margin-bottom: 1.5rem;">
-                        El trámite se realiza de forma <strong>presencial</strong> en tu sede administrativa correspondiente, a excepción de los estudiantes pertenecientes a la <strong>sede Choele Choel</strong>, quienes deberán realizar la solicitud obligatoriamente enviando un correo electrónico con la documentación escaneada al siguiente correo oficial:
+                        El trámite se realiza de forma <strong>presencial</strong>, a excepción de los estudiantes de la <strong>sede Choele Choel</strong> quienes deberán realizar la solicitud por correo electrónico a las siguientes casillas:
                         <br>
-                        <a href="mailto:auditoria.titulos@facias.uncoma.edu.ar" style="color: var(--color-primary); font-weight: 600; text-decoration: underline;">auditoria.titulos@facias.uncoma.edu.ar</a>.
+                        📧 <a href="mailto:gabrielavrosa@hotmail.com" style="color: var(--color-primary); font-weight: 600; text-decoration: underline;">gabrielavrosa@hotmail.com</a> – <a href="mailto:gabrielavanesarosa@gmail.com" style="color: var(--color-primary); font-weight: 600; text-decoration: underline;">gabrielavanesarosa@gmail.com</a>
                     </p>
 
                     <div style="background-color: rgba(220, 53, 69, 0.06); border-left: 4px solid #dc3545; padding: 1.25rem; border-radius: var(--border-radius-sm); margin-bottom: 2.5rem;">
                         <p style="color: #c0392b; font-weight: 700; margin: 0; font-size: 0.95rem; line-height: 1.5;">
-                            ⚠️ IMPORTANTE: A dicho trámite se le dará curso únicamente si se presenta toda la documentación requerida de forma completa. De lo contrario, la solicitud no podrá ser recibida ni procesada bajo ningún término.
+                            ⚠️ IMPORTANTE: A dicho trámite se le dará curso siempre que esté toda la documentación completa, de lo contrario no se podrá realizar.
                         </p>
                     </div>
 
                     <h4 style="font-weight: 700; margin-bottom: 1.25rem; color: var(--color-primary); font-size: 1.2rem; border-bottom: 2px solid var(--color-border); padding-bottom: 0.5rem;">Requisitos y Documentación Solicitada:</h4>
                     <ul class="requisitos-list" style="padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.95rem; margin-bottom: 2rem;">
-                        <li style="display: flex; gap: 0.5rem;"><span style="color: var(--color-secondary); font-weight: bold;">✔</span> <span><strong>Formulario único</strong> (Formulario de solicitud general).</span></li>
-                        <li style="display: flex; gap: 0.5rem;"><span style="color: var(--color-secondary); font-weight: bold;">✔</span> <span><strong>Formulario de Jura</strong> (seleccionando la fórmula de juramento que desees).</span></li>
-                        <li style="display: flex; gap: 0.5rem;"><span style="color: var(--color-secondary); font-weight: bold;">✔</span> <span><strong>1 Fotocopia del DNI</strong> ampliada en tamaño A4 (frente y dorso en el mismo folio).</span></li>
-                        <li style="display: flex; gap: 0.5rem;"><span style="color: var(--color-secondary); font-weight: bold;">✔</span> <span><strong>1 Fotocopia del Título analítico del secundario</strong>.</span></li>
-                        <li style="display: flex; gap: 0.5rem;"><span style="color: var(--color-secondary); font-weight: bold;">✔</span> <span><strong>1 Fotocopia del título analítico previo</strong> (solo si son enfermeros o técnicos en higiene y seguridad).</span></li>
-                        <li style="display: flex; gap: 0.5rem;"><span style="color: var(--color-secondary); font-weight: bold;">✔</span> <span><strong>1 Fotocopia de la Convalidación del Título Secundario</strong> (si correspondiera).</span></li>
-                        <li style="display: flex; gap: 0.5rem;"><span style="color: var(--color-secondary); font-weight: bold;">✔</span> <span><strong>1 Fotocopia de la Convalidación del Título Terciario</strong> (si correspondiera).</span></li>
-                        <li style="display: flex; gap: 0.5rem;"><span style="color: var(--color-secondary); font-weight: bold;">✔</span> <span><strong>1 Fotocopia de la Convalidación del Título Universitario</strong> (si correspondiera).</span></li>
-                        <li style="display: flex; gap: 0.5rem;"><span style="color: var(--color-secondary); font-weight: bold;">✔</span> <span><strong>1 Fotocopia del Acta de Nacimiento</strong> (no se requiere que tenga fecha actualizada).</span></li>
-                        <li style="display: flex; gap: 0.5rem;"><span style="color: var(--color-secondary); font-weight: bold;">✔</span> <span><strong>1 Formulario de materias optativas, seminarios y materias electivas</strong> completado.</span></li>
+                        <li style="display: flex; gap: 0.5rem;"><span style="color: var(--color-secondary); font-weight: bold;">✔</span> <span><strong>1 Formulario único</strong> (Formulario).</span></li>
+                        <li style="display: flex; gap: 0.5rem;"><span style="color: var(--color-secondary); font-weight: bold;">✔</span> <span><strong>1 Formulario de Jura</strong> (Eligiendo la fórmula que desean).</span></li>
+                        <li style="display: flex; gap: 0.5rem;"><span style="color: var(--color-secondary); font-weight: bold;">✔</span> <span><strong>2 Fotocopias DNI</strong> ampliadas en A4 en ambos lados.</span></li>
+                        <li style="display: flex; gap: 0.5rem;"><span style="color: var(--color-secondary); font-weight: bold;">✔</span> <span><strong>2 Fotocopias de Título analítico del secundario</strong> en hoja A4.</span></li>
+                        <li style="display: flex; gap: 0.5rem;"><span style="color: var(--color-secondary); font-weight: bold;">✔</span> <span><strong>1 Fotocopia de título analítico</strong> si son enfermeros o técnicos en higiene y seguridad.</span></li>
+                        <li style="display: flex; gap: 0.5rem;"><span style="color: var(--color-secondary); font-weight: bold;">✔</span> <span><strong>1 Fotocopia de la Convalidación del Título Secundario</strong> (Si correspondiera).</span></li>
+                        <li style="display: flex; gap: 0.5rem;"><span style="color: var(--color-secondary); font-weight: bold;">✔</span> <span><strong>1 Fotocopia de la Convalidación del Título Terciario</strong> (Si correspondiera).</span></li>
+                        <li style="display: flex; gap: 0.5rem;"><span style="color: var(--color-secondary); font-weight: bold;">✔</span> <span><strong>1 Fotocopia de la Convalidación del Título Universitario</strong> (Si correspondiera).</span></li>
+                        <li style="display: flex; gap: 0.5rem;"><span style="color: var(--color-secondary); font-weight: bold;">✔</span> <span><strong>1 Fotocopia del Acta de Nacimiento</strong> (Sin fecha actualizada).</span></li>
+                        <li style="display: flex; gap: 0.5rem;"><span style="color: var(--color-secondary); font-weight: bold;">✔</span> <span><strong>1 Formulario de MATERIAS OPTATIVAS – SEMINARIOS – MATERIAS ELECTIVAS</strong>.</span></li>
                     </ul>
+
+                    <!-- Aclaraciones especiales -->
+                    <div style="background-color: var(--color-bg-light); border: 1px solid var(--color-border); border-left: 4px solid var(--color-primary); border-radius: var(--border-radius-sm); padding: 1.25rem; margin-bottom: 2rem;">
+                        <p style="margin-bottom: 0.75rem; font-size: 0.95rem; color: var(--color-text-dark);">
+                            📌 <strong>Técnico/a en Saneamiento Ambiental:</strong> para dar cumplimiento a los requisitos de solicitud de títulos deben haber iniciado el trámite de Equivalencia (Sin excepción).
+                        </p>
+                        <p style="margin-bottom: 0.75rem; font-size: 0.95rem; color: var(--color-text-dark);">
+                            📄 <strong>Nota:</strong> Las fotocopias deben ser escaneadas y sin fondos oscuros, caso contrario no se dará curso.
+                        </p>
+                        <p style="margin: 0; font-size: 0.95rem; color: var(--color-text-dark);">
+                            ✉️ <strong>Dudas y consultas:</strong> <a href="mailto:amenieves64@gmail.com" style="color: var(--color-primary); font-weight: 700; text-decoration: underline;">amenieves64@gmail.com</a>
+                        </p>
+                    </div>
 
                     <h4 style="font-weight: 700; margin-top: 2rem; margin-bottom: 1.25rem; color: var(--color-primary); font-size: 1.2rem; border-bottom: 2px solid var(--color-border); padding-bottom: 0.5rem;">Descarga de Formularios Obligatorios:</h4>
                     <div style="display: grid; grid-template-columns: 1fr; gap: 1rem; margin-bottom: 2rem;">
@@ -276,17 +289,6 @@ document.addEventListener('DOMContentLoaded', () => {
                             </span>
                             <span style="font-size: 0.75rem; font-weight: 700; color: var(--color-secondary);">DOCX / PDF</span>
                         </a>
-                    </div>
-
-                    <div style="background-color: var(--color-bg-light); border: 1px solid var(--color-border); border-radius: var(--border-radius-md); padding: 1.5rem; margin-top: 2rem;">
-                        <h4 style="font-weight: 700; color: #e67e22; margin-bottom: 1rem; font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem;">
-                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
-                            ACLARACIONES IMPORTANTES POR CARRERA
-                        </h4>
-                        <ul style="padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.85rem; font-size: 0.92rem; line-height: 1.5;">
-                            <li><strong>• LICENCIATURA EN ENFERMERÍA:</strong> Para poder preinscribirse e ingresar al <strong>Ciclo Superior</strong> de la carrera, deberá presentar obligatoriamente el <strong>Título de Enfermero/a Profesional</strong> de base.</li>
-                            <li><strong>• LICENCIATURA EN HIGIENE Y SEGURIDAD EN EL TRABAJO:</strong> Para poder preinscribirse e ingresar al <strong>Ciclo Superior</strong> de la carrera, deberá presentar obligatoriamente el <strong>Título de Técnico/a</strong> de base.</li>
-                        </ul>
                     </div>
                 </div>
             `
