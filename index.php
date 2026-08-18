@@ -162,7 +162,6 @@ if ($files) {
                             <li><a href="#sec-ciencia" class="dropdown-item" data-action="sec-ciencia">Ciencia, Técnica y Posgrado</a></li>
                             <li><a href="#sec-extension" class="dropdown-item" data-action="sec-extension">Vinculación y Extensión</a></li>
                             <li><a href="#sec-administrativa" class="dropdown-item" data-action="sec-admin">Administración y Servicios</a></li>
-                            <li><a href="#sec-academica" class="dropdown-item" data-action="sec-academica">Académica</a></li>
                             <li><a href="#sec-bienestar" class="dropdown-item" data-action="sec-bienestar">Bienestar</a></li>
                         </ul>
                     </li>
