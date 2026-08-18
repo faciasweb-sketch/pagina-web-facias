@@ -269,7 +269,8 @@ button {
     border-color: transparent transparent var(--color-bg-white) transparent;
 }
 
-.dropdown-item {
+
+.dropdown-item, .dropdown-link {
     display: block;
     padding: 0.7rem 1.25rem;
     font-size: 0.9rem;
@@ -279,7 +280,7 @@ button {
     transition: var(--transition-smooth);
 }
 
-.dropdown-item:hover {
+.dropdown-item:hover, .dropdown-link:hover {
     background-color: var(--color-secondary-light);
     color: var(--color-primary);
 }
