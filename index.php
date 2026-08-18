@@ -402,7 +402,7 @@ if ($files) {
                             </div>
                             <h3 class="sec-name">Académica</h3>
                             <p class="sec-desc">Gestión curricular, calendario académico, expedición de títulos y coordinación del cuerpo docente.</p>
-                            <a href="#sec-academica" class="sec-link" data-sec="academica">
+                            <a href="academica.php" class="sec-link">
                                 Ver más información
                                 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
                             </a>
