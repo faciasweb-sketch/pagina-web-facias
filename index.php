@@ -92,7 +92,7 @@ if ($files) {
     <meta name="author" content="Universidad Nacional del Comahue">
     
     <!-- Hojas de estilo -->
-    <link rel="stylesheet" href="styles.css?v=1.3">
+    <link rel="stylesheet" href="styles.css?v=1.4">
 </head>
 <body>
 
@@ -341,23 +341,11 @@ if ($files) {
                             </svg>
                             PEDCO
                         </a>
-                        <a href="https://preinscripcion.uncoma.edu.ar" target="_blank" rel="noopener noreferrer" class="quick-item" id="quick-preins">
-                            <svg class="quick-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                            </svg>
-                            Preinscripción
-                        </a>
-                        <a href="https://facias.uncoma.edu.ar/" target="_blank" rel="noopener noreferrer" class="quick-item" id="quick-webmail">
+                        <a href="https://webmail.uncoma.edu.ar" target="_blank" rel="noopener noreferrer" class="quick-item" id="quick-webmail">
                             <svg class="quick-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                             </svg>
                             Webmail
-                        </a>
-                        <a href="#calendario" class="quick-item" id="quick-calendario">
-                            <svg class="quick-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                            </svg>
-                            Calendario académico
                         </a>
                     </div>
                 </div>
