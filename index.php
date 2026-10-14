@@ -1010,6 +1010,6 @@ if ($files) {
     </script>
 
     <!-- Script de interactividad -->
-    <script src="script.js?v=2.1"></script>
+    <script src="script.js?v=2.2"></script>
 </body>
 </html>
