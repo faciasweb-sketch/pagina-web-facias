@@ -341,7 +341,7 @@ if ($files) {
                             </svg>
                             PEDCO
                         </a>
-                        <a href="https://webmail.uncoma.edu.ar" target="_blank" rel="noopener noreferrer" class="quick-item" id="quick-webmail">
+                        <a href="https://facias.uncoma.edu.ar/?_task=mail" target="_blank" rel="noopener noreferrer" class="quick-item" id="quick-webmail">
                             <svg class="quick-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                             </svg>
@@ -1010,6 +1010,6 @@ if ($files) {
     </script>
 
     <!-- Script de interactividad -->
-    <script src="script.js?v=2.0"></script>
+    <script src="script.js?v=2.1"></script>
 </body>
 </html>

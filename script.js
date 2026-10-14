@@ -1035,9 +1035,9 @@ document.addEventListener('DOMContentLoaded', () => {
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z"></path></svg>
                             SIU Guaraní Autogestión
                         </a>
-                        <a href="https://webmail.uncoma.edu.ar" target="_blank" class="modal-action-link">
+                        <a href="https://facias.uncoma.edu.ar/?_task=mail" target="_blank" class="modal-action-link">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                            Correo Webmail UNCo
+                            Correo Webmail FACIAS
                         </a>
                         <a href="https://pedco.uncoma.edu.ar" target="_blank" class="modal-action-link">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3"></path></svg>
@@ -1059,7 +1059,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     <h4 class="modal-section-title">Herramientas de Trabajo:</h4>
                     <div class="modal-links-grid">
-                        <a href="https://webmail.uncoma.edu.ar" target="_blank" class="modal-action-link">
+                        <a href="https://facias.uncoma.edu.ar/?_task=mail" target="_blank" class="modal-action-link">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                             Webmail Institucional
                         </a>
