@@ -262,9 +262,211 @@
             line-height: 1.4;
         }
 
+        /* 3. Sección Cómo Inscribirte */
+        .como-inscribirte-section {
+            background: #ffffff;
+            border-radius: var(--border-radius-lg);
+            padding: 2.75rem 2.5rem;
+            box-shadow: var(--shadow-medium);
+            border: 1px solid var(--color-border);
+            margin-bottom: 2.5rem;
+        }
+
+        .como-header-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: #1e293b;
+            margin: 0 0 0.5rem 0;
+            line-height: 1.2;
+        }
+
+        .como-header-desc {
+            font-size: 1.05rem;
+            color: #475569;
+            margin: 0 0 2rem 0;
+            line-height: 1.5;
+        }
+
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.75rem;
+            margin-bottom: 1.75rem;
+        }
+
+        .step-full-card {
+            border-radius: 16px;
+            display: flex;
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+            box-shadow: var(--shadow-subtle);
+            transition: var(--transition-smooth);
+        }
+
+        .step-full-card:hover {
+            box-shadow: var(--shadow-medium);
+            transform: translateY(-3px);
+        }
+
+        .step-full-card.step-1 {
+            background-color: #f0fbfb;
+            border-color: rgba(0, 143, 156, 0.25);
+        }
+
+        .step-full-card.step-2 {
+            background-color: #f1f8fe;
+            border-color: rgba(0, 114, 185, 0.25);
+        }
+
+        .step-ribbon {
+            width: 85px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            padding: 1.75rem 0.5rem;
+        }
+
+        .step-full-card.step-1 .step-ribbon {
+            background: #008f9c;
+        }
+
+        .step-full-card.step-2 .step-ribbon {
+            background: #0072b9;
+        }
+
+        .ribbon-label {
+            font-size: 0.85rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 0.25rem;
+        }
+
+        .ribbon-number {
+            font-size: 3rem;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .step-content {
+            padding: 2rem 1.75rem 2rem 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .step-content-title {
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin: 0 0 0.5rem 0;
+            line-height: 1.2;
+        }
+
+        .step-full-card.step-1 .step-content-title {
+            color: #008f9c;
+        }
+
+        .step-full-card.step-2 .step-content-title {
+            color: #0072b9;
+        }
+
+        .step-content-subtitle {
+            font-size: 0.95rem;
+            color: #475569;
+            margin: 0 0 1.25rem 0;
+            line-height: 1.45;
+        }
+
+        .step-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1.5rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+            font-size: 0.95rem;
+            color: #334155;
+            line-height: 1.5;
+        }
+
+        .step-list li {
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .step-list-num {
+            position: absolute;
+            left: 0;
+            font-weight: 700;
+            color: #1e293b;
+        }
+
+        .btn-siu-guarani {
+            display: inline-block;
+            background-color: #008f9c;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 0.75rem 1.4rem;
+            border-radius: 8px;
+            text-decoration: none;
+            align-self: flex-start;
+            margin-top: auto;
+            transition: var(--transition-smooth);
+            box-shadow: 0 2px 5px rgba(0, 143, 156, 0.25);
+        }
+
+        .btn-siu-guarani:hover {
+            background-color: #007580;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 143, 156, 0.35);
+            color: #ffffff;
+        }
+
+        /* Banner de confirmación oscuro */
+        .inscripcion-success-banner {
+            background-color: #1e293b;
+            color: #ffffff;
+            border-radius: 12px;
+            padding: 1.15rem 1.5rem;
+            text-align: center;
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 3px 8px rgba(30, 41, 59, 0.15);
+        }
+
+        .inscripcion-success-banner span.check {
+            color: #10b981;
+            margin-right: 0.4rem;
+            font-size: 1.25rem;
+        }
+
+        /* Cuadro de advertencia importante */
+        .inscripcion-warning-box {
+            background-color: #fef8ee;
+            border: 1px solid #fed7aa;
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            font-size: 0.95rem;
+            color: #451a03;
+            line-height: 1.55;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .inscripcion-warning-box p {
+            margin: 0;
+        }
+
         /* Responsive */
         @media (max-width: 860px) {
-            .periodos-grid {
+            .periodos-grid,
+            .steps-container {
                 grid-template-columns: 1fr;
             }
         }
@@ -277,14 +479,16 @@
             .inscripciones-hero {
                 padding: 2.25rem 1.5rem;
             }
-            .fechas-section {
+            .fechas-section,
+            .como-inscribirte-section {
                 padding: 2rem 1.25rem;
             }
             .inscripciones-main-title {
                 font-size: 2.5rem;
                 margin-bottom: 1.5rem;
             }
-            .fechas-header-title {
+            .fechas-header-title,
+            .como-header-title {
                 font-size: 1.85rem;
             }
             .guide-question {
@@ -301,6 +505,18 @@
         @media (max-width: 540px) {
             .periodo-boxes {
                 grid-template-columns: 1fr;
+            }
+            .step-full-card {
+                flex-direction: column;
+            }
+            .step-ribbon {
+                width: 100%;
+                flex-direction: row;
+                gap: 0.5rem;
+                padding: 0.75rem 1rem;
+            }
+            .ribbon-number {
+                font-size: 2rem;
             }
         }
     </style>
@@ -424,6 +640,95 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- 3. Sección Cómo Inscribirte -->
+        <section class="como-inscribirte-section">
+            <h2 class="como-header-title">Cómo inscribirte</h2>
+            <p class="como-header-desc">
+                Son dos pasos y tenés que hacer los dos, en este orden.
+            </p>
+
+            <div class="steps-container">
+                <!-- Paso 1: Online -->
+                <div class="step-full-card step-1">
+                    <div class="step-ribbon">
+                        <span class="ribbon-label">PASO</span>
+                        <span class="ribbon-number">1</span>
+                    </div>
+                    <div class="step-content">
+                        <h3 class="step-content-title">Online</h3>
+                        <p class="step-content-subtitle">
+                            En SIU Guaraní. Mejor si lo hacés desde la computadora.
+                        </p>
+                        <ol class="step-list">
+                            <li>
+                                <span class="step-list-num">1.</span>
+                                Creá tu usuario. Usá un mail que revises seguido: te va a llegar un correo para activarlo.
+                            </li>
+                            <li>
+                                <span class="step-list-num">2.</span>
+                                Elegí carrera y sede, y completá tus datos.
+                            </li>
+                            <li>
+                                <span class="step-list-num">3.</span>
+                                Descargá tu <strong>formulario de preinscripción</strong> con el botón IMPRIMIR.
+                            </li>
+                            <li>
+                                <span class="step-list-num">4.</span>
+                                Subí tu documentación: <strong>DNI (frente y dorso), título secundario o constancia de título en trámite, y el formulario.</strong>
+                            </li>
+                        </ol>
+                        <a href="https://siufacias.uncoma.edu.ar/facias/" target="_blank" rel="noopener noreferrer" class="btn-siu-guarani">
+                            Ir a SIU Guaraní
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Paso 2: Presencial -->
+                <div class="step-full-card step-2">
+                    <div class="step-ribbon">
+                        <span class="ribbon-label">PASO</span>
+                        <span class="ribbon-number">2</span>
+                    </div>
+                    <div class="step-content">
+                        <h3 class="step-content-title">Presencial</h3>
+                        <p class="step-content-subtitle">
+                            En la sede donde te inscribiste.<br>
+                            Es un trámite personal: tenés que ir vos.
+                        </p>
+                        <ol class="step-list">
+                            <li>
+                                <span class="step-list-num">1.</span>
+                                Mostrás tus documentos originales. No se piden fotocopias.
+                            </li>
+                            <li>
+                                <span class="step-list-num">2.</span>
+                                Si todo está en orden, te asignan un <strong>número de legajo</strong>.
+                            </li>
+                            <li>
+                                <span class="step-list-num">3.</span>
+                                Te llevás un <strong>comprobante de inscripción</strong> con tu legajo, tu condición y, si te falta algo, qué documentación adeudás. Guardalo.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Banner oscuro de confirmación -->
+            <div class="inscripcion-success-banner">
+                <span class="check">✓</span> ¡Listo! Con tu número de legajo ya estás inscripto/a.
+            </div>
+
+            <!-- Cuadro de advertencia importante -->
+            <div class="inscripcion-warning-box">
+                <p>
+                    <strong>Si hacés solo el Paso 1, todavía no estás inscripto/a.</strong> El legajo te lo dan únicamente en la sede.
+                </p>
+                <p>
+                    <strong>Hacé el Paso 2 en el mismo período en que hiciste el Paso 1.</strong> ¡Y no lo dejes para el último día!
+                </p>
             </div>
         </section>
 
