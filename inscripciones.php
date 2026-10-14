@@ -463,7 +463,147 @@
             margin: 0;
         }
 
+        /* 4. Sección Atención en cada sede */
+        .atencion-section {
+            background: #ffffff;
+            border-radius: var(--border-radius-lg);
+            padding: 2.75rem 2.5rem;
+            box-shadow: var(--shadow-medium);
+            border: 1px solid var(--color-border);
+            margin-bottom: 2.5rem;
+        }
+
+        .atencion-header-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: #1e293b;
+            margin: 0 0 2rem 0;
+            line-height: 1.2;
+        }
+
+        .sedes-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .sede-info-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 2rem 1.75rem;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition-smooth);
+        }
+
+        .sede-info-card:hover {
+            box-shadow: var(--shadow-medium);
+            transform: translateY(-3px);
+        }
+
+        .sede-card-name {
+            font-size: 1.45rem;
+            font-weight: 800;
+            color: #1e293b;
+            margin: 0 0 0.5rem 0;
+        }
+
+        .sede-card-address {
+            font-size: 0.95rem;
+            color: #64748b;
+            margin: 0 0 1.25rem 0;
+        }
+
+        .sede-card-hours {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin: 0 0 0.85rem 0;
+            line-height: 1.4;
+        }
+
+        .sede-card-detail {
+            font-size: 0.9rem;
+            color: #475569;
+            line-height: 1.55;
+            margin: 0;
+        }
+
+        .sede-card-placeholder {
+            font-size: 0.95rem;
+            color: #94a3b8;
+            margin: 0;
+            font-style: italic;
+        }
+
+        /* Banner Talleres de Ingreso */
+        .talleres-banner {
+            background: #008f9c;
+            border-radius: 16px;
+            padding: 2.25rem 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 143, 156, 0.25);
+        }
+
+        .talleres-content {
+            flex-grow: 1;
+        }
+
+        .talleres-title {
+            font-size: 1.55rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin: 0 0 0.6rem 0;
+            line-height: 1.25;
+        }
+
+        .talleres-desc {
+            font-size: 0.98rem;
+            color: rgba(255, 255, 255, 0.95);
+            margin: 0;
+            line-height: 1.55;
+        }
+
+        .btn-instagram {
+            background-color: #ffffff;
+            color: #008f9c;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 0.8rem 1.6rem;
+            border-radius: 8px;
+            text-decoration: none;
+            white-space: nowrap;
+            flex-shrink: 0;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: var(--transition-smooth);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-instagram:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            background-color: #f8fafc;
+            color: #007580;
+        }
+
         /* Responsive */
+        @media (max-width: 900px) {
+            .sedes-cards-grid {
+                grid-template-columns: 1fr;
+            }
+            .talleres-banner {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1.75rem 1.5rem;
+            }
+        }
+
         @media (max-width: 860px) {
             .periodos-grid,
             .steps-container {
@@ -480,7 +620,8 @@
                 padding: 2.25rem 1.5rem;
             }
             .fechas-section,
-            .como-inscribirte-section {
+            .como-inscribirte-section,
+            .atencion-section {
                 padding: 2rem 1.25rem;
             }
             .inscripciones-main-title {
@@ -488,7 +629,8 @@
                 margin-bottom: 1.5rem;
             }
             .fechas-header-title,
-            .como-header-title {
+            .como-header-title,
+            .atencion-header-title {
                 font-size: 1.85rem;
             }
             .guide-question {
@@ -729,6 +871,50 @@
                 <p>
                     <strong>Hacé el Paso 2 en el mismo período en que hiciste el Paso 1.</strong> ¡Y no lo dejes para el último día!
                 </p>
+            </div>
+        </section>
+
+        <!-- 4. Sección Atención en cada sede y Talleres -->
+        <section class="atencion-section">
+            <h2 class="atencion-header-title">Atención en cada sede</h2>
+
+            <div class="sedes-cards-grid">
+                <!-- Neuquén -->
+                <div class="sede-info-card">
+                    <h3 class="sede-card-name">Neuquén</h3>
+                    <p class="sede-card-address">Buenos Aires 1400</p>
+                    <p class="sede-card-hours">De 9 a 12:30 y de 14 a 16:30</p>
+                    <p class="sede-card-detail">
+                        Atención por número: a las 9 y a las 14 se repartirá una cantidad limitada. Solo se atiende a quien tiene número. Si no quedan, o te llaman y no estás, tenés que volver otro día.
+                    </p>
+                </div>
+
+                <!-- Allen -->
+                <div class="sede-info-card">
+                    <h3 class="sede-card-name">Allen</h3>
+                    <p class="sede-card-address">Güemes y Einstein</p>
+                    <p class="sede-card-placeholder">[Horario y modalidad de atención]</p>
+                </div>
+
+                <!-- Choele Choel -->
+                <div class="sede-info-card">
+                    <h3 class="sede-card-name">Choele Choel</h3>
+                    <p class="sede-card-address">Pacheco 460 (Edificio Perito Moreno)</p>
+                    <p class="sede-card-placeholder">[Horario y modalidad de atención]</p>
+                </div>
+            </div>
+
+            <!-- Banner Talleres de Ingreso -->
+            <div class="talleres-banner">
+                <div class="talleres-content">
+                    <h3 class="talleres-title">Talleres de ingreso: en febrero</h3>
+                    <p class="talleres-desc">
+                        Los talleres son clave para empezar bien: hacelos aunque todavía no tengas tu número de legajo. Los días y horarios se publican más adelante.
+                    </p>
+                </div>
+                <a href="javascript:void(0)" class="btn-instagram" role="button">
+                    Seguinos en Instagram
+                </a>
             </div>
         </section>
 
