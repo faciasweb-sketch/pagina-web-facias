@@ -410,21 +410,18 @@
                 <div class="periodos-grid" style="grid-template-columns: 1fr; max-width: 560px;">
                     <div class="periodo-card">
                         <div>
-                            <h3 class="periodo-title">Período Único</h3>
+                            <h3 class="periodo-title">Período único</h3>
                             <div class="periodo-boxes">
                                 <div class="step-box online">
                                     <span class="step-tag">PASO 1 · ONLINE</span>
-                                    <span class="step-date">Fechas a confirmar</span>
+                                    <span class="step-date">15 de enero al 5 de febrero de 2027</span>
                                 </div>
                                 <div class="step-box presencial">
                                     <span class="step-tag">PASO 2 · PRESENCIAL</span>
-                                    <span class="step-date">Fechas a confirmar</span>
+                                    <span class="step-date">22 al 26 de febrero de 2027</span>
                                 </div>
                             </div>
                         </div>
-                        <p class="periodo-footer-note">
-                            * El cronograma para la sede Choele Choel se confirmará y actualizará próximamente.
-                        </p>
                     </div>
                 </div>
             </div>
