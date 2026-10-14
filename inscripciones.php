@@ -31,7 +31,7 @@
             transform: translateX(-4px);
         }
 
-        /* Hero / Banner Principal de Inscripciones */
+        /* 1. Hero / Banner Principal de Inscripciones */
         .inscripciones-hero {
             background: #ffffff;
             border-radius: var(--border-radius-lg);
@@ -53,7 +53,6 @@
             background: linear-gradient(180deg, #008f9c 0%, var(--color-primary) 100%);
         }
 
-        /* Título Principal */
         .inscripciones-main-title {
             font-size: 3.75rem;
             font-weight: 300;
@@ -75,7 +74,6 @@
             letter-spacing: -0.5px;
         }
 
-        /* Bloque de Pregunta y Pasos */
         .inscripciones-guide {
             display: flex;
             flex-direction: column;
@@ -114,74 +112,163 @@
             font-weight: 400;
         }
 
-        /* Tarjetas de Pasos (Estructura base para continuar agregando contenido) */
-        .pasos-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1.75rem;
+        /* 2. Sección de Fechas */
+        .fechas-section {
+            background: #ffffff;
+            border-radius: var(--border-radius-lg);
+            padding: 2.75rem 2.5rem;
+            box-shadow: var(--shadow-medium);
+            border: 1px solid var(--color-border);
             margin-bottom: 2.5rem;
         }
 
-        .paso-card {
-            background: #ffffff;
-            border: 1px solid var(--color-border);
-            border-radius: var(--border-radius-lg);
-            padding: 2.25rem 2rem;
-            box-shadow: var(--shadow-subtle);
-            transition: var(--transition-smooth);
-            position: relative;
-        }
-
-        .paso-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-medium);
-        }
-
-        .paso-card.online {
-            border-top: 5px solid #008f9c;
-        }
-
-        .paso-card.presencial {
-            border-top: 5px solid var(--color-primary);
-        }
-
-        .paso-badge {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
+        .fechas-header-title {
+            font-size: 2.25rem;
             font-weight: 800;
-            font-size: 1.15rem;
-            margin-bottom: 1.25rem;
+            color: #1e293b;
+            margin: 0 0 0.5rem 0;
+            line-height: 1.2;
         }
 
-        .paso-card.online .paso-badge {
-            background: rgba(0, 143, 156, 0.12);
+        .fechas-header-desc {
+            font-size: 1.05rem;
+            color: #475569;
+            margin: 0 0 1.75rem 0;
+            line-height: 1.5;
+        }
+
+        /* Selector de Sedes (Píldoras) */
+        .sede-tabs-container {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .sede-tab-btn {
+            background: #ffffff;
+            border: 1.5px solid #cbd5e1;
+            color: #1e293b;
+            padding: 0.6rem 1.6rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            font-family: inherit;
+        }
+
+        .sede-tab-btn:hover {
+            border-color: #008f9c;
             color: #008f9c;
         }
 
-        .paso-card.presencial .paso-badge {
-            background: rgba(0, 114, 185, 0.12);
+        .sede-tab-btn.active {
+            background: #1e293b;
+            border-color: #1e293b;
+            color: #ffffff;
+            box-shadow: 0 2px 6px rgba(30, 41, 59, 0.2);
+        }
+
+        /* Paneles con animación */
+        .sede-panel {
+            display: none;
+        }
+
+        .sede-panel.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .periodos-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.75rem;
+        }
+
+        .periodo-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .periodo-title {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #1e293b;
+            margin: 0 0 1.25rem 0;
+        }
+
+        .periodo-boxes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.85rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .step-box {
+            border-radius: 10px;
+            padding: 1.1rem 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .step-box.online {
+            background: rgba(0, 143, 156, 0.08);
+            border: 1px solid rgba(0, 143, 156, 0.15);
+        }
+
+        .step-box.presencial {
+            background: rgba(0, 114, 185, 0.08);
+            border: 1px solid rgba(0, 114, 185, 0.15);
+        }
+
+        .step-tag {
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .step-box.online .step-tag {
+            color: #008f9c;
+        }
+
+        .step-box.presencial .step-tag {
             color: var(--color-primary);
         }
 
-        .paso-title {
-            font-size: 1.35rem;
+        .step-date {
+            font-size: 1.05rem;
             font-weight: 700;
-            color: var(--color-primary-dark);
-            margin: 0 0 0.75rem 0;
+            color: #0f172a;
+            line-height: 1.35;
         }
 
-        .paso-desc {
-            font-size: 1rem;
-            color: var(--color-text-muted);
-            line-height: 1.6;
-            margin: 0;
+        .periodo-footer-note {
+            font-size: 0.82rem;
+            color: #64748b;
+            margin: 0.75rem 0 0 0;
+            line-height: 1.4;
         }
 
         /* Responsive */
+        @media (max-width: 860px) {
+            .periodos-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         @media (max-width: 768px) {
             .page-container {
                 margin-top: 1.5rem;
@@ -190,9 +277,15 @@
             .inscripciones-hero {
                 padding: 2.25rem 1.5rem;
             }
+            .fechas-section {
+                padding: 2rem 1.25rem;
+            }
             .inscripciones-main-title {
                 font-size: 2.5rem;
                 margin-bottom: 1.5rem;
+            }
+            .fechas-header-title {
+                font-size: 1.85rem;
             }
             .guide-question {
                 font-size: 1.45rem;
@@ -203,9 +296,11 @@
             .guide-callout {
                 font-size: 1.15rem;
             }
-            .pasos-grid {
+        }
+
+        @media (max-width: 540px) {
+            .periodo-boxes {
                 grid-template-columns: 1fr;
-                gap: 1.25rem;
             }
         }
     </style>
@@ -234,7 +329,7 @@
             Volver a la página principal
         </a>
 
-        <!-- Banner Principal con el diseño de la captura -->
+        <!-- 1. Banner Principal con el diseño de Inscripciones 2027 -->
         <section class="inscripciones-hero">
             <h1 class="inscripciones-main-title">
                 Inscripciones <span class="year-badge">2027</span>
@@ -251,26 +346,89 @@
             </div>
         </section>
 
-        <!-- Bloques para los dos pasos (listos para desarrollar y agregar contenido) -->
-        <div class="pasos-grid">
-            <!-- Paso 1 Online -->
-            <div class="paso-card online">
-                <span class="paso-badge">1</span>
-                <h3 class="paso-title">Paso 1: Trámite Online</h3>
-                <p class="paso-desc">
-                    Registro en la plataforma de preinscripción de la universidad, selección de carrera y carga de la documentación digital requerida.
-                </p>
+        <!-- 2. Sección Fechas de Inscripción -->
+        <section class="fechas-section">
+            <h2 class="fechas-header-title">Fechas</h2>
+            <p class="fechas-header-desc">
+                Hay dos períodos de inscripción en Neuquén y Allen, y uno solo en Choele Choel.
+            </p>
+
+            <!-- Selector de sedes en pestañas/píldoras -->
+            <div class="sede-tabs-container" role="tablist">
+                <button class="sede-tab-btn active" data-sede="neuquen-allen" role="tab" aria-selected="true">Neuquén y Allen</button>
+                <button class="sede-tab-btn" data-sede="choele" role="tab" aria-selected="false">Choele Choel</button>
             </div>
 
-            <!-- Paso 2 Presencial -->
-            <div class="paso-card presencial">
-                <span class="paso-badge">2</span>
-                <h3 class="paso-title">Paso 2: Presentación Presencial</h3>
-                <p class="paso-desc">
-                    Presentación de la documentación impresa y original para su correspondiente cotejo y validación en la ventanilla de Alumnos de la facultad.
-                </p>
+            <!-- Panel 1: Neuquén y Allen -->
+            <div class="sede-panel active" id="panel-neuquen-allen" role="tabpanel">
+                <div class="periodos-grid">
+                    <!-- Primer período -->
+                    <div class="periodo-card">
+                        <div>
+                            <h3 class="periodo-title">Primer período</h3>
+                            <div class="periodo-boxes">
+                                <!-- Paso 1 Online -->
+                                <div class="step-box online">
+                                    <span class="step-tag">PASO 1 · ONLINE</span>
+                                    <span class="step-date">1 al 15 de noviembre de 2026</span>
+                                </div>
+                                <!-- Paso 2 Presencial -->
+                                <div class="step-box presencial">
+                                    <span class="step-tag">PASO 2 · PRESENCIAL</span>
+                                    <span class="step-date">23 de noviembre al 4 de diciembre de 2026</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="periodo-footer-note">
+                            Sin atención presencial el [26/11 o 27/11 – Día del Nodocente, a confirmar].
+                        </p>
+                    </div>
+
+                    <!-- Segundo período -->
+                    <div class="periodo-card">
+                        <div>
+                            <h3 class="periodo-title">Segundo período</h3>
+                            <div class="periodo-boxes">
+                                <!-- Paso 1 Online -->
+                                <div class="step-box online">
+                                    <span class="step-tag">PASO 1 · ONLINE</span>
+                                    <span class="step-date">15 de enero al 5 de febrero de 2027</span>
+                                </div>
+                                <!-- Paso 2 Presencial -->
+                                <div class="step-box presencial">
+                                    <span class="step-tag">PASO 2 · PRESENCIAL</span>
+                                    <span class="step-date">10 al 26 de febrero de 2027</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+
+            <!-- Panel 2: Choele Choel -->
+            <div class="sede-panel" id="panel-choele" role="tabpanel">
+                <div class="periodos-grid" style="grid-template-columns: 1fr; max-width: 560px;">
+                    <div class="periodo-card">
+                        <div>
+                            <h3 class="periodo-title">Período Único</h3>
+                            <div class="periodo-boxes">
+                                <div class="step-box online">
+                                    <span class="step-tag">PASO 1 · ONLINE</span>
+                                    <span class="step-date">Fechas a confirmar</span>
+                                </div>
+                                <div class="step-box presencial">
+                                    <span class="step-tag">PASO 2 · PRESENCIAL</span>
+                                    <span class="step-date">Fechas a confirmar</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="periodo-footer-note">
+                            * El cronograma para la sede Choele Choel se confirmará y actualizará próximamente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
 
@@ -279,5 +437,31 @@
         <p style="font-size: 0.9rem; opacity: 0.85; margin: 0;">&copy; 2026 Facultad de Ciencias del Ambiente y la Salud - Universidad Nacional del Comahue</p>
     </footer>
 
+    <!-- Script para alternar sedes interactivamente -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabBtns = document.querySelectorAll('.sede-tab-btn');
+            const panels = document.querySelectorAll('.sede-panel');
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const targetSede = btn.getAttribute('data-sede');
+
+                    tabBtns.forEach(b => {
+                        b.classList.remove('active');
+                        b.setAttribute('aria-selected', 'false');
+                    });
+                    panels.forEach(p => p.classList.remove('active'));
+
+                    btn.classList.add('active');
+                    btn.setAttribute('aria-selected', 'true');
+                    const targetPanel = document.getElementById(`panel-${targetSede}`);
+                    if (targetPanel) {
+                        targetPanel.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
