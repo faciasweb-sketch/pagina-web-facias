@@ -92,7 +92,7 @@ if ($files) {
     <meta name="author" content="Universidad Nacional del Comahue">
     
     <!-- Hojas de estilo -->
-    <link rel="stylesheet" href="styles.css?v=1.2">
+    <link rel="stylesheet" href="styles.css?v=1.3">
 </head>
 <body>
 
@@ -225,20 +225,23 @@ if ($files) {
                 </div>
             </section>
 
-            <!-- ¿QUÉ NECESITÁS? (Accesos por Rol) -->
+            <!-- ENCONTRÁ LO QUE BUSCÁS (Accesos por Rol) -->
             <section class="roles-section">
                 <div class="container">
                     <div class="roles-container">
-                        <h2 class="roles-title">¿Qué necesitás?</h2>
+                        <h2 class="roles-title">Encontrá lo que buscás</h2>
                         <div class="roles-grid">
-                            <!-- Ingresante -->
+                            <!-- 1. Quiero estudiar en FACIAS - INGRESO 2027 -->
                             <button class="role-card" id="role-ingresante" aria-haspopup="dialog">
                                 <svg class="role-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
                                 </svg>
-                                <span class="role-name">Ingresante</span>
+                                <span class="role-name">
+                                    Quiero estudiar en FACIAS
+                                    <span class="role-badge-ingreso">INGRESO 2027</span>
+                                </span>
                             </button>
-                            <!-- Estudiante -->
+                            <!-- 2. Ya soy Estudiante -->
                             <button class="role-card" id="role-estudiante" aria-haspopup="dialog">
                                 <svg class="role-icon" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <!-- Manija superior -->
@@ -258,9 +261,9 @@ if ($files) {
                                     <!-- Dos líneas verticales del parche -->
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 10.5v1.5M12.75 10.5v1.5" />
                                 </svg>
-                                <span class="role-name">Estudiante</span>
+                                <span class="role-name">Ya soy Estudiante</span>
                             </button>
-                            <!-- Docente -->
+                            <!-- 3. Soy Docente -->
                             <button class="role-card" id="role-docente" aria-haspopup="dialog">
                                 <svg class="role-icon" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <!-- Pizarra - Barra horizontal superior -->
@@ -277,9 +280,23 @@ if ($files) {
                                     <!-- Docente - Cuerpo y Brazo apuntando -->
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.5 20v-2.5c0-1.8 1.2-2.5 3-2.5h1.5l4.5-1.5a1 1 0 011.2.8v0a1 1 0 01-.8 1.2L9.2 17c-1 1-1.2 2-1.2 3H3.5z" />
                                 </svg>
-                                <span class="role-name">Docente</span>
+                                <span class="role-name">Soy Docente</span>
                             </button>
-                            <!-- Graduado/a -->
+                            <!-- 4. Soy NoDocente -->
+                            <button class="role-card" id="role-nodocente" aria-haspopup="dialog">
+                                <svg class="role-icon" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Credencial / Lanyard superior -->
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 2l3 3 3-3" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 5v2" />
+                                    <!-- Cuerpo de credencial -->
+                                    <rect x="4" y="7" width="16" height="15" rx="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <!-- Avatar / Usuario -->
+                                    <circle cx="12" cy="12" r="2" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.5 18c0-1.6 1.6-2.5 3.5-2.5s3.5.9 3.5 2.5" />
+                                </svg>
+                                <span class="role-name">Soy NoDocente</span>
+                            </button>
+                            <!-- 5. Soy Graduado -->
                             <button class="role-card" id="role-graduado" aria-haspopup="dialog">
                                 <svg class="role-icon" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <!-- Tapa del birrete (Rombo superior) -->
@@ -290,7 +307,17 @@ if ($files) {
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M20.5 8v5.5" />
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19 16l1.5-2.5 1.5 2.5" />
                                 </svg>
-                                <span class="role-name">Graduado/a</span>
+                                <span class="role-name">Soy Graduado</span>
+                            </button>
+                            <!-- 6. Represento a una organización -->
+                            <button class="role-card" id="role-organizacion" aria-haspopup="dialog">
+                                <svg class="role-icon" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Edificio institucional / Entidad / Empresa -->
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 7h1m-1 4h1m4-4h1m-1 4h1" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 21v-4a1 1 0 011-1h2a1 1 0 011 1v4" />
+                                </svg>
+                                <span class="role-name">Represento a una organización</span>
                             </button>
                         </div>
                     </div>
@@ -995,6 +1022,6 @@ if ($files) {
     </script>
 
     <!-- Script de interactividad -->
-    <script src="script.js?v=1.9"></script>
+    <script src="script.js?v=2.0"></script>
 </body>
 </html>

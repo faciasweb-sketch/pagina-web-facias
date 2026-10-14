@@ -962,7 +962,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Datos dinámicos por rol
     const rolesData = {
         ingresante: {
-            title: "Portal para Ingresantes",
+            title: "Quiero estudiar en FACIAS - Ingreso 2027",
             html: `
                 <div class="modal-info">
                     <p style="margin-bottom: 1.25rem;">¡Te damos la bienvenida a FACIAS! Si querés estudiar una carrera en nuestra facultad, acá tenés las herramientas clave para comenzar tu trámite de ingreso.</p>
@@ -1090,6 +1090,26 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </div>
             `
+        },
+        organizacion: {
+            title: "Vinculación con Organizaciones",
+            html: `
+                <div class="modal-info">
+                    <p style="margin-bottom: 1.25rem;">Espacio para empresas, organismos públicos, privados y organizaciones de la sociedad civil interesadas en coordinar pasantías, convenios de cooperación mutua y vinculación institucional con FACIAS.</p>
+                    
+                    <h4 class="modal-section-title">Canales de Contacto:</h4>
+                    <div class="modal-links-grid">
+                        <a href="#contacto" class="modal-action-link" id="modal-lnk-contacto-org">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            Mesa de Entradas y Contacto
+                        </a>
+                        <a href="#investigacion" class="modal-action-link" id="modal-lnk-invest-org">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547"></path></svg>
+                            Secretaría de Investigación
+                        </a>
+                    </div>
+                </div>
+            `
         }
     };
 
@@ -1121,12 +1141,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnRoleDocente = document.getElementById('role-docente');
     const btnRoleNodocente = document.getElementById('role-nodocente');
     const btnRoleGraduado = document.getElementById('role-graduado');
+    const btnRoleOrganizacion = document.getElementById('role-organizacion');
 
     if (btnRoleIngresante) btnRoleIngresante.addEventListener('click', () => abrirModalRol('ingresante'));
     if (btnRoleEstudiante) btnRoleEstudiante.addEventListener('click', () => abrirModalRol('estudiante'));
     if (btnRoleDocente) btnRoleDocente.addEventListener('click', () => abrirModalRol('docente'));
     if (btnRoleNodocente) btnRoleNodocente.addEventListener('click', () => abrirModalRol('nodocente'));
     if (btnRoleGraduado) btnRoleGraduado.addEventListener('click', () => abrirModalRol('graduado'));
+    if (btnRoleOrganizacion) btnRoleOrganizacion.addEventListener('click', () => abrirModalRol('organizacion'));
 
     btnModalClose.addEventListener('click', cerrarModalRol);
 
@@ -1142,6 +1164,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const lnkInvest = document.getElementById('modal-lnk-invest');
         const lnkContacto = document.getElementById('modal-lnk-contacto');
         const lnkPosgrado = document.getElementById('modal-lnk-posgrado');
+        const lnkContactoOrg = document.getElementById('modal-lnk-contacto-org');
+        const lnkInvestOrg = document.getElementById('modal-lnk-invest-org');
 
         if (lnkCarreras) {
             lnkCarreras.addEventListener('click', (e) => {
@@ -1172,6 +1196,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
                 cerrarModalRol();
                 switchView('contacto');
+            });
+        }
+        if (lnkContactoOrg) {
+            lnkContactoOrg.addEventListener('click', (e) => {
+                e.preventDefault();
+                cerrarModalRol();
+                switchView('contacto');
+            });
+        }
+        if (lnkInvestOrg) {
+            lnkInvestOrg.addEventListener('click', (e) => {
+                e.preventDefault();
+                cerrarModalRol();
+                switchView('investigacion');
             });
         }
         if (lnkPosgrado) {
