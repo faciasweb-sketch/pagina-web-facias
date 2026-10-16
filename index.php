@@ -661,7 +661,7 @@ if ($files) {
                         <p style="font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1;">Forma profesionales dedicados a diagnosticar, planificar y remediar problemas medioambientales, evaluando el impacto ambiental en el sector público y privado.</p>
                         <div style="border-top: 1px solid var(--color-border); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
                             <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: 600;">Sede: Neuquén</span>
-                            <a href="#carrera-saneamiento" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;" data-carrera="saneamiento">Plan de estudio</a>
+                            <a href="carrera-saneamiento.php" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Más info</a>
                         </div>
                     </div>
 
@@ -672,7 +672,7 @@ if ($files) {
                         <p style="font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1;">Brinda una formación integral humanística, científica y técnica para el cuidado y atención de la salud individual, familiar y comunitaria.</p>
                         <div style="border-top: 1px solid var(--color-border); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
                             <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: 600;">Sedes: Allen / Choele Choel</span>
-                            <a href="#carrera-enfermeria" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;" data-carrera="enfermeria">Plan de estudio</a>
+                            <a href="carrera-enfermeria.php" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Más info</a>
                         </div>
                     </div>
 
@@ -683,7 +683,7 @@ if ($files) {
                         <p style="font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1;">Destinado a graduados de tecnicaturas afines para profundizar en la prevención de riesgos y gestión integral de la salud laboral.</p>
                         <div style="border-top: 1px solid var(--color-border); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
                             <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: 600;">Sede: Neuquén</span>
-                            <a href="#carrera-higiene-lic" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;" data-carrera="higiene-lic">Plan de estudio</a>
+                            <a href="carrera-higiene-lic.php" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Más info</a>
                         </div>
                     </div>
 
@@ -694,18 +694,7 @@ if ($files) {
                         <p style="font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1;">Capacita para la aplicación de normas, prevención de riesgos laborales y control de ambientes de trabajo seguros y saludables.</p>
                         <div style="border-top: 1px solid var(--color-border); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
                             <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: 600;">Sede: Neuquén</span>
-                            <a href="#carrera-higiene-tec" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;" data-carrera="higiene-tec">Plan de estudio</a>
-                        </div>
-                    </div>
-
-                    <!-- Enfermería Profesional -->
-                    <div style="background: var(--color-bg-light); border: 1px solid var(--color-border); border-radius: var(--border-radius-md); padding: 2.25rem; display: flex; flex-direction: column;" class="academic-card">
-                        <span style="font-size: 0.75rem; font-weight: 700; color: var(--color-secondary); text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.5px;">Pregrado (3 años)</span>
-                        <h3 style="color: var(--color-primary); font-size: 1.35rem; font-weight: 700; margin-bottom: 1rem;">Enfermería Profesional</h3>
-                        <p style="font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1;">Carrera técnica con rápida salida laboral habilitando para el ejercicio del cuidado de enfermería de mediana complejidad.</p>
-                        <div style="border-top: 1px solid var(--color-border); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
-                            <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: 600;">Sedes: Allen / Choele Choel</span>
-                            <a href="#carrera-enfermero" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;" data-carrera="enfermero">Plan de estudio</a>
+                            <a href="carrera-higiene-tec.php" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Más info</a>
                         </div>
                     </div>
                 </div>
@@ -1047,6 +1036,6 @@ if ($files) {
     </script>
 
     <!-- Script de interactividad -->
-    <script src="script.js?v=2.2"></script>
+    <script src="script.js?v=2.3"></script>
 </body>
 </html>

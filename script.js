@@ -1511,4 +1511,19 @@ document.addEventListener('DOMContentLoaded', () => {
         startAutoSlider();
     }
 
+    // Soporte para navegación directa por hash al cargar la página (ej. index.php#carreras)
+    function handleInitialHash() {
+        if (window.location.hash) {
+            const hash = window.location.hash.replace('#', '');
+            if (views[hash]) {
+                switchView(hash);
+            } else if (hash === 'academica-carreras') {
+                switchView('carreras');
+            }
+        }
+    }
+
+    handleInitialHash();
+    window.addEventListener('hashchange', handleInitialHash);
+
 });
