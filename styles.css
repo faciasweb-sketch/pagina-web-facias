@@ -1824,3 +1824,59 @@ button {
         max-width: 320px;
     }
 }
+
+/* Sección Institucional - Nuestra Historia */
+.historia-lead {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #1e293b;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    padding: 1rem 1.25rem;
+    border-left: 4px solid var(--color-secondary);
+    background: rgba(81, 168, 177, 0.06);
+    border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+}
+
+.historia-item {
+    margin-bottom: 1.75rem;
+}
+
+.historia-item-title {
+    color: var(--color-primary);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.historia-item-title::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color-secondary);
+    flex-shrink: 0;
+}
+
+.historia-item p {
+    font-size: 0.98rem;
+    line-height: 1.65;
+    color: #334155;
+    margin-bottom: 0.75rem;
+}
+
+.historia-item p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+    .responsive-two-cols {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+    }
+}
+

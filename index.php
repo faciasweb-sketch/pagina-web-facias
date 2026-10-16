@@ -92,7 +92,7 @@ if ($files) {
     <meta name="author" content="Universidad Nacional del Comahue">
     
     <!-- Hojas de estilo -->
-    <link rel="stylesheet" href="styles.css?v=1.4">
+    <link rel="stylesheet" href="styles.css?v=1.5">
 </head>
 <body>
 
@@ -550,12 +550,49 @@ if ($files) {
                 <h2 class="section-title">Institucional</h2>
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem;" class="responsive-two-cols">
                     <div>
-                        <h3 style="color: var(--color-primary); font-size: 1.5rem; margin-bottom: 1.25rem;">Nuestra Historia y Misión</h3>
-                        <p style="margin-bottom: 1.25rem;">La Facultad de Ciencias del Ambiente y la Salud (FACIAS) es una de las unidades académicas fundacionales de la Universidad Nacional del Comahue. Buscamos formar profesionales capacitados para dar respuesta a las problemáticas sanitarias y medioambientales de la región patagónica.</p>
-                        <p style="margin-bottom: 2rem;">Contamos con un equipo de docentes, investigadores y nodocentes altamente comprometidos con la educación pública, la inclusión social, la excelencia académica y la sustentabilidad.</p>
+                        <h3 style="color: var(--color-primary); font-size: 1.85rem; font-weight: 800; margin-bottom: 1.5rem;">Nuestra historia</h3>
+                        
+                        <p class="historia-lead">
+                            FACIAS es el resultado de casi cuatro décadas de trabajo en torno a una idea que estuvo desde el comienzo: la salud de las personas no puede pensarse separada del ambiente en el que viven.
+                        </p>
+
+                        <!-- Hito 1: 1985 -->
+                        <div class="historia-item">
+                            <h4 class="historia-item-title">Los orígenes: el CUCS (1985)</h4>
+                            <p>
+                                Con la recuperación de la democracia, la Universidad Nacional del Comahue creó el Centro Universitario de Ciencias para la Salud (CUCS), dependiente del Consejo Superior. Su objetivo era la formación permanente de profesionales de la salud de la región, con foco en las patologías regionales y en estrecho contacto con los lugares donde ejercían. La primera Comisión Directiva se conformó con profesionales de la región, en acuerdo con la Asociación Médico Científica de Neuquén y Río Negro, y estuvo encabezada por el Dr. Armando Kremer como director y el Dr. Roberto Raña como secretario. En esos años se desarrolló un programa de actualización e investigación sobre problemas sanitarios propios de la zona, como las enfermedades alérgicas vinculadas al ambiente, la hidatidosis, el cáncer de mama, el desarrollo infantil y los accidentes en la infancia.
+                            </p>
+                        </div>
+
+                        <!-- Hito 2: 1988 -->
+                        <div class="historia-item">
+                            <h4 class="historia-item-title">El IUCS y las primeras carreras (1988)</h4>
+                            <p>
+                                En 1988 el CUCS dio paso al Instituto Universitario de Ciencias de la Salud (IUCS), que sumó la formación de pregrado y grado. A través de convenios con los ministerios de salud de Neuquén y Río Negro comenzaron a dictarse carreras a término en salud y ambiente. En sintonía con la preocupación de la Organización Mundial de la Salud por el vínculo entre ambiente y salud, y con el asesoramiento de la OPS, se creó la Tecnicatura en Saneamiento Ambiental, antecedente de la Licenciatura en Saneamiento y Protección Ambiental, única en la región.
+                            </p>
+                            <p>
+                                En 1999 se creó la Licenciatura en Enfermería, que completó el proyecto original: formar profesionales del saneamiento y del cuidado de la salud. Desde ese año se dicta en Neuquén y en Allen, en el marco de convenios con las provincias de Neuquén y Río Negro, que buscaban responder al déficit histórico de enfermeros y enfermeras en los sistemas de salud de la Norpatagonia.
+                            </p>
+                        </div>
+
+                        <!-- Hito 3: 2002 -->
+                        <div class="historia-item">
+                            <h4 class="historia-item-title">La Escuela Superior de Salud y Ambiente (2002)</h4>
+                            <p>
+                                En diciembre de 2002 el Consejo Superior aprobó la creación de la ESSA, que después de 17 años dejó de depender del Rectorado. Se organizaron los departamentos académicos y se realizaron los primeros concursos de profesores regulares, que sentaron las bases del gobierno cuatripartito. En 2007, a partir de un nuevo convenio con el Ministerio de Salud de Río Negro, la carrera de Enfermería llegó también a Choele Choel, ampliando la presencia de la institución en el Valle Medio.
+                            </p>
+                        </div>
+
+                        <!-- Hito 4: 2009 -->
+                        <div class="historia-item">
+                            <h4 class="historia-item-title">Facultad de Ciencias del Ambiente y la Salud (2009)</h4>
+                            <p>
+                                En 2009, con una estructura académica y administrativa equivalente a la de cualquier facultad, la Asamblea Universitaria aprobó su conversión en Facultad. Hoy FACIAS recoge esa trayectoria desde sus sedes en Neuquén, Allen y Choele Choel, y sostiene la formación, la investigación y la extensión en salud y ambiente al servicio de la región.
+                            </p>
+                        </div>
                         
                         <!-- Panel de estadísticas visuales -->
-                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center;">
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center; margin-top: 2.5rem;">
                             <div style="background: var(--color-bg-white); padding: 1.25rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-subtle); border-top: 4px solid var(--color-primary);">
                                 <span style="font-size: 2rem; font-weight: 800; color: var(--color-primary); display: block;">3</span>
                                 <span style="font-size: 0.8rem; font-weight: 600; color: var(--color-text-muted);">Sedes Regionales</span>
@@ -571,7 +608,7 @@ if ($files) {
                         </div>
                     </div>
                     
-                    <div style="background: var(--color-bg-white); padding: 2.5rem; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-medium); border: 1px solid var(--color-border);">
+                    <div style="background: var(--color-bg-white); padding: 2.5rem; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-medium); border: 1px solid var(--color-border); align-self: start;">
                         <h3 style="color: var(--color-primary); font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--color-border); padding-bottom: 0.5rem;">Autoridades</h3>
                         <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.25rem;">
                             <li>
