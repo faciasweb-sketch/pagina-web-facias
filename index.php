@@ -678,7 +678,7 @@ if ($files) {
 
                     <!-- Lic. en Higiene y Seguridad -->
                     <div style="background: var(--color-bg-light); border: 1px solid var(--color-border); border-radius: var(--border-radius-md); padding: 2.25rem; display: flex; flex-direction: column;" class="academic-card">
-                        <span style="font-size: 0.75rem; font-weight: 700; color: var(--color-secondary); text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.5px;">Licenciatura (5 años - Ciclo de Complementación)</span>
+                        <span style="font-size: 0.75rem; font-weight: 700; color: var(--color-secondary); text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.5px;">Licenciatura (2 años - Ciclo de Complementación)</span>
                         <h3 style="color: var(--color-primary); font-size: 1.35rem; font-weight: 700; margin-bottom: 1rem;">Licenciatura en Higiene y Seguridad del Trabajo</h3>
                         <p style="font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1;">Destinado a graduados de tecnicaturas afines para profundizar en la prevención de riesgos y gestión integral de la salud laboral.</p>
                         <div style="border-top: 1px solid var(--color-border); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center;">

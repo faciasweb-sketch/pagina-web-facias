@@ -129,7 +129,7 @@
             <h1 class="page-title">Licenciatura en Higiene y Seguridad del Trabajo</h1>
             <p class="page-subtitle">Facultad de Ciencias del Ambiente y la Salud - Universidad Nacional del Comahue</p>
             <div class="career-tags">
-                <span class="career-tag">🦺 Ciclo de Complementación (Grado)</span>
+                <span class="career-tag">🦺 Licenciatura (2 años - Ciclo de Complementación)</span>
                 <span class="career-tag sede">📍 Sede: Neuquén Capital</span>
                 <span class="career-tag">🎓 Título de Grado</span>
             </div>
