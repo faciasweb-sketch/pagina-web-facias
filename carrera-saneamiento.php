@@ -197,6 +197,70 @@
             color: #ffffff;
         }
 
+        /* Tarjeta ¿Cómo es la carrera? */
+        .como-es-carrera-card {
+            background: #ffffff;
+            border-radius: var(--border-radius-lg);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-subtle);
+            border: 1px solid var(--color-border);
+            margin-bottom: 3.5rem;
+        }
+
+        .carrera-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .timeline-step {
+            display: flex;
+            gap: 1.25rem;
+            align-items: flex-start;
+        }
+
+        .timeline-badge {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #008f9c 0%, var(--color-primary) 100%);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.05rem;
+            flex-shrink: 0;
+            box-shadow: 0 2px 6px rgba(0, 143, 156, 0.3);
+        }
+
+        .timeline-body p {
+            font-size: 1.08rem;
+            line-height: 1.75;
+            color: #334155;
+            margin: 0;
+            padding-top: 0.25rem;
+        }
+
+        .plan-descarga-box {
+            background: #f8fafc;
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius-md);
+            padding: 1.5rem 2rem;
+            margin-top: 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.25rem;
+        }
+
+        .plan-descarga-info {
+            flex: 1;
+            min-width: 250px;
+        }
+
         /* Banner CTA al pie */
         .cta-inscripciones-box {
             background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
@@ -391,16 +455,62 @@
                     <span class="dato-label-icon">📋</span>
                     <span>Plan de estudios</span>
                 </div>
-                <div class="dato-value">
-                    <a href="https://drive.google.com/file/d/1QUTn80-Bu7AcvBVBppuCe5Y-OBjYla76/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-descarga-plan">
-                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-                        </svg>
-                        Descargar Plan de Estudios
-                    </a>
+                <div class="dato-value" style="font-size: 0.98rem; line-height: 1.5;">
+                    Ord. CS N° 0950/05, vigente desde 2006 (correlatividades: Ord. CS N° 0629/10, modificada por las Ord. CS N° 0630/10 y 0631/10)
                 </div>
             </div>
         </div>
+
+        <!-- ¿Cómo es la carrera? -->
+        <section class="como-es-carrera-card">
+            <h2 class="carrera-section-title">
+                <span>¿Cómo es la carrera?</span>
+            </h2>
+
+            <div class="carrera-timeline">
+                <div class="timeline-step">
+                    <div class="timeline-badge">1</div>
+                    <div class="timeline-body">
+                        <p>Los primeros años construyen la base científica: matemática, física, química, biología y ecología.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="timeline-badge">2</div>
+                    <div class="timeline-body">
+                        <p>A partir de allí, la formación se orienta al saneamiento: tratamiento de aguas, efluentes y residuos, microbiología y toxicología ambiental, calidad del agua, del aire y del suelo, salud ambiental y salud ocupacional. Hay trabajo de laboratorio y de campo.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="timeline-badge">3</div>
+                    <div class="timeline-body">
+                        <p>Los últimos años suman herramientas de gestión: evaluación de impacto y riesgo ambiental, planificación y gestión ambiental, intervención en ambientes degradados, monitoreo de recursos vivos y legislación ambiental.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="timeline-badge">4</div>
+                    <div class="timeline-body">
+                        <p>El recorrido se completa con dos seminarios optativos e Inglés, y cierra con una tesis.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón con URL debajo del texto -->
+            <div class="plan-descarga-box">
+                <div class="plan-descarga-info">
+                    <h4 style="margin: 0 0 0.35rem 0; font-size: 1.15rem; color: var(--color-primary); font-weight: 700;">Plan de Estudio Completo</h4>
+                    <p style="margin: 0; font-size: 0.95rem; color: var(--color-text-muted);">Consultá o descargá el documento oficial del plan de estudio en formato PDF.</p>
+                </div>
+                <a href="https://drive.google.com/file/d/1QUTn80-Bu7AcvBVBppuCe5Y-OBjYla76/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn-descarga-plan">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                    </svg>
+                    Descargar Plan de Estudios
+                </a>
+            </div>
+        </section>
 
         <!-- Banner de acción -->
         <div class="cta-inscripciones-box">
