@@ -558,14 +558,14 @@
             <!-- Botón con URL debajo del texto -->
             <div class="plan-descarga-box">
                 <div class="plan-descarga-info">
-                    <h4 style="margin: 0 0 0.35rem 0; font-size: 1.15rem; color: var(--color-primary); font-weight: 700;">Grilla de Materias y Correlatividades</h4>
-                    <p style="margin: 0; font-size: 0.95rem; color: var(--color-text-muted);">Consultá o descargá el documento oficial en formato PDF.</p>
+                    <h4 style="margin: 0 0 0.35rem 0; font-size: 1.15rem; color: var(--color-primary); font-weight: 700;">Plan de Estudio Completo</h4>
+                    <p style="margin: 0; font-size: 0.95rem; color: var(--color-text-muted);">Consultá o descargá el documento oficial del plan de estudio en formato PDF.</p>
                 </div>
-                <a href="#" class="btn-descarga-plan" target="_blank" rel="noopener noreferrer">
+                <a href="https://drive.google.com/file/d/1of99rpkFJbv-sgSjvuy4GkE0-xR9DwWt/view?usp=sharing" class="btn-descarga-plan" target="_blank" rel="noopener noreferrer">
                     <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
                     </svg>
-                    Descargar grilla de materias y correlatividades (PDF)
+                    Descargar Plan de Estudios
                 </a>
             </div>
         </section>
