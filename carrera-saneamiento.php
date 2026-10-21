@@ -261,6 +261,24 @@
             min-width: 250px;
         }
 
+        /* Tarjetas de Información: Perfil del Egresado y Alcances */
+        .carrera-info-card {
+            background: #ffffff;
+            border-radius: var(--border-radius-lg);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-subtle);
+            border: 1px solid var(--color-border);
+            margin-bottom: 3rem;
+        }
+
+        .carrera-card-body p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #334155;
+            margin: 0;
+            font-weight: 400;
+        }
+
         /* Banner CTA al pie */
         .cta-inscripciones-box {
             background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
@@ -320,7 +338,9 @@
             .page-title {
                 font-size: 1.85rem;
             }
-            .carrera-hero-card {
+            .carrera-hero-card,
+            .como-es-carrera-card,
+            .carrera-info-card {
                 padding: 1.75rem 1.5rem;
             }
             .dato-row {
@@ -509,6 +529,30 @@
                     </svg>
                     Descargar Plan de Estudios
                 </a>
+            </div>
+        </section>
+
+        <!-- Perfil del egresado/a -->
+        <section class="carrera-info-card">
+            <h2 class="carrera-section-title">
+                <span>Perfil del egresado/a</span>
+            </h2>
+            <div class="carrera-card-body">
+                <p>
+                    Quienes egresan de la Licenciatura conocen las características físicas, químicas y biológicas del ambiente y los factores que lo modifican. Están preparados/as para planificar muestreos e interpretar resultados analíticos de aguas, efluentes, residuos, alimentos y aire, con el fin de evaluar riesgos, sanear ambientes contaminados y proteger áreas expuestas a potenciales contaminaciones. Integran equipos multidisciplinarios de evaluación de impacto ambiental, así como equipos de los ámbitos de la salud y la ingeniería, para programar, ejecutar y supervisar acciones de protección y corrección ambiental en áreas urbanas y rurales. También conducen inspecciones y relevamientos que evalúan las condiciones higiénicas de viviendas, establecimientos públicos y lugares de recreación.
+                </p>
+            </div>
+        </section>
+
+        <!-- Alcances del título -->
+        <section class="carrera-info-card">
+            <h2 class="carrera-section-title">
+                <span>Alcances del título</span>
+            </h2>
+            <div class="carrera-card-body">
+                <p>
+                    El título habilita para realizar estudios, investigaciones y asesoramiento en saneamiento y protección ambiental. También para planificar muestreos y analizar contaminantes en agua, aire, suelo, efluentes y residuos, y para evaluar la eficiencia de los sistemas de tratamiento. Incluye la evaluación de impacto y riesgo ambiental, el asesoramiento en educación, higiene y seguridad ambiental, y la evaluación de riesgos por agentes biológicos y de las condiciones de seguridad ambiental de viviendas, establecimientos y ámbitos de trabajo.
+                </p>
             </div>
         </section>
 
