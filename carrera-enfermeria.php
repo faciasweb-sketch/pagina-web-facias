@@ -290,6 +290,51 @@
             min-width: 250px;
         }
 
+        /* Tarjetas de Información: Perfil, Alcances, Campo Laboral y Acreditación */
+        .carrera-info-card {
+            background: #ffffff;
+            border-radius: var(--border-radius-lg);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-subtle);
+            border: 1px solid var(--color-border);
+            margin-bottom: 3rem;
+        }
+
+        .carrera-card-body p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #334155;
+            margin: 0;
+            font-weight: 400;
+        }
+
+        .campo-laboral-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1rem 1.75rem;
+        }
+
+        .campo-laboral-list li {
+            position: relative;
+            padding-left: 1.75rem;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: #334155;
+        }
+
+        .campo-laboral-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #008f9c;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
         /* Banner CTA al pie */
         .cta-inscripciones-box {
             background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
@@ -350,8 +395,12 @@
                 font-size: 1.85rem;
             }
             .carrera-hero-card,
-            .como-es-carrera-card {
+            .como-es-carrera-card,
+            .carrera-info-card {
                 padding: 1.75rem 1.5rem;
+            }
+            .campo-laboral-list {
+                grid-template-columns: 1fr;
             }
             .dato-row {
                 flex-direction: column;
@@ -567,6 +616,92 @@
                     </svg>
                     Descargar Plan de Estudios
                 </a>
+            </div>
+        </section>
+
+        <!-- Perfil del egresado/a -->
+        <section class="carrera-info-card">
+            <h2 class="carrera-section-title">
+                <span>Perfil del egresado/a</span>
+            </h2>
+            <div class="carrera-card-body">
+                <p>
+                    Quienes egresan de la Licenciatura están preparados/as para brindar y administrar cuidados enfermeros a personas, grupos y comunidades en todas las etapas de la vida, incluidas las situaciones de alto riesgo para la salud, en todos los niveles de atención y prevención. Pueden además gestionar servicios de enfermería, diseñar y participar en programas de salud, formar nuevos/as profesionales e investigar, en equipos interdisciplinarios e intersectoriales.
+                </p>
+            </div>
+        </section>
+
+        <!-- Alcances del título -->
+        <section class="carrera-info-card">
+            <h2 class="carrera-section-title">
+                <span>Alcances del título</span>
+            </h2>
+            <div class="carrera-card-body">
+                <div style="margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--color-border);">
+                    <h4 style="color: var(--color-primary); font-size: 1.15rem; font-weight: 700; margin: 0 0 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #008f9c;"></span>
+                        Enfermero/a
+                    </h4>
+                    <p>
+                        Habilita para el ejercicio profesional en relación de dependencia y en forma autónoma: brindar y gestionar cuidados de enfermería para la promoción, prevención, recuperación y rehabilitación de personas, familias y comunidades, hasta el nivel de cuidados intermedios, en ámbitos comunitarios, hospitalarios y domiciliarios.
+                    </p>
+                </div>
+                <div>
+                    <h4 style="color: var(--color-primary); font-size: 1.15rem; font-weight: 700; margin: 0 0 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #008f9c;"></span>
+                        Licenciado/a en Enfermería
+                    </h4>
+                    <p>
+                        Suma la atención de alta complejidad y riesgo de vida, la administración de servicios de salud y de enfermería, la investigación, la planificación de programas de educación para la salud y de salud pública, la formación de profesionales de enfermería y funciones de dirección en instituciones de salud, docencia e investigación.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Campo laboral -->
+        <section class="carrera-info-card">
+            <h2 class="carrera-section-title">
+                <span>Campo laboral</span>
+            </h2>
+            <div class="carrera-card-body">
+                <ul class="campo-laboral-list">
+                    <li>Hospitales, clínicas, sanatorios y centros de salud, públicos y privados, de todas las complejidades</li>
+                    <li>Servicios de emergencia y traslado de pacientes</li>
+                    <li>Atención domiciliaria, servicios de enfermería independientes y consultorios interdisciplinarios</li>
+                    <li>Servicios de medicina laboral en empresas e instituciones</li>
+                    <li>Escuelas, clubes e instituciones comunitarias con servicio de enfermería</li>
+                    <li>Instituciones formadoras de profesionales de la salud</li>
+                    <li>Organismos de salud pública: gestión, epidemiología, inmunizaciones, programas sanitarios y direcciones de enfermería (con la Licenciatura)</li>
+                    <li>Empresas de cuidados paliativos y de insumos médicos</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Acreditación -->
+        <section class="carrera-info-card">
+            <h2 class="carrera-section-title">
+                <span>Acreditación</span>
+            </h2>
+            <div class="carrera-card-body">
+                <p style="margin-bottom: 1.25rem;">
+                    La Licenciatura en Enfermería está acreditada por la Comisión Nacional de Evaluación y Acreditación Universitaria (CONEAU), el organismo nacional que evalúa la calidad de las carreras incluidas en el artículo 43 de la Ley de Educación Superior. La acreditación alcanza a las tres sedes en las que se dicta la carrera:
+                </p>
+                <div style="background: #f8fafc; border: 1px solid var(--color-border); border-left: 4px solid #008f9c; border-radius: var(--border-radius-md); padding: 1.25rem 1.5rem; margin-bottom: 1.25rem;">
+                    <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.75rem;">
+                        <li style="font-size: 1.02rem; color: #1e293b; line-height: 1.5;">
+                            <strong>• Sede Central (Neuquén) y extensión áulica Choele Choel:</strong> Resolución RESFC-2024-211-APN-CONEAU#MCH
+                        </li>
+                        <li style="font-size: 1.02rem; color: #1e293b; line-height: 1.5;">
+                            <strong>• Sede Allen:</strong> Resolución RESFC-2024-212-APN-CONEAU#MCH
+                        </li>
+                    </ul>
+                </div>
+                <p style="margin-bottom: 1rem;">
+                    Ambas resoluciones extienden la acreditación otorgada en 2018, que se mantiene vigente hasta que la CONEAU se expida sobre la carrera en la próxima convocatoria.
+                </p>
+                <p style="font-size: 0.98rem; color: var(--color-text-muted); margin: 0; font-style: italic;">
+                    La acreditación puede consultarse en el buscador de carreras acreditadas de la CONEAU, seleccionando Universidad Nacional del Comahue.
+                </p>
             </div>
         </section>
 
