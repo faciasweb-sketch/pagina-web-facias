@@ -279,6 +279,33 @@
             min-width: 250px;
         }
 
+        .campo-laboral-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1rem 1.75rem;
+        }
+
+        .campo-laboral-list li {
+            position: relative;
+            padding-left: 1.75rem;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: #334155;
+        }
+
+        .campo-laboral-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #008f9c;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
         /* Banner CTA al pie */
         .cta-inscripciones-box {
             background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
@@ -342,6 +369,9 @@
             .como-es-carrera-card,
             .carrera-info-card {
                 padding: 1.75rem 1.5rem;
+            }
+            .campo-laboral-list {
+                grid-template-columns: 1fr;
             }
             .dato-row {
                 flex-direction: column;
@@ -573,6 +603,46 @@
                     </svg>
                     Descargar Plan de Estudios
                 </a>
+            </div>
+        </section>
+
+        <!-- Perfil del egresado/a -->
+        <section class="carrera-info-card">
+            <h2 class="carrera-section-title">
+                <span>Perfil del egresado/a</span>
+            </h2>
+            <div class="carrera-card-body">
+                <p>
+                    Quienes egresan de la Licenciatura están preparados/as para satisfacer las necesidades interdisciplinarias vinculadas a los factores de riesgo de las actividades productivas y para reconocer e interpretar los procesos en que intervienen maquinarias y variables físicas que puedan poner en riesgo la salud laboral y ambiental. Pueden participar en la concepción e implementación de actividades para controlar la accidentología de los procesos productivos, proveer medidas preventivas para eliminar las causas de las enfermedades profesionales, reducir los efectos perjudiciales del trabajo y contribuir al mantenimiento de la salud de los trabajadores y a la productividad mediante el control de las condiciones del ambiente de trabajo. También contribuyen a determinar los costos de las acciones de su incumbencia, analizan y actúan en la comercialización y distribución de equipos y procesos del área, y conciben y ejecutan proyectos de investigación y extensión universitaria.
+                </p>
+            </div>
+        </section>
+
+        <!-- Campo laboral -->
+        <section class="carrera-info-card">
+            <h2 class="carrera-section-title">
+                <span>Campo laboral</span>
+            </h2>
+            <div class="carrera-card-body">
+                <ul class="campo-laboral-list">
+                    <li>Empresas e industrias de todo tipo, en áreas de higiene, seguridad y gestión de riesgos laborales</li>
+                    <li>Organismos de producción y de servicios, públicos y privados, en tareas de gestión, planificación, conducción y supervisión</li>
+                    <li>Construcción y obras civiles</li>
+                    <li>Comercialización y distribución de equipos y procesos del área</li>
+                    <li>Centros académicos: docencia, investigación y extensión</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Alcances del título -->
+        <section class="carrera-info-card">
+            <h2 class="carrera-section-title">
+                <span>Alcances del título</span>
+            </h2>
+            <div class="carrera-card-body">
+                <p>
+                    El título habilita para conducir equipos de trabajo de alta calificación que lleven adelante la planificación, organización, dirección, control, análisis y evaluación de la higiene y seguridad de los ambientes laborales. También para controlar equipos y elementos de protección personal y colectiva, desarrollar programas de capacitación y prevención, caracterizar puestos de trabajo según sus riesgos, intervenir en la selección e ingreso de personal, investigar accidentes y enfermedades profesionales y ejercer la docencia universitaria.
+                </p>
             </div>
         </section>
 
