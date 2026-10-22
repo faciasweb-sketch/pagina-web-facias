@@ -671,7 +671,7 @@ if ($files) {
                         <h3 style="color: var(--color-primary); font-size: 1.35rem; font-weight: 700; margin-bottom: 1rem;">Licenciatura en Enfermería</h3>
                         <p style="font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1;">Brinda una formación integral humanística, científica y técnica para el cuidado y atención de la salud individual, familiar y comunitaria.</p>
                         <div style="border-top: 1px solid var(--color-border); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
-                            <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: 600;">Sedes: Allen / Choele Choel</span>
+                            <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: 600;">Sedes: Neuquén, Allen y Choele Choel</span>
                             <a href="carrera-enfermeria.php" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Más info</a>
                         </div>
                     </div>
