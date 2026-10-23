@@ -962,33 +962,46 @@ document.addEventListener('DOMContentLoaded', () => {
     // Datos dinámicos por rol
     const rolesData = {
         ingresante: {
-            title: "Quiero estudiar en FACIAS - Ingreso 2027",
+            title: "Ingreso 2027",
+            icon: `<svg style="width:26px;height:26px;color:#008f9c;flex-shrink:0;" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>`,
             html: `
                 <div class="modal-info">
-                    <p style="margin-bottom: 1.25rem;">¡Te damos la bienvenida a FACIAS! Si querés estudiar una carrera en nuestra facultad, acá tenés las herramientas clave para comenzar tu trámite de ingreso.</p>
+                    <p style="margin-bottom: 1.35rem; font-size: 0.98rem; line-height: 1.6; color: #475569;">
+                        Si querés estudiar en FACIAS, empezá por acá. Las inscripciones 2027 abren el 1 de noviembre.
+                    </p>
                     
-                    <h4 class="modal-section-title">Enlaces Importantes:</h4>
-                    <div class="modal-links-grid">
-                        <a href="inscripciones.php" class="modal-action-link">
-                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
-                            Quiero inscribirme
+                    <div class="modal-nav-stack">
+                        <a href="inscripciones.php" class="modal-nav-card">
+                            <span class="modal-nav-text">Inscripciones 2027: fechas y pasos</span>
+                            <svg class="modal-nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                            </svg>
                         </a>
-                        <a href="#carreras" class="modal-action-link" id="modal-lnk-carreras">
-                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                            Oferta de Carreras
+
+                        <a href="index.php#carreras" class="modal-nav-card" id="modal-lnk-carreras">
+                            <span class="modal-nav-text">Carreras</span>
+                            <svg class="modal-nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+
+                        <a href="#nuestras-sedes" class="modal-nav-card" id="modal-lnk-sedes">
+                            <span class="modal-nav-text">Sedes: Neuquén, Allen y Choele Choel</span>
+                            <svg class="modal-nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+
+                        <a href="ya-inscripto.php" class="modal-nav-card modal-nav-card-featured">
+                            <div class="modal-nav-content">
+                                <span class="modal-nav-title">Ya estoy inscripto/a</span>
+                                <span class="modal-nav-subtitle">GPF · Guía Para las FACIAS</span>
+                            </div>
+                            <svg class="modal-nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                            </svg>
                         </a>
                     </div>
-                    
-                    <h4 class="modal-section-title">Requisitos de Inscripción:</h4>
-                    <ul style="padding-left: 1.25rem; margin-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.6;">
-                        <li>Formulario de preinscripción impreso.</li>
-                        <li>DNI (original y copia).</li>
-                        <li>Título secundario legalizado o certificado de finalización en trámite.</li>
-                        <li>Dos fotos tipo carnet de 3x3 cm.</li>
-                    </ul>
-                    <p style="font-size: 0.85rem; color: var(--color-text-muted); background: var(--color-bg-light); padding: 0.75rem; border-radius: var(--border-radius-sm);">
-                        <strong>Consultas:</strong> Escribí al área de Ingreso a <a href="mailto:ingreso@facias.uncoma.edu.ar" style="color: var(--color-primary); font-weight: 600;">ingreso.alumnos@facias.uncoma.edu.ar</a>.
-                    </p>
                 </div>
             `
         },
@@ -1119,7 +1132,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!data) return;
 
         modalTitle.innerHTML = `
-            <svg style="width:28px;height:28px;color:var(--color-secondary);" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            ${data.icon || '<svg style="width:28px;height:28px;color:var(--color-secondary);" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>'}
             ${data.title}
         `;
         modalBody.innerHTML = data.html;
@@ -1166,12 +1179,26 @@ document.addEventListener('DOMContentLoaded', () => {
         const lnkPosgrado = document.getElementById('modal-lnk-posgrado');
         const lnkContactoOrg = document.getElementById('modal-lnk-contacto-org');
         const lnkInvestOrg = document.getElementById('modal-lnk-invest-org');
+        const lnkSedes = document.getElementById('modal-lnk-sedes');
 
         if (lnkCarreras) {
             lnkCarreras.addEventListener('click', (e) => {
                 e.preventDefault();
                 cerrarModalRol();
                 switchView('carreras');
+            });
+        }
+        if (lnkSedes) {
+            lnkSedes.addEventListener('click', (e) => {
+                e.preventDefault();
+                cerrarModalRol();
+                switchView('inicio');
+                setTimeout(() => {
+                    const sedesEl = document.getElementById('nuestras-sedes');
+                    if (sedesEl) {
+                        sedesEl.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }, 150);
             });
         }
         if (lnkBienestar) {

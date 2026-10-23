@@ -1531,6 +1531,81 @@ button {
     color: var(--color-secondary);
 }
 
+/* Cards de navegación estilo lista para modales (ej. Ingreso 2027) */
+.modal-nav-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    margin-top: 1.25rem;
+}
+
+.modal-nav-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.05rem 1.35rem;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.modal-nav-card:hover {
+    background-color: #f1f5f9;
+    border-color: #cbd5e1;
+    transform: translateX(4px);
+}
+
+.modal-nav-card .modal-nav-text {
+    font-size: 1.02rem;
+    font-weight: 700;
+    color: #00558f;
+}
+
+.modal-nav-card .modal-nav-arrow {
+    width: 20px;
+    height: 20px;
+    color: #008f9c;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.modal-nav-card:hover .modal-nav-arrow {
+    transform: translateX(3px);
+}
+
+/* Tarjeta destacada (ej. Ya estoy inscripto/a) */
+.modal-nav-card.modal-nav-card-featured {
+    background-color: #f0fdfa;
+    border: 1.5px solid #008f9c;
+}
+
+.modal-nav-card.modal-nav-card-featured:hover {
+    background-color: #e6f7f5;
+    border-color: #007580;
+}
+
+.modal-nav-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    text-align: left;
+}
+
+.modal-nav-title {
+    font-size: 1.02rem;
+    font-weight: 700;
+    color: #00558f;
+}
+
+.modal-nav-subtitle {
+    font-size: 0.85rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
 /* 8. Panel de Novedades Completo (SPA Switch) */
 .view-panel {
     display: none;

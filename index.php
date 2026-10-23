@@ -960,7 +960,7 @@ if ($files) {
 
                 <!-- Columna 4: Sedes y Mini Mapa Interactivo -->
                 <div class="footer-col">
-                    <h3 class="footer-col-title">Nuestras Sedes</h3>
+                    <h3 class="footer-col-title" id="nuestras-sedes">Nuestras Sedes</h3>
                     <div class="footer-map-container">
                         <div class="sede-buttons" role="tablist">
                             <button class="btn-sede-tab active" id="btn-sede-nqn" role="tab" aria-selected="true" aria-controls="map-box" data-sede="nqn">Neuquén</button>
