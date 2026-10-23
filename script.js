@@ -1003,32 +1003,28 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         estudiante: {
             title: "Portal para Estudiantes",
+            icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#008f9c" stroke-width="2.2" style="width:24px!important;height:24px!important;min-width:24px!important;max-width:24px!important;display:inline-block;flex-shrink:0;"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>`,
             html: `
-                <div class="modal-info">
-                    <p style="margin-bottom: 1.25rem;">Acceso directo a las plataformas de gestión de cursado y exámenes oficiales, así como servicios de apoyo.</p>
-                    
-                    <h4 class="modal-section-title">Sistemas de Autogestión:</h4>
-                    <div class="modal-links-grid">
-                        <a href="https://guarani.uncoma.edu.ar" target="_blank" class="modal-action-link">
-                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z"></path></svg>
-                            SIU Guaraní Alumnos
+                <div class="modal-info" style="font-family: inherit;">
+                    <div style="display: flex; flex-direction: column; gap: 0.85rem;">
+                        <!-- 1. Trámites -->
+                        <a href="index.php#estudiantes-tramites" id="modal-lnk-tramites" class="modal-nav-card" style="display: flex; align-items: center; justify-content: space-between; padding: 1.05rem 1.35rem; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; text-decoration: none; cursor: pointer; box-sizing: border-box;">
+                            <span style="font-size: 1.02rem; font-weight: 700; color: #00558f;">Trámites</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#008f9c" stroke-width="2.5" style="width: 20px !important; height: 20px !important; min-width: 20px !important; max-width: 20px !important; display: block; flex-shrink: 0;"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
                         </a>
-                        <a href="https://pedco.uncoma.edu.ar" target="_blank" class="modal-action-link">
-                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3"></path></svg>
-                            Plataforma PEDCO
+
+                        <!-- 2. Calendario académico -->
+                        <a href="calendario-academico.php" class="modal-nav-card" style="display: flex; align-items: center; justify-content: space-between; padding: 1.05rem 1.35rem; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; text-decoration: none; cursor: pointer; box-sizing: border-box;">
+                            <span style="font-size: 1.02rem; font-weight: 700; color: #00558f;">Calendario académico</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#008f9c" stroke-width="2.5" style="width: 20px !important; height: 20px !important; min-width: 20px !important; max-width: 20px !important; display: block; flex-shrink: 0;"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
                         </a>
-                        <a href="#calendario" class="modal-action-link">
-                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                            Calendario Académico
-                        </a>
-                        <a href="#secretarias" class="modal-action-link" id="modal-lnk-bienestar">
-                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-                            Becas y Bienestar
+
+                        <!-- 3. Horarios -->
+                        <a href="horarios.php" class="modal-nav-card" style="display: flex; align-items: center; justify-content: space-between; padding: 1.05rem 1.35rem; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; text-decoration: none; cursor: pointer; box-sizing: border-box;">
+                            <span style="font-size: 1.02rem; font-weight: 700; color: #00558f;">Horarios</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#008f9c" stroke-width="2.5" style="width: 20px !important; height: 20px !important; min-width: 20px !important; max-width: 20px !important; display: block; flex-shrink: 0;"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
                         </a>
                     </div>
-                    
-                    <h4 class="modal-section-title">Certificados de Cursado:</h4>
-                    <p style="font-size: 0.9rem; margin-bottom: 1rem;">Para constancias de alumno regular o analíticos parciales, realizá la solicitud 100% online desde la sección trámites de tu perfil de SIU Guaraní.</p>
                 </div>
             `
         },
@@ -1176,6 +1172,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const lnkContactoOrg = document.getElementById('modal-lnk-contacto-org');
         const lnkInvestOrg = document.getElementById('modal-lnk-invest-org');
         const lnkSedes = document.getElementById('modal-lnk-sedes');
+        const lnkTramites = document.getElementById('modal-lnk-tramites');
 
         if (lnkCarreras) {
             lnkCarreras.addEventListener('click', (e) => {
@@ -1195,6 +1192,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         sedesEl.scrollIntoView({ behavior: 'smooth' });
                     }
                 }, 150);
+            });
+        }
+        if (lnkTramites) {
+            lnkTramites.addEventListener('click', (e) => {
+                e.preventDefault();
+                cerrarModalRol();
+                switchView('tramites');
             });
         }
         if (lnkBienestar) {
