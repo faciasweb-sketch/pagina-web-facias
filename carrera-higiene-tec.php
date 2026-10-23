@@ -522,7 +522,7 @@
                     <h4 style="margin: 0 0 0.35rem 0; font-size: 1.15rem; color: var(--color-primary); font-weight: 700;">Plan de Estudio Completo</h4>
                     <p style="margin: 0; font-size: 0.95rem; color: var(--color-text-muted);">Consultá o descargá la grilla de materias y correlatividades oficial en formato PDF.</p>
                 </div>
-                <a href="https://drive.google.com/file/d/1TVunSHcxn7Ae8y7_Q8m2W-aIiXnxV3lp/view?usp=sharing" class="btn-descarga-plan" target="_blank" rel="noopener noreferrer">
+                <a href="https://drive.google.com/file/d/1o1fTbmc9tBU167lu2uhcE0YgVtcrQNYi/view?usp=sharing" class="btn-descarga-plan" target="_blank" rel="noopener noreferrer">
                     <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
                     </svg>
