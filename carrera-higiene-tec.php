@@ -279,6 +279,60 @@
             min-width: 250px;
         }
 
+        .campo-laboral-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1rem 1.75rem;
+        }
+
+        .campo-laboral-list li {
+            position: relative;
+            padding-left: 1.75rem;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: #334155;
+        }
+
+        .campo-laboral-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #008f9c;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .perfil-egresado-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+        }
+
+        .perfil-egresado-list li {
+            position: relative;
+            padding-left: 1.75rem;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: #334155;
+        }
+
+        .perfil-egresado-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #008f9c;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
         /* Banner CTA al pie */
         .cta-inscripciones-box {
             background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
@@ -342,6 +396,9 @@
             .como-es-carrera-card,
             .carrera-info-card {
                 padding: 1.75rem 1.5rem;
+            }
+            .campo-laboral-list {
+                grid-template-columns: 1fr;
             }
             .dato-row {
                 flex-direction: column;
@@ -528,6 +585,57 @@
                     </svg>
                     Descargar Plan de Estudios
                 </a>
+            </div>
+        </section>
+
+        <!-- Perfil del egresado/a -->
+        <section class="carrera-info-card">
+            <h2 class="carrera-section-title">
+                <span>Perfil del egresado/a</span>
+            </h2>
+            <div class="carrera-card-body">
+                <p style="margin-bottom: 1.25rem;">
+                    Quienes egresan de la Tecnicatura están capacitados/as para:
+                </p>
+                <ul class="perfil-egresado-list">
+                    <li>Colaborar en la identificación, evaluación y control de riesgos laborales producidos en los ambientes, máquinas y materias primas en el proceso productivo.</li>
+                    <li>Identificar el tipo de instrumental necesario para controlar los ambientes de trabajo desde el punto de vista del riesgo determinado por la Ley de Higiene y Seguridad en el Trabajo.</li>
+                    <li>Participar en el diseño de acciones correctivas de ambientes de trabajo dentro del marco legislativo.</li>
+                    <li>Identificar los tipos y características de los elementos de protección personal.</li>
+                    <li>Colaborar en el diseño de procedimientos de trabajo seguro.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Alcances del título -->
+        <section class="carrera-info-card">
+            <h2 class="carrera-section-title">
+                <span>Alcances del título</span>
+            </h2>
+            <div class="carrera-card-body">
+                <p>
+                    El título habilita para participar en las funciones y obligaciones que establece la Ley de Higiene y Seguridad en el Trabajo y su reglamentación; colaborar en la identificación de riesgos, en el relevamiento de instalaciones y equipos, en la evaluación y el análisis de accidentes de trabajo y en el análisis de riesgos y enfermedades profesionales; supervisar la conservación de las instalaciones y los servicios destinados a los trabajadores; verificar el cumplimiento de las normas de higiene y seguridad; y colaborar en programas de capacitación y campañas de prevención.
+                </p>
+            </div>
+        </section>
+
+        <!-- Campo laboral -->
+        <section class="carrera-info-card">
+            <h2 class="carrera-section-title">
+                <span>Campo laboral</span>
+            </h2>
+            <div class="carrera-card-body">
+                <p style="margin-bottom: 1.25rem;">
+                    Empresas e instituciones públicas y privadas de todos los ámbitos laborales, colaborando con los servicios de higiene y seguridad en el trabajo. Entre otros:
+                </p>
+                <ul class="campo-laboral-list">
+                    <li>Industria y actividades productivas</li>
+                    <li>Construcción y obras</li>
+                    <li>Actividades rurales</li>
+                    <li>Hospitales y servicios de salud</li>
+                    <li>Comercios y locales de servicios</li>
+                    <li>Minería, petróleo y gas</li>
+                </ul>
             </div>
         </section>
 
