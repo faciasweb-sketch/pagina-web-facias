@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Departamento Docente | FACIAS</title>
-    <link rel="stylesheet" href="styles.css?v=1.1">
+    <title>Concursos y Selecciones Docentes | FACIAS</title>
+    <link rel="stylesheet" href="styles.css?v=3.0">
     <style>
         .page-container {
             max-width: 800px;
@@ -87,14 +87,14 @@
         </a>
 
         <div class="page-header">
-            <h1 class="page-title">Departamento Docente</h1>
-            <p class="page-subtitle">Secretaría Académica - Facultad de Ciencias del Ambiente y la Salud (UNCo)</p>
+            <h1 class="page-title">Concursos y Selecciones</h1>
+            <p class="page-subtitle">Departamento Docente - Facultad de Ciencias del Ambiente y la Salud (UNCo)</p>
         </div>
 
         <div class="placeholder-box">
             <span class="placeholder-icon">📋</span>
             <p class="placeholder-text">
-                Sección en desarrollo. Próximamente se cargará en esta página toda la información correspondiente al Departamento Docente de la FACIAS.
+                En esta sección se publicarán las convocatorias a concursos docentes, selecciones de cargos y resoluciones correspondientes.
             </p>
             <a href="index.php" class="btn btn-primary" style="text-decoration: none;">Volver a la Home</a>
         </div>

@@ -1030,27 +1030,38 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         docente: {
             title: "Portal para Docentes",
+            icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#008f9c" stroke-width="2.2" style="width:24px!important;height:24px!important;min-width:24px!important;max-width:24px!important;display:inline-block;flex-shrink:0;"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>`,
             html: `
-                <div class="modal-info">
-                    <p style="margin-bottom: 1.25rem;">Espacio de recursos técnicos y académicos para la gestión docente de cátedras y comisiones.</p>
-                    
-                    <h4 class="modal-section-title">Enlaces del Docente:</h4>
-                    <div class="modal-links-grid">
-                        <a href="https://guarani.uncoma.edu.ar" target="_blank" class="modal-action-link">
-                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z"></path></svg>
-                            SIU Guaraní Autogestión
+                <div class="modal-info" style="font-family: inherit;">
+                    <h4 style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin: 0 0 0.85rem 0;">Sistemas</h4>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.85rem; margin-bottom: 1.75rem;">
+                        <!-- Oficina digital -->
+                        <a href="https://oficinadigital.fi.uncoma.edu.ar/autogestion/" target="_blank" rel="noopener noreferrer" class="modal-nav-card" style="display: flex; align-items: center; justify-content: flex-start; padding: 1.05rem 1.25rem; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; text-decoration: none; cursor: pointer; box-sizing: border-box;">
+                            <span style="font-size: 1.02rem; font-weight: 700; color: #00558f;">Oficina digital</span>
                         </a>
-                        <a href="https://facias.uncoma.edu.ar/?_task=mail" target="_blank" class="modal-action-link">
-                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                            Correo Webmail FACIAS
+
+                        <!-- PEDCO -->
+                        <a href="https://pedco.uncoma.edu.ar/" target="_blank" rel="noopener noreferrer" class="modal-nav-card" style="display: flex; align-items: center; justify-content: flex-start; padding: 1.05rem 1.25rem; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; text-decoration: none; cursor: pointer; box-sizing: border-box;">
+                            <span style="font-size: 1.02rem; font-weight: 700; color: #00558f;">PEDCO</span>
                         </a>
-                        <a href="https://pedco.uncoma.edu.ar" target="_blank" class="modal-action-link">
-                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3"></path></svg>
-                            Aulas Virtuales PEDCO
+
+                        <!-- Webmail -->
+                        <a href="https://facias.uncoma.edu.ar/" target="_blank" rel="noopener noreferrer" class="modal-nav-card" style="display: flex; align-items: center; justify-content: flex-start; padding: 1.05rem 1.25rem; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; text-decoration: none; cursor: pointer; box-sizing: border-box;">
+                            <span style="font-size: 1.02rem; font-weight: 700; color: #00558f;">Webmail</span>
                         </a>
-                        <a href="#investigacion" class="modal-action-link" id="modal-lnk-invest">
-                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547"></path></svg>
-                            Secretaría de Investigación
+
+                        <!-- SIU Guarani -->
+                        <a href="https://siufacias.uncoma.edu.ar/facias/" target="_blank" rel="noopener noreferrer" class="modal-nav-card" style="display: flex; align-items: center; justify-content: flex-start; padding: 1.05rem 1.25rem; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; text-decoration: none; cursor: pointer; box-sizing: border-box;">
+                            <span style="font-size: 1.02rem; font-weight: 700; color: #00558f;">SIU Guaraní</span>
+                        </a>
+                    </div>
+
+                    <h4 style="font-size: 1.15rem; font-weight: 700; color: #1e293b; margin: 0 0 0.85rem 0;">Información</h4>
+                    <div style="display: flex; flex-direction: column; gap: 0.85rem;">
+                        <!-- Concursos y Selecciones -->
+                        <a href="dpto-docente.php" class="modal-nav-card" style="display: flex; align-items: center; justify-content: space-between; padding: 1.05rem 1.35rem; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; text-decoration: none; cursor: pointer; box-sizing: border-box;">
+                            <span style="font-size: 1.02rem; font-weight: 700; color: #00558f;">Concursos y Selecciones</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#008f9c" stroke-width="2.5" style="width: 20px !important; height: 20px !important; min-width: 20px !important; max-width: 20px !important; display: block; flex-shrink: 0;"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
                         </a>
                     </div>
                 </div>
