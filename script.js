@@ -963,43 +963,39 @@ document.addEventListener('DOMContentLoaded', () => {
     const rolesData = {
         ingresante: {
             title: "Ingreso 2027",
-            icon: `<svg style="width:26px;height:26px;color:#008f9c;flex-shrink:0;" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>`,
+            icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#008f9c" stroke-width="2.2" style="width:24px!important;height:24px!important;min-width:24px!important;max-width:24px!important;display:inline-block;flex-shrink:0;"><path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>`,
             html: `
-                <div class="modal-info">
+                <div class="modal-info" style="font-family: inherit;">
                     <p style="margin-bottom: 1.35rem; font-size: 0.98rem; line-height: 1.6; color: #475569;">
                         Si querés estudiar en FACIAS, empezá por acá. Las inscripciones 2027 abren el 1 de noviembre.
                     </p>
                     
-                    <div class="modal-nav-stack">
-                        <a href="inscripciones.php" class="modal-nav-card">
-                            <span class="modal-nav-text">Inscripciones 2027: fechas y pasos</span>
-                            <svg class="modal-nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
-                            </svg>
+                    <div style="display: flex; flex-direction: column; gap: 0.85rem;">
+                        <!-- 1. Inscripciones -->
+                        <a href="inscripciones.php" class="modal-nav-card" style="display: flex; align-items: center; justify-content: space-between; padding: 1.05rem 1.35rem; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; text-decoration: none; cursor: pointer; box-sizing: border-box;">
+                            <span style="font-size: 1.02rem; font-weight: 700; color: #00558f;">Inscripciones 2027: fechas y pasos</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#008f9c" stroke-width="2.5" style="width: 20px !important; height: 20px !important; min-width: 20px !important; max-width: 20px !important; display: block; flex-shrink: 0;"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
                         </a>
 
-                        <a href="index.php#carreras" class="modal-nav-card" id="modal-lnk-carreras">
-                            <span class="modal-nav-text">Carreras</span>
-                            <svg class="modal-nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
-                            </svg>
+                        <!-- 2. Carreras -->
+                        <a href="index.php#carreras" id="modal-lnk-carreras" class="modal-nav-card" style="display: flex; align-items: center; justify-content: space-between; padding: 1.05rem 1.35rem; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; text-decoration: none; cursor: pointer; box-sizing: border-box;">
+                            <span style="font-size: 1.02rem; font-weight: 700; color: #00558f;">Carreras</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#008f9c" stroke-width="2.5" style="width: 20px !important; height: 20px !important; min-width: 20px !important; max-width: 20px !important; display: block; flex-shrink: 0;"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
                         </a>
 
-                        <a href="#nuestras-sedes" class="modal-nav-card" id="modal-lnk-sedes">
-                            <span class="modal-nav-text">Sedes: Neuquén, Allen y Choele Choel</span>
-                            <svg class="modal-nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
-                            </svg>
+                        <!-- 3. Sedes -->
+                        <a href="#nuestras-sedes" id="modal-lnk-sedes" class="modal-nav-card" style="display: flex; align-items: center; justify-content: space-between; padding: 1.05rem 1.35rem; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; text-decoration: none; cursor: pointer; box-sizing: border-box;">
+                            <span style="font-size: 1.02rem; font-weight: 700; color: #00558f;">Sedes: Neuquén, Allen y Choele Choel</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#008f9c" stroke-width="2.5" style="width: 20px !important; height: 20px !important; min-width: 20px !important; max-width: 20px !important; display: block; flex-shrink: 0;"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
                         </a>
 
-                        <a href="ya-inscripto.php" class="modal-nav-card modal-nav-card-featured">
-                            <div class="modal-nav-content">
-                                <span class="modal-nav-title">Ya estoy inscripto/a</span>
-                                <span class="modal-nav-subtitle">GPF · Guía Para las FACIAS</span>
+                        <!-- 4. Ya estoy inscripto/a -->
+                        <a href="ya-inscripto.php" class="modal-nav-card modal-nav-card-featured" style="display: flex; align-items: center; justify-content: space-between; padding: 1.05rem 1.35rem; background-color: #f0fdfa; border: 1.5px solid #008f9c; border-radius: 12px; text-decoration: none; cursor: pointer; box-sizing: border-box;">
+                            <div style="display: flex; flex-direction: column; gap: 0.25rem; text-align: left;">
+                                <span style="font-size: 1.02rem; font-weight: 700; color: #00558f;">Ya estoy inscripto/a</span>
+                                <span style="font-size: 0.85rem; color: #64748b; font-weight: 500;">GPF · Guía Para las FACIAS</span>
                             </div>
-                            <svg class="modal-nav-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
-                            </svg>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#008f9c" stroke-width="2.5" style="width: 20px !important; height: 20px !important; min-width: 20px !important; max-width: 20px !important; display: block; flex-shrink: 0;"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
                         </a>
                     </div>
                 </div>

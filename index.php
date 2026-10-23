@@ -92,7 +92,7 @@ if ($files) {
     <meta name="author" content="Universidad Nacional del Comahue">
     
     <!-- Hojas de estilo -->
-    <link rel="stylesheet" href="styles.css?v=1.5">
+    <link rel="stylesheet" href="styles.css?v=3.0">
 </head>
 <body>
 
@@ -1036,6 +1036,6 @@ if ($files) {
     </script>
 
     <!-- Script de interactividad -->
-    <script src="script.js?v=2.3"></script>
+    <script src="script.js?v=3.0"></script>
 </body>
 </html>
