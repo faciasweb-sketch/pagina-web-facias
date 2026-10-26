@@ -208,8 +208,6 @@ function get_novedad_meta($item) {
                             <li><a href="#sec-bienestar" class="dropdown-item" data-action="sec-bienestar">Bienestar</a></li>
                         </ul>
                     </li>
-                    <!-- Ingresantes -->
-                    <li><a href="#ingresantes" class="nav-link" id="nav-item-ingresantes">Ingresantes</a></li>
                 </ul>
             </nav>
 
