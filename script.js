@@ -865,8 +865,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btnNovedadesCompleto) {
         btnNovedadesCompleto.addEventListener('click', () => {
             switchView('novedades');
-            // Filtrar por "all" por defecto
-            filterNews('all');
+            // Reset de filtros a Todos
+            filterNews('Todos');
         });
     }
 
@@ -1261,45 +1261,109 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // ==========================================
-    // 5. FILTRADO DE NOVEDADES EN TIEMPO REAL
+    // 5. FILTRADO DE NOVEDADES EN TIEMPO REAL (Público y Tema)
     // ==========================================
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const filterableNewsGrid = document.getElementById('filterable-news-grid');
-    const newsCards = filterableNewsGrid.querySelectorAll('.news-card');
+    let currentFilterPublico = 'Todos';
+    let currentFilterTema = 'Todos';
 
-    function filterNews(categoria) {
-        newsCards.forEach(card => {
-            const cardCategory = card.getAttribute('data-category');
-            
-            if (categoria === 'all' || cardCategory === categoria) {
+    const filterableNewsGrid = document.getElementById('filterable-news-grid');
+    const newsFilterPills = document.querySelectorAll('.news-filter-pill');
+
+    function applyDualNewsFilter() {
+        if (!filterableNewsGrid) return;
+        const cards = filterableNewsGrid.querySelectorAll('.news-card');
+        const pubNorm = currentFilterPublico.toLowerCase().trim();
+        const temaNorm = currentFilterTema.toLowerCase().trim();
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+            const cardPub = (card.getAttribute('data-publico') || card.getAttribute('data-category') || 'Todos')
+                .toLowerCase()
+                .split(',')
+                .map(s => s.trim());
+            const cardTema = (card.getAttribute('data-tema') || 'Todos')
+                .toLowerCase()
+                .split(',')
+                .map(s => s.trim());
+
+            const matchPublico = (pubNorm === 'todos') || cardPub.includes('todos') || cardPub.includes(pubNorm);
+            const matchTema = (temaNorm === 'todos') || cardTema.includes('todos') || cardTema.includes(temaNorm);
+
+            if (matchPublico && matchTema) {
                 card.style.display = 'flex';
-                // Animación fade sutil
                 card.style.opacity = '0';
                 setTimeout(() => {
-                    card.style.transition = 'opacity 0.3s ease';
+                    card.style.transition = 'opacity 0.25s ease';
                     card.style.opacity = '1';
-                }, 50);
+                }, 40);
+                visibleCount++;
             } else {
                 card.style.display = 'none';
             }
         });
 
-        // Actualizar botón de filtro activo
-        filterButtons.forEach(btn => {
-            if (btn.getAttribute('data-filter') === categoria) {
-                btn.classList.add('active');
-            } else {
-                btn.classList.remove('active');
-            }
-        });
+        // Alerta de no resultados
+        let noResults = document.getElementById('news-no-results-alert');
+        if (!noResults && filterableNewsGrid) {
+            noResults = document.createElement('div');
+            noResults.id = 'news-no-results-alert';
+            noResults.style.gridColumn = '1 / -1';
+            noResults.style.textAlign = 'center';
+            noResults.style.padding = '3.5rem 1rem';
+            noResults.style.color = 'var(--color-text-muted)';
+            noResults.style.fontSize = '1.05rem';
+            noResults.innerHTML = '<p style="margin: 0;">No se encontraron novedades para los filtros seleccionados.</p>';
+            filterableNewsGrid.appendChild(noResults);
+        }
+        if (noResults) {
+            noResults.style.display = (visibleCount === 0) ? 'block' : 'none';
+        }
     }
 
-    filterButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const filterVal = btn.getAttribute('data-filter');
-            filterNews(filterVal);
+    newsFilterPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+            const group = pill.getAttribute('data-filter-group');
+            const val = pill.getAttribute('data-value');
+
+            // Actualizar clase active en las píldoras del mismo grupo
+            document.querySelectorAll(`.news-filter-pill[data-filter-group="${group}"]`).forEach(p => {
+                p.classList.remove('active');
+            });
+            pill.classList.add('active');
+
+            if (group === 'publico') {
+                currentFilterPublico = val;
+            } else if (group === 'tema') {
+                currentFilterTema = val;
+            }
+
+            applyDualNewsFilter();
         });
     });
+
+    function filterNews(filtro) {
+        if (!filtro || filtro === 'all' || filtro.toLowerCase() === 'todos') {
+            currentFilterPublico = 'Todos';
+            currentFilterTema = 'Todos';
+            document.querySelectorAll('.news-filter-pill').forEach(p => {
+                if (p.getAttribute('data-value') === 'Todos') {
+                    p.classList.add('active');
+                } else {
+                    p.classList.remove('active');
+                }
+            });
+            applyDualNewsFilter();
+            return;
+        }
+
+        const matchPill = document.querySelector(`.news-filter-pill[data-value="${filtro}"]`);
+        if (matchPill) {
+            matchPill.click();
+        } else {
+            currentFilterPublico = filtro;
+            applyDualNewsFilter();
+        }
+    }
 
 
     // ==========================================
@@ -1397,9 +1461,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         modalNewsTitle.textContent = data.title;
         
-        // Normalizar los campos de categoría, fecha, imagen y cuerpo
-        const rawCategory = data.categoria || data.category || 'Novedad';
-        const prettyCategory = rawCategory.charAt(0).toUpperCase() + rawCategory.slice(1).toLowerCase();
+        // Normalizar los campos de categoría / público / tema, fecha, imagen y cuerpo
+        let displayCategory = 'Novedad';
+        if (data.tema && data.tema !== 'Todos') {
+            displayCategory = data.tema;
+        } else if (data.publico && data.publico !== 'Todos') {
+            displayCategory = data.publico;
+        } else if (data.categoria) {
+            displayCategory = data.categoria.charAt(0).toUpperCase() + data.categoria.slice(1).toLowerCase();
+        }
         
         const rawDate = data.fecha || data.date || '';
         const imgUrl = data.imagen || data.image || '';
@@ -1418,7 +1488,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <img src="${imgUrl}" alt="${data.title}" style="width:100%; height:100%; object-fit:cover;">
             </div>
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem; font-size:0.85rem;">
-                <span style="background-color: var(--color-secondary); color: white; padding: 0.25rem 0.75rem; border-radius: 50px; font-weight:700;">${prettyCategory}</span>
+                <span style="background-color: var(--color-secondary); color: white; padding: 0.25rem 0.75rem; border-radius: 50px; font-weight:700;">${displayCategory}</span>
                 <span style="color:var(--color-text-muted); font-weight:600;">${rawDate}</span>
             </div>
             <div style="line-height:1.7; color: var(--color-text-dark);">

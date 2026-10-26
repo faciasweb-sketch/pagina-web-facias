@@ -29,7 +29,30 @@ $categoria_map = [
     'DPTO_DOCENTE' => 'Dpto. Docente'
 ];
 
-$cat_pretty = isset($categoria_map[$noticia['categoria']]) ? $categoria_map[$noticia['categoria']] : ucfirst(strtolower($noticia['categoria']));
+$publico = isset($noticia['publico']) && !empty($noticia['publico']) ? $noticia['publico'] : 'Todos';
+$tema = isset($noticia['tema']) && !empty($noticia['tema']) ? $noticia['tema'] : 'Todos';
+
+if (is_array($publico)) $publico = implode(', ', $publico);
+if (is_array($tema)) $tema = implode(', ', $tema);
+
+// Fallbacks para publicaciones antiguas
+if ($publico === 'Todos' && isset($noticia['categoria'])) {
+    $cat = strtolower($noticia['categoria']);
+    if (in_array($cat, ['estudiantes', 'ambiente', 'salud'])) $publico = 'Estudiantes';
+    elseif (in_array($cat, ['docentes', 'dpto. docente', 'dpto_docente'])) $publico = 'Docentes';
+}
+if ($tema === 'Todos' && isset($noticia['title'])) {
+    $t = strtolower($noticia['title']);
+    if (strpos($t, 'beca') !== false) $tema = 'Becas';
+    elseif (strpos($t, 'concurso') !== false) $tema = 'Concursos docentes';
+    elseif (strpos($t, 'horario') !== false) $tema = 'Horarios';
+    elseif (strpos($t, 'mesa') !== false || strpos($t, 'examen') !== false) $tema = 'Mesas de examen';
+    elseif (strpos($t, 'convocatoria') !== false) $tema = 'Convocatorias';
+    elseif (strpos($t, 'posgrado') !== false) $tema = 'Posgrado';
+    elseif (strpos($t, 'curso') !== false || strpos($t, 'seminario') !== false) $tema = 'Cursos';
+}
+
+$cat_pretty = ($tema !== 'Todos') ? $tema : (($publico !== 'Todos') ? $publico : (isset($categoria_map[$noticia['categoria']]) ? $categoria_map[$noticia['categoria']] : 'Institucional'));
 
 // Formatear el contenido del body a párrafos HTML
 $body_html = '';
@@ -46,7 +69,7 @@ if (isset($noticia['body'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($noticia['title']); ?> | FACIAS</title>
-    <link rel="stylesheet" href="styles.css?v=1.1">
+    <link rel="stylesheet" href="styles.css?v=3.1">
     <style>
         .article-container {
             max-width: 800px;
@@ -148,8 +171,16 @@ if (isset($noticia['body'])) {
 
         <article>
             <header class="article-header">
-                <div class="article-meta">
-                    <span class="article-category"><?php echo htmlspecialchars($cat_pretty); ?></span>
+                <div class="article-meta" style="gap: 0.6rem; flex-wrap: wrap; align-items: center;">
+                    <?php if ($tema !== 'Todos'): ?>
+                        <span class="article-category"><?php echo htmlspecialchars($tema); ?></span>
+                    <?php endif; ?>
+                    <?php if ($publico !== 'Todos'): ?>
+                        <span class="article-category" style="background-color: var(--color-secondary);"><?php echo htmlspecialchars($publico); ?></span>
+                    <?php endif; ?>
+                    <?php if ($tema === 'Todos' && $publico === 'Todos'): ?>
+                        <span class="article-category"><?php echo htmlspecialchars($cat_pretty); ?></span>
+                    <?php endif; ?>
                     <span class="article-date"><?php echo htmlspecialchars($noticia['fecha']); ?></span>
                 </div>
                 <h1 class="article-title"><?php echo htmlspecialchars($noticia['title']); ?></h1>

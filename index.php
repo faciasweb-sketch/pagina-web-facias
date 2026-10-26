@@ -79,6 +79,48 @@ if ($files) {
         }
     }
 }
+
+// Función helper para normalizar Público, Tema y etiqueta de cada Novedad
+function get_novedad_meta($item) {
+    $publico = isset($item['publico']) && !empty($item['publico']) ? $item['publico'] : 'Todos';
+    $tema = isset($item['tema']) && !empty($item['tema']) ? $item['tema'] : 'Todos';
+
+    if (is_array($publico)) {
+        $publico = implode(', ', $publico);
+    }
+    if (is_array($tema)) {
+        $tema = implode(', ', $tema);
+    }
+
+    // Retrocompatibilidad con publicaciones antiguas que solo tenían 'categoria'
+    if ($publico === 'Todos' && isset($item['categoria'])) {
+        $cat = strtolower($item['categoria']);
+        if (in_array($cat, ['estudiantes', 'ambiente', 'salud'])) {
+            $publico = 'Estudiantes';
+        } elseif (in_array($cat, ['docentes', 'dpto. docente', 'dpto_docente'])) {
+            $publico = 'Docentes';
+        }
+    }
+
+    if ($tema === 'Todos' && isset($item['title'])) {
+        $t = strtolower($item['title']);
+        if (strpos($t, 'beca') !== false) $tema = 'Becas';
+        elseif (strpos($t, 'concurso') !== false) $tema = 'Concursos docentes';
+        elseif (strpos($t, 'horario') !== false) $tema = 'Horarios';
+        elseif (strpos($t, 'mesa') !== false || strpos($t, 'examen') !== false) $tema = 'Mesas de examen';
+        elseif (strpos($t, 'convocatoria') !== false) $tema = 'Convocatorias';
+        elseif (strpos($t, 'posgrado') !== false) $tema = 'Posgrado';
+        elseif (strpos($t, 'curso') !== false || strpos($t, 'seminario') !== false) $tema = 'Cursos';
+    }
+
+    $badge = ($tema !== 'Todos') ? $tema : (($publico !== 'Todos') ? $publico : 'Institucional');
+
+    return [
+        'publico' => $publico,
+        'tema' => $tema,
+        'badge' => $badge
+    ];
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -92,7 +134,7 @@ if ($files) {
     <meta name="author" content="Universidad Nacional del Comahue">
     
     <!-- Hojas de estilo -->
-    <link rel="stylesheet" href="styles.css?v=3.0">
+    <link rel="stylesheet" href="styles.css?v=3.1">
 </head>
 <body>
 
@@ -363,27 +405,16 @@ if ($files) {
                     <div class="news-grid">
                         <?php
                         $count = 0;
-                        $categoria_map = [
-                            'AMBIENTE' => 'Estudiantes',
-                            'SALUD' => 'Estudiantes',
-                            'INSTITUCIONAL' => 'Académica',
-                            'Estudiantes' => 'Estudiantes',
-                            'Academica' => 'Académica',
-                            'Dpto. Docente' => 'Dpto. Docente',
-                            'ESTUDIANTES' => 'Estudiantes',
-                            'ACADEMICA' => 'Académica',
-                            'DPTO_DOCENTE' => 'Dpto. Docente'
-                        ];
                         foreach ($novedades as $item):
                             if ($count >= 3) break;
-                            $cat_pretty = isset($categoria_map[$item['categoria']]) ? $categoria_map[$item['categoria']] : ucfirst(strtolower($item['categoria']));
+                            $meta = get_novedad_meta($item);
                             $count++;
                         ?>
                             <article class="news-card">
                                 <a href="noticia.php?id=<?php echo urlencode($item['id']); ?>" target="_blank" rel="noopener noreferrer" style="display: block; overflow: hidden; border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;">
                                     <div class="news-img-wrapper">
                                         <img src="<?php echo htmlspecialchars($item['imagen']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>" class="news-img" loading="lazy">
-                                        <span class="news-badge"><?php echo htmlspecialchars($cat_pretty); ?></span>
+                                        <span class="news-badge"><?php echo htmlspecialchars($meta['badge']); ?></span>
                                     </div>
                                 </a>
                                 <div class="news-body">
@@ -391,7 +422,7 @@ if ($files) {
                                     <h3 class="news-card-title"><?php echo htmlspecialchars($item['title']); ?></h3>
                                     <a href="noticia.php?id=<?php echo urlencode($item['id']); ?>" target="_blank" rel="noopener noreferrer" class="news-link">
                                         Leer más 
-                                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+                                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 18px !important; height: 18px !important; display: inline-block; flex-shrink: 0;"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
                                     </a>
                                 </div>
                             </article>
@@ -502,25 +533,48 @@ if ($files) {
                     
                     <h2 class="section-title">Todas las Novedades</h2>
                     
-                    <!-- Botonera de Filtro -->
-                    <div class="filter-container">
-                        <button class="filter-btn active" data-filter="all">Todas</button>
-                        <button class="filter-btn" data-filter="Estudiantes">Estudiantes</button>
-                        <button class="filter-btn" data-filter="Académica">Académica</button>
-                        <button class="filter-btn" data-filter="Dpto. Docente">Dpto. Docente</button>
+                    <!-- Filtros Novedades: Público y Tema -->
+                    <div class="news-filters-wrapper">
+                        <!-- Fila 1: PÚBLICO -->
+                        <div class="news-filter-row">
+                            <span class="news-filter-label">PÚBLICO</span>
+                            <div class="news-filter-pills" id="pills-publico">
+                                <button type="button" class="news-filter-pill active" data-filter-group="publico" data-value="Todos">Todos</button>
+                                <button type="button" class="news-filter-pill" data-filter-group="publico" data-value="Ingresantes">Ingresantes</button>
+                                <button type="button" class="news-filter-pill" data-filter-group="publico" data-value="Estudiantes">Estudiantes</button>
+                                <button type="button" class="news-filter-pill" data-filter-group="publico" data-value="Docentes">Docentes</button>
+                                <button type="button" class="news-filter-pill" data-filter-group="publico" data-value="Graduados">Graduados</button>
+                                <button type="button" class="news-filter-pill" data-filter-group="publico" data-value="Organizaciones">Organizaciones</button>
+                            </div>
+                        </div>
+
+                        <!-- Fila 2: TEMA -->
+                        <div class="news-filter-row">
+                            <span class="news-filter-label">TEMA</span>
+                            <div class="news-filter-pills" id="pills-tema">
+                                <button type="button" class="news-filter-pill active" data-filter-group="tema" data-value="Todos">Todos</button>
+                                <button type="button" class="news-filter-pill" data-filter-group="tema" data-value="Concursos docentes">Concursos docentes</button>
+                                <button type="button" class="news-filter-pill" data-filter-group="tema" data-value="Mesas de examen">Mesas de examen</button>
+                                <button type="button" class="news-filter-pill" data-filter-group="tema" data-value="Horarios">Horarios</button>
+                                <button type="button" class="news-filter-pill" data-filter-group="tema" data-value="Convocatorias">Convocatorias</button>
+                                <button type="button" class="news-filter-pill" data-filter-group="tema" data-value="Becas">Becas</button>
+                                <button type="button" class="news-filter-pill" data-filter-group="tema" data-value="Posgrado">Posgrado</button>
+                                <button type="button" class="news-filter-pill" data-filter-group="tema" data-value="Cursos">Cursos</button>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Grilla Completa de Novedades -->
                     <div class="news-grid" id="filterable-news-grid">
                         <?php
                         foreach ($novedades as $item):
-                            $cat_pretty = isset($categoria_map[$item['categoria']]) ? $categoria_map[$item['categoria']] : ucfirst(strtolower($item['categoria']));
+                            $meta = get_novedad_meta($item);
                         ?>
-                            <article class="news-card" data-category="<?php echo htmlspecialchars($cat_pretty); ?>">
+                            <article class="news-card" data-publico="<?php echo htmlspecialchars($meta['publico']); ?>" data-tema="<?php echo htmlspecialchars($meta['tema']); ?>">
                                 <a href="noticia.php?id=<?php echo urlencode($item['id']); ?>" target="_blank" rel="noopener noreferrer" style="display: block; overflow: hidden; border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;">
                                     <div class="news-img-wrapper">
                                         <img src="<?php echo htmlspecialchars($item['imagen']); ?>" alt="<?php echo htmlspecialchars($item['title']); ?>" class="news-img" loading="lazy">
-                                        <span class="news-badge"><?php echo htmlspecialchars($cat_pretty); ?></span>
+                                        <span class="news-badge"><?php echo htmlspecialchars($meta['badge']); ?></span>
                                     </div>
                                 </a>
                                 <div class="news-body">
@@ -528,7 +582,7 @@ if ($files) {
                                     <h3 class="news-card-title"><?php echo htmlspecialchars($item['title']); ?></h3>
                                     <a href="noticia.php?id=<?php echo urlencode($item['id']); ?>" target="_blank" rel="noopener noreferrer" class="news-link">
                                         Leer más 
-                                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+                                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width: 18px !important; height: 18px !important; display: inline-block; flex-shrink: 0;"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
                                     </a>
                                 </div>
                             </article>
@@ -1036,6 +1090,6 @@ if ($files) {
     </script>
 
     <!-- Script de interactividad -->
-    <script src="script.js?v=3.0"></script>
+    <script src="script.js?v=3.1"></script>
 </body>
 </html>

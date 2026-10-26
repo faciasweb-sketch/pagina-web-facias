@@ -1,6 +1,9 @@
 {
   "title": "PRUEBA DE LA NOVEDAD",
+  "publico": "Todos",
+  "tema": "Todos",
   "categoria": "INSTITUCIONAL",
+  "fecha": "13 de Julio, 2026",
   "imagen": "/Assets/bienestar_bg.jpg",
   "body": "ESTO ES UN PRUEBA A VER SI LO PUBLICA EN LA PAGINA WEB"
 }

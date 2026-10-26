@@ -1,8 +1,8 @@
 backend:
- name: git-gateway
- repo: faciasweb-sketch/pagina-web-facias
- branch: main
- site_domain: precious-donut-ae4543.netlify.app
+  name: git-gateway
+  repo: faciasweb-sketch/pagina-web-facias
+  branch: main
+  site_domain: precious-donut-ae4543.netlify.app
 
 media_folder: "Assets"
 public_folder: "/Assets"
@@ -17,7 +17,30 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Título de la Novedad", name: "title", widget: "string" }
-      - { label: "Categoría", name: "categoria", widget: "select", options: ["Estudiantes", "Academica", "Dpto. Docente"] }
+      - label: "Público"
+        name: "publico"
+        widget: "select"
+        options:
+          - "Todos"
+          - "Ingresantes"
+          - "Estudiantes"
+          - "Docentes"
+          - "Graduados"
+          - "Organizaciones"
+        default: "Todos"
+      - label: "Tema"
+        name: "tema"
+        widget: "select"
+        options:
+          - "Todos"
+          - "Concursos docentes"
+          - "Mesas de examen"
+          - "Horarios"
+          - "Convocatorias"
+          - "Becas"
+          - "Posgrado"
+          - "Cursos"
+        default: "Todos"
       - { label: "Fecha de Publicación", name: "fecha", widget: "date", format: "DD de MMMM, YYYY" }
       - { label: "Imagen de Portada", name: "imagen", widget: "image" }
       - { label: "Contenido/Cuerpo", name: "body", widget: "text" }
