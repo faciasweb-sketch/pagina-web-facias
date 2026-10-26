@@ -878,6 +878,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Botón "Volver" en canales de contacto
+    const btnContactoBackHome = document.getElementById('btn-contacto-back-home');
+    if (btnContactoBackHome) {
+        btnContactoBackHome.addEventListener('click', () => {
+            switchView('inicio');
+        });
+    }
+
 
     // ==========================================
     // 3. SELECCIÓN DE SEDES (Sincronización Bidireccional)

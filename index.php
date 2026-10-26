@@ -174,6 +174,7 @@ function get_novedad_meta($item) {
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="#estudiantes-mesas" class="dropdown-item" data-action="mesas">Mesas de examen</a></li>
+                            <li><a href="horarios.php" class="dropdown-item">Horarios</a></li>
                             <li><a href="#estudiantes-tramites" class="dropdown-item" data-action="estudiantes-tramites">Trámites</a></li>
                             <li><a href="#estudiantes-consultas" class="dropdown-item" data-action="consultas">Canales de consultas</a></li>
                         </ul>
@@ -808,47 +809,188 @@ function get_novedad_meta($item) {
 
         </section>
 
-        <!-- CONTACTO -->
+        <!-- CONTACTO / CANALES DE CONSULTAS -->
         <section class="section" id="contacto" style="display:none;">
             <div class="container">
-                <h2 class="section-title">Contacto y Ubicación</h2>
+                <!-- Botón Volver -->
+                <button class="btn-back-home" id="btn-contacto-back-home" style="margin-bottom: 2rem; display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 600; color: var(--color-primary); background: none; border: none; cursor: pointer; padding: 0.5rem 0;">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    Volver al Inicio
+                </button>
+
+                <h2 class="section-title">Canales de Consultas</h2>
+                <p style="text-align: center; color: var(--color-text-muted); max-width: 650px; margin: -1.5rem auto 3rem; font-size: 1.05rem;">
+                    Directorio de correos electrónicos oficiales de secretarías, departamentos y áreas de FACIAS para la atención de consultas y trámites de estudiantes.
+                </p>
                 
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem;" class="responsive-two-cols">
-                    <!-- Formulario de contacto -->
-                    <div style="background: var(--color-bg-light); padding: 2.5rem; border-radius: var(--border-radius-lg); border: 1px solid var(--color-border);">
-                        <h3 style="color: var(--color-primary); font-size: 1.4rem; margin-bottom: 1.5rem;">Escribinos tu consulta</h3>
-                        <form id="contact-form" style="display: flex; flex-direction: column; gap: 1.25rem;">
-                            <div>
-                                <label for="name" style="font-weight: 600; font-size: 0.9rem; display: block; margin-bottom: 0.5rem;">Nombre Completo:</label>
-                                <input type="text" id="name" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--border-radius-sm); outline: none;" placeholder="Ej. Juan Pérez">
-                            </div>
+                <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 3rem; margin-top: 1rem;" class="responsive-two-cols">
+                    <!-- Directorio de Contacto por Área -->
+                    <div style="background: var(--color-bg-light); padding: 2.25rem; border-radius: var(--border-radius-lg); border: 1px solid var(--color-border);">
+                        <h3 style="color: var(--color-primary); font-size: 1.35rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.6rem;">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            Directorio de Contacto por Área
+                        </h3>
+
+                        <div class="consultas-directory-list" style="display: flex; flex-direction: column; gap: 0.85rem;">
                             
-                            <div>
-                                <label for="email" style="font-weight: 600; font-size: 0.9rem; display: block; margin-bottom: 0.5rem;">Correo Electrónico:</label>
-                                <input type="email" id="email" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--border-radius-sm); outline: none;" placeholder="Ej. juan@correo.com">
+                            <!-- 1. Decanato -->
+                            <div class="consulta-item-card" style="background: #ffffff; padding: 1rem 1.25rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid var(--color-secondary);">
+                                <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.35rem;">Decanato</strong>
+                                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                                    <a href="mailto:decanato@facias.uncoma.edu.ar" style="color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">decanato@facias.uncoma.edu.ar</a>
+                                    <a href="mailto:decafacias@gmail.com" style="color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">decafacias@gmail.com</a>
+                                </div>
                             </div>
 
-                            <div>
-                                <label for="subject" style="font-weight: 600; font-size: 0.9rem; display: block; margin-bottom: 0.5rem;">Asunto o Rol:</label>
-                                <select id="subject" style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--border-radius-sm); outline: none; background: white;">
-                                    <option value="consulta">Consulta General</option>
-                                    <option value="ingreso">Inscripción / Ingreso</option>
-                                    <option value="tramite">Trámite Académico</option>
-                                    <option value="investigacion">Investigación</option>
-                                </select>
+                            <!-- 2. Secretaría Académica -->
+                            <div class="consulta-item-card" style="background: #ffffff; padding: 1rem 1.25rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid var(--color-secondary);">
+                                <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.35rem;">Secretaría Académica</strong>
+                                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                                    <a href="mailto:secretariaacademicafacias@hotmail.com" style="color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">secretariaacademicafacias@hotmail.com</a>
+                                </div>
                             </div>
 
-                            <div>
-                                <label for="message" style="font-weight: 600; font-size: 0.9rem; display: block; margin-bottom: 0.5rem;">Mensaje:</label>
-                                <textarea id="message" rows="5" required style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: var(--border-radius-sm); outline: none; resize: vertical;" placeholder="Escribí tu consulta detallada acá..."></textarea>
+                            <!-- 3. Consejo Directivo -->
+                            <div class="consulta-item-card" style="background: #ffffff; padding: 1rem 1.25rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid var(--color-secondary);">
+                                <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.35rem;">Consejo Directivo</strong>
+                                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                                    <a href="mailto:consejodirectivofacias@yahoo.com.ar" style="color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">consejodirectivofacias@yahoo.com.ar</a>
+                                </div>
                             </div>
-                            
-                            <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem;">Enviar Mensaje</button>
-                        </form>
+
+                            <!-- 4. Bedelía -->
+                            <div class="consulta-item-card" style="background: #ffffff; padding: 1rem 1.25rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid var(--color-secondary);">
+                                <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.35rem;">Bedelía</strong>
+                                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                                    <a href="mailto:bedelia@facias.uncoma.edu.ar" style="color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">bedelia@facias.uncoma.edu.ar</a>
+                                </div>
+                            </div>
+
+                            <!-- 5. Sec. de Extensión -->
+                            <div class="consulta-item-card" style="background: #ffffff; padding: 1rem 1.25rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid var(--color-secondary);">
+                                <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.35rem;">Sec. de Extensión</strong>
+                                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                                    <a href="mailto:secretaria.extension@facias.uncoma.edu.ar" style="color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">secretaria.extension@facias.uncoma.edu.ar</a>
+                                </div>
+                            </div>
+
+                            <!-- 6. Sec. de Ciencia y Técnica Y de Posgrado -->
+                            <div class="consulta-item-card" style="background: #ffffff; padding: 1rem 1.25rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid var(--color-secondary);">
+                                <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.35rem;">Sec. de Ciencia y Técnica Y de Posgrado</strong>
+                                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                                    <a href="mailto:posgrado@facias.uncoma.edu.ar" style="color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">posgrado@facias.uncoma.edu.ar</a>
+                                    <a href="mailto:secretaria.investigacion@facias.uncoma.edu.ar" style="color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">secretaria.investigacion@facias.uncoma.edu.ar</a>
+                                </div>
+                            </div>
+
+                            <!-- 7. Sec. de Vinculación Tecnológica -->
+                            <div class="consulta-item-card" style="background: #ffffff; padding: 1rem 1.25rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid var(--color-secondary);">
+                                <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.35rem;">Sec. de Vinculación Tecnológica:</strong>
+                                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                                    <a href="mailto:vinculacion.facias@gmail.com" style="color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">vinculacion.facias@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <!-- 8. Relaciones Internacionales -->
+                            <div class="consulta-item-card" style="background: #ffffff; padding: 1rem 1.25rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid var(--color-secondary);">
+                                <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.35rem;">Relaciones Internacionales</strong>
+                                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                                    <a href="mailto:internacionalesfacias@gmail.com" style="color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">internacionalesfacias@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <!-- 9. Dpto. de Alumnos -->
+                            <div class="consulta-item-card" style="background: #ffffff; padding: 1rem 1.25rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid var(--color-secondary);">
+                                <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.35rem;">Dpto. de Alumnos</strong>
+                                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                                    <a href="mailto:alumnosfacias@hotmail.com" style="color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">alumnosfacias@hotmail.com</a>
+                                    <a href="mailto:alumnos@facias.uncoma.edu.ar" style="color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">alumnos@facias.uncoma.edu.ar</a>
+                                    <a href="mailto:direccion.academica@facias.uncoma.edu.ar" style="color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">direccion.academica@facias.uncoma.edu.ar</a>
+                                    <a href="mailto:equivalencia.documentacion@facias.uncoma.edu.ar" style="color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">equivalencia.documentacion@facias.uncoma.edu.ar</a>
+                                    <a href="mailto:tramites.dptoalumnos@facias.uncoma.edu.ar" style="color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">tramites.dptoalumnos@facias.uncoma.edu.ar</a>
+                                </div>
+                            </div>
+
+                            <!-- 10. Dpto. Administrativo -->
+                            <div class="consulta-item-card" style="background: #ffffff; padding: 1rem 1.25rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid var(--color-secondary);">
+                                <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.35rem;">Dpto. Administrativo</strong>
+                                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                                    <a href="mailto:departamento.administrativo@facias.uncoma.edu.ar" style="color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">departamento.administrativo@facias.uncoma.edu.ar</a>
+                                </div>
+                            </div>
+
+                            <!-- 11. Dpto. Docente -->
+                            <div class="consulta-item-card" style="background: #ffffff; padding: 1rem 1.25rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid var(--color-secondary);">
+                                <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.35rem;">Dpto. Docente</strong>
+                                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                                    <a href="mailto:concursosdocentesfacias1@gmail.com" style="color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">concursosdocentesfacias1@gmail.com</a>
+                                    <a href="mailto:departamentodocentesfacias@gmail.com" style="color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">departamentodocentesfacias@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <!-- 12. Biblioteca -->
+                            <div class="consulta-item-card" style="background: #ffffff; padding: 1rem 1.25rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid var(--color-secondary);">
+                                <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.35rem;">Biblioteca</strong>
+                                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                                    <a href="mailto:biblioteca@facias.uncoma.edu.ar" style="color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">biblioteca@facias.uncoma.edu.ar</a>
+                                </div>
+                            </div>
+
+                            <!-- 13. Dir. de Enfermería -->
+                            <div class="consulta-item-card" style="background: #ffffff; padding: 1rem 1.25rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid var(--color-secondary);">
+                                <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.35rem;">Dir. de Enfermería</strong>
+                                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                                    <a href="mailto:departamento.enfermeria@facias.uncoma.edu.ar" style="color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">departamento.enfermeria@facias.uncoma.edu.ar</a>
+                                </div>
+                            </div>
+
+                            <!-- 14. Dir. de Ciencias del Ambiente -->
+                            <div class="consulta-item-card" style="background: #ffffff; padding: 1rem 1.25rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid var(--color-secondary);">
+                                <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.35rem;">Dir. de Ciencias del Ambiente</strong>
+                                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                                    <a href="mailto:dptocienciasdelambiente@gmail.com" style="color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">dptocienciasdelambiente@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <!-- 15. Departamento de Higiene y Seguridad -->
+                            <div class="consulta-item-card" style="background: #ffffff; padding: 1rem 1.25rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid var(--color-secondary);">
+                                <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.35rem;">Departamento de Higiene y Seguridad</strong>
+                                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                                    <a href="mailto:depto.higieneyseguridad@facias.uncoma.edu.ar" style="color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">depto.higieneyseguridad@facias.uncoma.edu.ar</a>
+                                </div>
+                            </div>
+
+                            <!-- 16. Gabinete de Enfermería -->
+                            <div class="consulta-item-card" style="background: #ffffff; padding: 1rem 1.25rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid var(--color-secondary);">
+                                <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.35rem;">Gabinete de Enfermería</strong>
+                                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                                    <a href="mailto:gabineteenfermeriafacias@gmail.com" style="color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">gabineteenfermeriafacias@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <!-- 17. Gabinete de Simulación -->
+                            <div class="consulta-item-card" style="background: #ffffff; padding: 1rem 1.25rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid var(--color-secondary);">
+                                <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.35rem;">Gabinete de Simulación</strong>
+                                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                                    <a href="mailto:gabinete.simulacion@facias.uncoma.edu.ar" style="color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">gabinete.simulacion@facias.uncoma.edu.ar</a>
+                                </div>
+                            </div>
+
+                            <!-- 18. Laboratorios de Enseñanza I y II -->
+                            <div class="consulta-item-card" style="background: #ffffff; padding: 1rem 1.25rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid var(--color-secondary);">
+                                <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.35rem;">Laboratorios de Enseñanza I y II</strong>
+                                <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+                                    <a href="mailto:laboratorios@facias.uncoma.edu.ar" style="color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">laboratorios@facias.uncoma.edu.ar</a>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
 
                     <!-- Datos y Horarios -->
-                    <div>
+                    <div style="position: sticky; top: 90px; align-self: start;">
                         <h3 style="color: var(--color-primary); font-size: 1.4rem; margin-bottom: 1.5rem;">Datos Institucionales</h3>
                         
                         <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 2rem;">
