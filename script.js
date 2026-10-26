@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                             FECHAS DEL TRÁMITE
                         </h4>
-                        <p style="font-size: 1.1rem; font-weight: 700; color: var(--color-primary); margin: 0;">Desde 27/07/2026 al 14/08/2026 de 10:00 a 14:00 hs.</p>
+                        <p style="font-size: 1.1rem; font-weight: 700; color: var(--color-primary); margin: 0;">Desde 17/11/2026 al 18/12/2026 de 10 a 14 hs. (Gabriela – Amelia)</p>
                     </div>
 
                     <h4 style="font-weight: 700; margin-bottom: 0.75rem; color: var(--color-primary); font-size: 1.2rem;">Modalidad de Presentación</h4>
@@ -213,7 +213,10 @@ document.addEventListener('DOMContentLoaded', () => {
                             📌 <strong>Técnico/a en Saneamiento Ambiental:</strong> para dar cumplimiento a los requisitos de solicitud de títulos deben haber iniciado el trámite de Equivalencia (Sin excepción).
                         </p>
                         <p style="margin-bottom: 0.75rem; font-size: 0.95rem; color: var(--color-text-dark);">
-                            📄 <strong>Nota:</strong> Las fotocopias deben ser escaneadas y sin fondos oscuros, caso contrario no se dará curso.
+                            📄 <strong>Nota:</strong> Las fotocopias deben ser escaneadas y sin fondos oscuros, en un archivo (PDF), caso contrario no se dará curso.
+                        </p>
+                        <p style="margin-bottom: 0.75rem; font-size: 0.95rem; color: var(--color-text-dark);">
+                            Los formularios deben ser completados con letra clara en: correos electrónicos (actualizados), contactos telefónicos y datos personales.
                         </p>
                         <p style="margin: 0; font-size: 0.95rem; color: var(--color-text-dark);">
                             ✉️ <strong>Dudas y consultas:</strong> <a href="mailto:amenieves64@gmail.com" style="color: var(--color-primary); font-weight: 700; text-decoration: underline;">amenieves64@gmail.com</a>
