@@ -912,7 +912,7 @@
                         Los talleres son clave para empezar bien: hacelos aunque todavía no tengas tu número de legajo. Los días y horarios se publican más adelante.
                     </p>
                 </div>
-                <a href="javascript:void(0)" class="btn-instagram" role="button">
+                <a href="https://www.instagram.com/facias_aip/" target="_blank" rel="noopener noreferrer" class="btn-instagram" role="button">
                     Seguinos en Instagram
                 </a>
             </div>
