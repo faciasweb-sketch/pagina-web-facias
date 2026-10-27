@@ -435,7 +435,7 @@
             text-align: center;
             font-size: 1.15rem;
             font-weight: 700;
-            margin-bottom: 1.5rem;
+            margin-bottom: 0;
             box-shadow: 0 3px 8px rgba(30, 41, 59, 0.15);
         }
 
@@ -457,6 +457,7 @@
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
+            margin-bottom: 1.75rem;
         }
 
         .inscripcion-warning-box p {
@@ -792,6 +793,16 @@
                 Son dos pasos y tenés que hacer los dos, en este orden.
             </p>
 
+            <!-- Cuadro de advertencia importante -->
+            <div class="inscripcion-warning-box">
+                <p>
+                    <strong>Si hacés solo el Paso 1, todavía no estás inscripto/a.</strong> El legajo te lo dan únicamente en la sede.
+                </p>
+                <p>
+                    <strong>Hacé el Paso 2 en el mismo período en que hiciste el Paso 1.</strong> ¡Y no lo dejes para el último día!
+                </p>
+            </div>
+
             <div class="steps-container">
                 <!-- Paso 1: Online -->
                 <div class="step-full-card step-1">
@@ -861,16 +872,6 @@
             <!-- Banner oscuro de confirmación -->
             <div class="inscripcion-success-banner">
                 <span class="check">✓</span> ¡Listo! Con tu número de legajo ya estás inscripto/a.
-            </div>
-
-            <!-- Cuadro de advertencia importante -->
-            <div class="inscripcion-warning-box">
-                <p>
-                    <strong>Si hacés solo el Paso 1, todavía no estás inscripto/a.</strong> El legajo te lo dan únicamente en la sede.
-                </p>
-                <p>
-                    <strong>Hacé el Paso 2 en el mismo período en que hiciste el Paso 1.</strong> ¡Y no lo dejes para el último día!
-                </p>
             </div>
         </section>
 
