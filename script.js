@@ -1035,6 +1035,12 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span style="font-size: 1.02rem; font-weight: 700; color: #00558f;">Horarios</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#008f9c" stroke-width="2.5" style="width: 20px !important; height: 20px !important; min-width: 20px !important; max-width: 20px !important; display: block; flex-shrink: 0;"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
                         </a>
+
+                        <!-- 4. Mesas de Examen -->
+                        <a href="mesas-examen.php" class="modal-nav-card" style="display: flex; align-items: center; justify-content: space-between; padding: 1.05rem 1.35rem; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; text-decoration: none; cursor: pointer; box-sizing: border-box;">
+                            <span style="font-size: 1.02rem; font-weight: 700; color: #00558f;">Mesas de Examen</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#008f9c" stroke-width="2.5" style="width: 20px !important; height: 20px !important; min-width: 20px !important; max-width: 20px !important; display: block; flex-shrink: 0;"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                        </a>
                     </div>
                 </div>
             `
