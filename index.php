@@ -176,7 +176,6 @@ function get_novedad_meta($item) {
                             <li><a href="#estudiantes-mesas" class="dropdown-item" data-action="mesas">Mesas de examen</a></li>
                             <li><a href="horarios.php" class="dropdown-item">Horarios</a></li>
                             <li><a href="#estudiantes-tramites" class="dropdown-item" data-action="estudiantes-tramites">Trámites</a></li>
-                            <li><a href="#estudiantes-consultas" class="dropdown-item" data-action="consultas">Canales de consultas</a></li>
                         </ul>
                     </li>
                     <!-- Académica -->
@@ -208,6 +207,10 @@ function get_novedad_meta($item) {
                             <li><a href="#sec-administrativa" class="dropdown-item" data-action="sec-admin">Administración y Servicios</a></li>
                             <li><a href="#sec-bienestar" class="dropdown-item" data-action="sec-bienestar">Bienestar</a></li>
                         </ul>
+                    </li>
+                    <!-- Contacto -->
+                    <li class="nav-item">
+                        <a href="#contacto" class="nav-link" id="nav-item-contacto">Contacto</a>
                     </li>
                 </ul>
             </nav>
