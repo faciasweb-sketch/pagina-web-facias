@@ -174,7 +174,6 @@ function get_novedad_meta($item) {
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="#academica-carreras" class="dropdown-item" data-action="carreras">Nuestras carreras</a></li>
-                            <li><a href="#academica-calendario" class="dropdown-item" data-action="calendario">Calendario académico</a></li>
                             <li><a href="#academica-departamentos" class="dropdown-item" data-action="departamentos">Departamentos</a></li>
                             <li><a href="dpto-docente.php" class="dropdown-item">Dpto. Docente</a></li>
                         </ul>
