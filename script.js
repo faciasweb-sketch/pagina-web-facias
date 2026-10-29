@@ -475,6 +475,52 @@ document.addEventListener('DOMContentLoaded', () => {
                             <div style="margin-top: 1.25rem; background-color: rgba(46, 204, 113, 0.08); border-left: 3px solid #2ecc71; padding: 0.75rem 1rem; border-radius: 4px; font-size: 0.9rem; color: #27ae60; font-weight: 600;">
                                 ℹ NOTA: En este caso no es necesario legalizarlos ni certificarlos, ya que los programas pertenecen y fueron aprobados dentro de la FACIAS.
                             </div>
+
+                            <!-- EJEMPLOS DE EQUIVALENCIAS INTERNAS -->
+                            <div style="margin-top: 1.75rem; border-top: 1px dashed var(--color-border); padding-top: 1.25rem;">
+                                <h5 style="margin: 0 0 1rem; font-weight: 700; color: var(--color-primary); font-size: 1.05rem; display: flex; align-items: center; gap: 0.5rem;">
+                                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                    EJEMPLOS DE EQUIVALENCIAS INTERNAS:
+                                </h5>
+
+                                <div style="display: flex; flex-direction: column; gap: 0.85rem;">
+                                    <!-- 1. LSAN a TUSA -->
+                                    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; background: var(--color-bg-light); border: 1px solid var(--color-border); border-radius: var(--border-radius-sm); padding: 0.85rem 1rem;">
+                                        <div style="max-width: 70%;">
+                                            <strong style="color: var(--color-primary); font-size: 0.95rem; display: block;">LSAN a TUSA:</strong>
+                                            <span style="font-size: 0.88rem; color: var(--color-text-dark);">Adjunto de nota modelo con las 19 asignaturas aprobadas en la Licenciatura.</span>
+                                        </div>
+                                        <a href="https://drive.google.com/file/d/1PiP5NckFkMAlraf7scZEvbR6bsLVPMOx/view?usp=sharing" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.35rem; background: var(--color-secondary); color: #ffffff; padding: 0.4rem 0.85rem; border-radius: 6px; font-size: 0.82rem; font-weight: 700; text-decoration: none; transition: var(--transition-smooth); white-space: nowrap;" onmouseover="this.style.opacity='0.9';" onmouseout="this.style.opacity='1';">
+                                            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                            Descargar
+                                        </a>
+                                    </div>
+
+                                    <!-- 2. LSAN a TECH -->
+                                    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; background: var(--color-bg-light); border: 1px solid var(--color-border); border-radius: var(--border-radius-sm); padding: 0.85rem 1rem;">
+                                        <div style="max-width: 70%;">
+                                            <strong style="color: var(--color-primary); font-size: 0.95rem; display: block;">LSAN a TECH:</strong>
+                                            <span style="font-size: 0.88rem; color: var(--color-text-dark);">Adjunto Resolución.</span>
+                                        </div>
+                                        <a href="https://drive.google.com/file/d/13Iu2zKXK09rjexNwepehUJKKG8I5Ys7g/view?usp=sharing" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.35rem; background: var(--color-secondary); color: #ffffff; padding: 0.4rem 0.85rem; border-radius: 6px; font-size: 0.82rem; font-weight: 700; text-decoration: none; transition: var(--transition-smooth); white-space: nowrap;" onmouseover="this.style.opacity='0.9';" onmouseout="this.style.opacity='1';">
+                                            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                            Descargar
+                                        </a>
+                                    </div>
+
+                                    <!-- 3. TUSA a TECH -->
+                                    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; background: var(--color-bg-light); border: 1px solid var(--color-border); border-radius: var(--border-radius-sm); padding: 0.85rem 1rem;">
+                                        <div style="max-width: 70%;">
+                                            <strong style="color: var(--color-primary); font-size: 0.95rem; display: block;">TUSA a TECH:</strong>
+                                            <span style="font-size: 0.88rem; color: var(--color-text-dark);">Adjunto Resolución.</span>
+                                        </div>
+                                        <a href="https://drive.google.com/file/d/15Qjdo-aYEMVUb5coVLTMjceOYw-eNLyd/view?usp=sharing" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.35rem; background: var(--color-secondary); color: #ffffff; padding: 0.4rem 0.85rem; border-radius: 6px; font-size: 0.82rem; font-weight: 700; text-decoration: none; transition: var(--transition-smooth); white-space: nowrap;" onmouseover="this.style.opacity='0.9';" onmouseout="this.style.opacity='1';">
+                                            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                            Descargar
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
