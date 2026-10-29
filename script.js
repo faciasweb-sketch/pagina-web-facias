@@ -348,12 +348,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     <h4 style="font-weight: 700; margin-top: 2rem; margin-bottom: 1.25rem; color: var(--color-primary); font-size: 1.2rem; border-bottom: 2px solid var(--color-border); padding-bottom: 0.5rem;">Descarga de Modelos:</h4>
                     <div style="display: grid; grid-template-columns: 1fr; gap: 1rem; margin-bottom: 2rem;">
-                        <a href="#" class="download-link-box" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem; background: var(--color-bg-light); border: 1px solid var(--color-border); border-radius: var(--border-radius-md); text-decoration: none; color: var(--color-text-dark); transition: var(--transition-smooth);" onmouseover="this.style.borderColor='var(--color-primary)'; this.style.backgroundColor='var(--color-secondary-light)';" onmouseout="this.style.borderColor='var(--color-border)'; this.style.backgroundColor='var(--color-bg-light)';">
+                        <a href="https://drive.google.com/file/d/1tppZXrjRrQfnhGBgSWX3L_m9wtxcC0o-/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="download-link-box" style="display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem; background: var(--color-bg-light); border: 1px solid var(--color-border); border-radius: var(--border-radius-md); text-decoration: none; color: var(--color-text-dark); transition: var(--transition-smooth);" onmouseover="this.style.borderColor='var(--color-primary)'; this.style.backgroundColor='var(--color-secondary-light)';" onmouseout="this.style.borderColor='var(--color-border)'; this.style.backgroundColor='var(--color-bg-light)';">
                             <span style="font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 0.75rem;">
                                 <svg width="22" height="22" fill="none" stroke="#2980b9" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M9 17h6M9 13h6M9 9h3"></path></svg>
                                 Modelo de Nota - Levantamiento de Materias en Suspenso
                             </span>
-                            <span style="font-size: 0.8rem; font-weight: 700; color: var(--color-primary); background: rgba(0, 114, 185, 0.1); padding: 0.25rem 0.6rem; border-radius: 4px; text-transform: uppercase;">Descargar Word</span>
+                            <span style="font-size: 0.8rem; font-weight: 700; color: var(--color-primary); background: rgba(0, 114, 185, 0.1); padding: 0.3rem 0.75rem; border-radius: 4px; text-transform: uppercase;">Descargar Modelo de Nota</span>
                         </a>
                     </div>
 
