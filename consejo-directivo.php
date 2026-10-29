@@ -476,6 +476,28 @@
             margin: 0;
         }
 
+        .btn-descargar-reglamento {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            background: var(--color-secondary);
+            color: #ffffff;
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 0.55rem 1.15rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            white-space: nowrap;
+        }
+
+        .btn-descargar-reglamento:hover {
+            background: #007580;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 143, 156, 0.25);
+        }
+
         .reglamento-proximamente {
             background: #fffbeb;
             border: 1.5px dashed #f59e0b;
@@ -990,6 +1012,10 @@
                             <p class="reglamento-desc">Reglamento de Funcionamiento Interno del Consejo Directivo de FACIAS.</p>
                         </div>
                     </div>
+                    <a href="https://drive.google.com/file/d/1AeWe1OvDFkqVTKqpKN81NDCxr_Br1CUD/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-descargar-reglamento">
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                        Descargar PDF
+                    </a>
                 </div>
 
                 <!-- Reglamento 2 -->
@@ -1003,6 +1029,10 @@
                             <p class="reglamento-desc">Procedimiento formal de Ingreso de Proyectos ante el Consejo Directivo.</p>
                         </div>
                     </div>
+                    <a href="https://drive.google.com/file/d/1WWX7XJL0FQQ7SJOzMyLQOYk6S914cGIs/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-descargar-reglamento">
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                        Descargar PDF
+                    </a>
                 </div>
 
                 <!-- Reglamento 3 -->
@@ -1016,6 +1046,10 @@
                             <p class="reglamento-desc">Registro, tramitación y seguimiento de Despachos Digitales.</p>
                         </div>
                     </div>
+                    <a href="https://drive.google.com/file/d/1baiWo2Wg9YWmWEIhpopIn6DrO1c5-ifJ/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-descargar-reglamento">
+                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                        Descargar PDF
+                    </a>
                 </div>
 
                 <!-- Próximamente -->
