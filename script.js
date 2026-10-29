@@ -40,6 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const views = {
         'inicio': document.getElementById('home-view'),
         'institucional': document.getElementById('institucional'),
+        'autoridades': document.getElementById('institucional'),
+        'historia': document.getElementById('historia-view'),
         'carreras': document.getElementById('carreras'),
         'investigacion': document.getElementById('investigacion'),
         'contacto': document.getElementById('contacto'),
@@ -149,12 +151,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Event listeners para los enlaces directos del menú (que no son dropdowns, ej. Ingresantes)
+    // Event listeners para los enlaces directos del menú (que no son dropdowns, ej. Ingresantes, Contacto, Sedes)
     navLinks.forEach(link => {
         if (!link.classList.contains('dropdown-toggle')) {
             link.addEventListener('click', (e) => {
+                const action = link.getAttribute('data-action');
+                if (action) {
+                    e.preventDefault();
+                    ejecutarAccionMenu(action);
+                    return;
+                }
                 const href = link.getAttribute('href');
-                if (href.startsWith('#')) {
+                if (href && href.startsWith('#')) {
                     e.preventDefault();
                     const viewId = href.substring(1);
                     const targetViewId = viewId === 'ingresantes' ? 'ingresantes' : viewId;
@@ -731,20 +739,10 @@ document.addEventListener('DOMContentLoaded', () => {
         switch (action) {
             // INSTITUCIONAL
             case 'autoridades':
-                switchView('institucional');
-                setTimeout(() => {
-                    const h3s = document.querySelectorAll('#institucional h3');
-                    let targetFound = false;
-                    h3s.forEach(h3 => {
-                        if (h3.textContent.includes('Autoridades')) {
-                            h3.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                            targetFound = true;
-                        }
-                    });
-                    if (!targetFound) {
-                        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-                    }
-                }, 300);
+                switchView('autoridades');
+                break;
+            case 'historia':
+                switchView('historia');
                 break;
             case 'consejo':
                 abrirModalInformativo(
@@ -765,8 +763,13 @@ document.addEventListener('DOMContentLoaded', () => {
             case 'sedes':
                 switchView('inicio');
                 setTimeout(() => {
-                    const footer = document.querySelector('.footer');
-                    footer.scrollIntoView({ behavior: 'smooth' });
+                    const sedesEl = document.getElementById('nuestras-sedes');
+                    if (sedesEl) {
+                        sedesEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    } else {
+                        const footer = document.querySelector('.footer');
+                        if (footer) footer.scrollIntoView({ behavior: 'smooth' });
+                    }
                 }, 300);
                 break;
 
@@ -885,6 +888,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnContactoBackHome = document.getElementById('btn-contacto-back-home');
     if (btnContactoBackHome) {
         btnContactoBackHome.addEventListener('click', () => {
+            switchView('inicio');
+        });
+    }
+
+    // Botón "Volver" en Autoridades
+    const btnAutoridadesBackHome = document.getElementById('btn-autoridades-back-home');
+    if (btnAutoridadesBackHome) {
+        btnAutoridadesBackHome.addEventListener('click', () => {
+            switchView('inicio');
+        });
+    }
+
+    // Botón "Volver" en Nuestra Historia
+    const btnHistoriaBackHome = document.getElementById('btn-historia-back-home');
+    if (btnHistoriaBackHome) {
+        btnHistoriaBackHome.addEventListener('click', () => {
             switchView('inicio');
         });
     }

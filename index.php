@@ -161,7 +161,7 @@ function get_novedad_meta($item) {
                         <ul class="dropdown-menu">
                             <li><a href="#institucional-autoridades" class="dropdown-item" data-action="autoridades">Autoridades</a></li>
                             <li><a href="#institucional-consejo" class="dropdown-item" data-action="consejo">Consejo Directivo</a></li>
-                            <li><a href="#institucional-sedes" class="dropdown-item" data-action="sedes">Nuestras sedes</a></li>
+                            <li><a href="#institucional-historia" class="dropdown-item" data-action="historia">Nuestra Historia</a></li>
                         </ul>
                     </li>
                     <!-- Académica -->
@@ -196,6 +196,10 @@ function get_novedad_meta($item) {
                     <!-- Contacto -->
                     <li class="nav-item">
                         <a href="#contacto" class="nav-link" id="nav-item-contacto">Contacto</a>
+                    </li>
+                    <!-- Sedes -->
+                    <li class="nav-item">
+                        <a href="#nuestras-sedes" class="nav-link" id="nav-item-sedes" data-action="sedes">Sedes</a>
                     </li>
                 </ul>
             </nav>
@@ -585,102 +589,112 @@ function get_novedad_meta($item) {
 
         <!-- SECCIONES INTERACTIVAS EXTRA (Navegables vía Header links) -->
         
-        <!-- INSTITUCIONAL -->
+        <!-- INSTITUCIONAL - AUTORIDADES -->
         <section class="section section-bg-light" id="institucional" style="display:none;">
-            <div class="container">
-                <h2 class="section-title">Institucional</h2>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem;" class="responsive-two-cols">
-                    <div>
-                        <h3 style="color: var(--color-primary); font-size: 1.85rem; font-weight: 800; margin-bottom: 1.5rem;">Nuestra historia</h3>
-                        
-                        <p class="historia-lead">
-                            FACIAS es el resultado de casi cuatro décadas de trabajo en torno a una idea que estuvo desde el comienzo: la salud de las personas no puede pensarse separada del ambiente en el que viven.
+            <div class="container" style="max-width: 900px;">
+                <button class="btn-back-home" id="btn-autoridades-back-home" style="margin-bottom: 2rem; display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 600; color: var(--color-primary); background: none; border: none; cursor: pointer; padding: 0.5rem 0;">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    Volver al Inicio
+                </button>
+                <h2 class="section-title">Autoridades</h2>
+                <div style="background: var(--color-bg-white); padding: 2.75rem 2.5rem; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-medium); border: 1px solid var(--color-border); margin-top: 2rem;">
+                    <h3 style="color: var(--color-primary); font-size: 1.6rem; font-weight: 800; margin-bottom: 1.75rem; border-bottom: 2px solid var(--color-border); padding-bottom: 0.75rem;">Equipo de Gestión</h3>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.35rem;">
+                        <li style="border-bottom: 1px solid var(--color-border); padding-bottom: 1rem;">
+                            <strong style="color: var(--color-text-dark); display: block; font-size: 1.1rem; margin-bottom: 0.2rem;">Decana:</strong>
+                            <span style="color: var(--color-text-muted); font-size: 1.05rem; font-weight: 600;">Lic. Liliana LIBERATI</span>
+                        </li>
+                        <li style="border-bottom: 1px solid var(--color-border); padding-bottom: 1rem;">
+                            <strong style="color: var(--color-text-dark); display: block; font-size: 1.1rem; margin-bottom: 0.2rem;">Vicedecano:</strong>
+                            <span style="color: var(--color-text-muted); font-size: 1.05rem; font-weight: 600;">Ing. Juan VASSALLO</span>
+                        </li>
+                        <li style="border-bottom: 1px solid var(--color-border); padding-bottom: 1rem;">
+                            <strong style="color: var(--color-text-dark); display: block; font-size: 1.1rem; margin-bottom: 0.2rem;">Secretaria Académica:</strong>
+                            <span style="color: var(--color-text-muted); font-size: 1.05rem; font-weight: 600;">Dra. Florencia DEL MAR GONZALEZ</span>
+                        </li>
+                        <li style="border-bottom: 1px solid var(--color-border); padding-bottom: 1rem;">
+                            <strong style="color: var(--color-text-dark); display: block; font-size: 1.1rem; margin-bottom: 0.2rem;">Secretaria Administrativa:</strong>
+                            <span style="color: var(--color-text-muted); font-size: 1.05rem; font-weight: 600;">Lic. Malén ZAPATA</span>
+                        </li>
+                        <li style="border-bottom: 1px solid var(--color-border); padding-bottom: 1rem;">
+                            <strong style="color: var(--color-text-dark); display: block; font-size: 1.1rem; margin-bottom: 0.2rem;">Secretaria de Ciencia, Técnica y Posgrado:</strong>
+                            <span style="color: var(--color-text-muted); font-size: 1.05rem; font-weight: 600;">Dra. Paula SETTE</span>
+                        </li>
+                        <li style="border-bottom: 1px solid var(--color-border); padding-bottom: 1rem;">
+                            <strong style="color: var(--color-text-dark); display: block; font-size: 1.1rem; margin-bottom: 0.2rem;">Secretario de Extensión y Vinculación:</strong>
+                            <span style="color: var(--color-text-muted); font-size: 1.05rem; font-weight: 600;">Ing. Juan VASSALLO</span>
+                        </li>
+                        <li>
+                            <strong style="color: var(--color-text-dark); display: block; font-size: 1.1rem; margin-bottom: 0.2rem;">Secretario de Bienestar Estudiantil:</strong>
+                            <span style="color: var(--color-text-muted); font-size: 1.05rem; font-weight: 600;">Enf. Felipe INOSTROZA</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- INSTITUCIONAL - NUESTRA HISTORIA -->
+        <section class="section section-bg-light" id="historia-view" style="display:none;">
+            <div class="container" style="max-width: 900px;">
+                <button class="btn-back-home" id="btn-historia-back-home" style="margin-bottom: 2rem; display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 600; color: var(--color-primary); background: none; border: none; cursor: pointer; padding: 0.5rem 0;">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    Volver al Inicio
+                </button>
+                <h2 class="section-title">Nuestra Historia</h2>
+                <div style="background: var(--color-bg-white); padding: 2.75rem 2.5rem; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-medium); border: 1px solid var(--color-border); margin-top: 2rem;">
+                    <p class="historia-lead" style="font-size: 1.15rem; color: #1e293b; font-weight: 600; line-height: 1.7; margin-bottom: 2rem;">
+                        FACIAS es el resultado de casi cuatro décadas de trabajo en torno a una idea que estuvo desde el comienzo: la salud de las personas no puede pensarse separada del ambiente en el que viven.
+                    </p>
+
+                    <!-- Hito 1: 1985 -->
+                    <div class="historia-item">
+                        <h4 class="historia-item-title">Los orígenes: el CUCS (1985)</h4>
+                        <p>
+                            Con la recuperación de la democracia, la Universidad Nacional del Comahue creó el Centro Universitario de Ciencias para la Salud (CUCS), dependiente del Consejo Superior. Su objetivo era la formación permanente de profesionales de la salud de la región, con foco en las patologías regionales y en estrecho contacto con los lugares donde ejercían. La primera Comisión Directiva se conformó con profesionales de la región, en acuerdo con la Asociación Médico Científica de Neuquén y Río Negro, y estuvo encabezada por el Dr. Armando Kremer como director y el Dr. Roberto Raña como secretario. En esos años se desarrolló un programa de actualización e investigación sobre problemas sanitarios propios de la zona, como las enfermedades alérgicas vinculadas al ambiente, la hidatidosis, el cáncer de mama, el desarrollo infantil y los accidentes en la infancia.
                         </p>
+                    </div>
 
-                        <!-- Hito 1: 1985 -->
-                        <div class="historia-item">
-                            <h4 class="historia-item-title">Los orígenes: el CUCS (1985)</h4>
-                            <p>
-                                Con la recuperación de la democracia, la Universidad Nacional del Comahue creó el Centro Universitario de Ciencias para la Salud (CUCS), dependiente del Consejo Superior. Su objetivo era la formación permanente de profesionales de la salud de la región, con foco en las patologías regionales y en estrecho contacto con los lugares donde ejercían. La primera Comisión Directiva se conformó con profesionales de la región, en acuerdo con la Asociación Médico Científica de Neuquén y Río Negro, y estuvo encabezada por el Dr. Armando Kremer como director y el Dr. Roberto Raña como secretario. En esos años se desarrolló un programa de actualización e investigación sobre problemas sanitarios propios de la zona, como las enfermedades alérgicas vinculadas al ambiente, la hidatidosis, el cáncer de mama, el desarrollo infantil y los accidentes en la infancia.
-                            </p>
-                        </div>
+                    <!-- Hito 2: 1988 -->
+                    <div class="historia-item">
+                        <h4 class="historia-item-title">El IUCS y las primeras carreras (1988)</h4>
+                        <p>
+                            En 1988 el CUCS dio paso al Instituto Universitario de Ciencias de la Salud (IUCS), que sumó la formación de pregrado y grado. A través de convenios con los ministerios de salud de Neuquén y Río Negro comenzaron a dictarse carreras a término en salud y ambiente. En sintonía con la preocupación de la Organización Mundial de la Salud por el vínculo entre ambiente y salud, y con el asesoramiento de la OPS, se creó la Tecnicatura en Saneamiento Ambiental, antecedente de la Licenciatura en Saneamiento y Protección Ambiental, única en la región.
+                        </p>
+                        <p>
+                            En 1999 se creó la Licenciatura en Enfermería, que completó el proyecto original: formar profesionales del saneamiento y del cuidado de la salud. Desde ese año se dicta en Neuquén y en Allen, en el marco de convenios con las provincias de Neuquén y Río Negro, que buscaban responder al déficit histórico de enfermeros y enfermeras en los sistemas de salud de la Norpatagonia.
+                        </p>
+                    </div>
 
-                        <!-- Hito 2: 1988 -->
-                        <div class="historia-item">
-                            <h4 class="historia-item-title">El IUCS y las primeras carreras (1988)</h4>
-                            <p>
-                                En 1988 el CUCS dio paso al Instituto Universitario de Ciencias de la Salud (IUCS), que sumó la formación de pregrado y grado. A través de convenios con los ministerios de salud de Neuquén y Río Negro comenzaron a dictarse carreras a término en salud y ambiente. En sintonía con la preocupación de la Organización Mundial de la Salud por el vínculo entre ambiente y salud, y con el asesoramiento de la OPS, se creó la Tecnicatura en Saneamiento Ambiental, antecedente de la Licenciatura en Saneamiento y Protección Ambiental, única en la región.
-                            </p>
-                            <p>
-                                En 1999 se creó la Licenciatura en Enfermería, que completó el proyecto original: formar profesionales del saneamiento y del cuidado de la salud. Desde ese año se dicta en Neuquén y en Allen, en el marco de convenios con las provincias de Neuquén y Río Negro, que buscaban responder al déficit histórico de enfermeros y enfermeras en los sistemas de salud de la Norpatagonia.
-                            </p>
-                        </div>
+                    <!-- Hito 3: 2002 -->
+                    <div class="historia-item">
+                        <h4 class="historia-item-title">La Escuela Superior de Salud y Ambiente (2002)</h4>
+                        <p>
+                            En diciembre de 2002 el Consejo Superior aprobó la creación de la ESSA, que después de 17 años dejó de depender del Rectorado. Se organizaron los departamentos académicos y se realizaron los primeros concursos de profesores regulares, que sentaron las bases del gobierno cuatripartito. En 2007, a partir de un nuevo convenio con el Ministerio de Salud de Río Negro, la carrera de Enfermería llegó también a Choele Choel, ampliando la presencia de la institución en el Valle Medio.
+                        </p>
+                    </div>
 
-                        <!-- Hito 3: 2002 -->
-                        <div class="historia-item">
-                            <h4 class="historia-item-title">La Escuela Superior de Salud y Ambiente (2002)</h4>
-                            <p>
-                                En diciembre de 2002 el Consejo Superior aprobó la creación de la ESSA, que después de 17 años dejó de depender del Rectorado. Se organizaron los departamentos académicos y se realizaron los primeros concursos de profesores regulares, que sentaron las bases del gobierno cuatripartito. En 2007, a partir de un nuevo convenio con el Ministerio de Salud de Río Negro, la carrera de Enfermería llegó también a Choele Choel, ampliando la presencia de la institución en el Valle Medio.
-                            </p>
-                        </div>
-
-                        <!-- Hito 4: 2009 -->
-                        <div class="historia-item">
-                            <h4 class="historia-item-title">Facultad de Ciencias del Ambiente y la Salud (2009)</h4>
-                            <p>
-                                En 2009, con una estructura académica y administrativa equivalente a la de cualquier facultad, la Asamblea Universitaria aprobó su conversión en Facultad. Hoy FACIAS recoge esa trayectoria desde sus sedes en Neuquén, Allen y Choele Choel, y sostiene la formación, la investigación y la extensión en salud y ambiente al servicio de la región.
-                            </p>
-                        </div>
-                        
-                        <!-- Panel de estadísticas visuales -->
-                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center; margin-top: 2.5rem;">
-                            <div style="background: var(--color-bg-white); padding: 1.25rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-subtle); border-top: 4px solid var(--color-primary);">
-                                <span style="font-size: 2rem; font-weight: 800; color: var(--color-primary); display: block;">3</span>
-                                <span style="font-size: 0.8rem; font-weight: 600; color: var(--color-text-muted);">Sedes Regionales</span>
-                            </div>
-                            <div style="background: var(--color-bg-white); padding: 1.25rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-subtle); border-top: 4px solid var(--color-secondary);">
-                                <span style="font-size: 2rem; font-weight: 800; color: var(--color-secondary); display: block;">+1500</span>
-                                <span style="font-size: 0.8rem; font-weight: 600; color: var(--color-text-muted);">Estudiantes Activos</span>
-                            </div>
-                            <div style="background: var(--color-bg-white); padding: 1.25rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-subtle); border-top: 4px solid var(--color-primary);">
-                                <span style="font-size: 2rem; font-weight: 800; color: var(--color-primary); display: block;">5</span>
-                                <span style="font-size: 0.8rem; font-weight: 600; color: var(--color-text-muted);">Carreras de Grado</span>
-                            </div>
-                        </div>
+                    <!-- Hito 4: 2009 -->
+                    <div class="historia-item">
+                        <h4 class="historia-item-title">Facultad de Ciencias del Ambiente y la Salud (2009)</h4>
+                        <p>
+                            En 2009, con una estructura académica y administrativa equivalente a la de cualquier facultad, la Asamblea Universitaria aprobó su conversión en Facultad. Hoy FACIAS recoge esa trayectoria desde sus sedes en Neuquén, Allen y Choele Choel, y sostiene la formación, la investigación y la extensión en salud y ambiente al servicio de la región.
+                        </p>
                     </div>
                     
-                    <div style="background: var(--color-bg-white); padding: 2.5rem; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-medium); border: 1px solid var(--color-border); align-self: start;">
-                        <h3 style="color: var(--color-primary); font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--color-border); padding-bottom: 0.5rem;">Autoridades</h3>
-                        <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.25rem;">
-                            <li>
-                                <strong style="color: var(--color-text-dark); display: block; font-size: 1.05rem;">Decana:</strong>
-                                <span style="color: var(--color-text-muted); font-size: 0.95rem;">Lic. Liliana LIBERATI</span>
-                            </li>
-                            <li>
-                                <strong style="color: var(--color-text-dark); display: block; font-size: 1.05rem;">Vicedecano:</strong>
-                                <span style="color: var(--color-text-muted); font-size: 0.95rem;">Ing. Juan VASSALLO</span>
-                            </li>
-                            <li>
-                                <strong style="color: var(--color-text-dark); display: block; font-size: 1.05rem;">Secretaria Académica:</strong>
-                                <span style="color: var(--color-text-muted); font-size: 0.95rem;">Dra. Florencia DEL MAR GONZALEZ</span>
-                            </li>
-                            <li>
-                                <strong style="color: var(--color-text-dark); display: block; font-size: 1.05rem;">Secretaria Administrativa:</strong>
-                                <span style="color: var(--color-text-muted); font-size: 0.95rem;">Lic. Malén ZAPATA</span>
-                            </li>
-                            <li>
-                                <strong style="color: var(--color-text-dark); display: block; font-size: 1.05rem;">Secretaria de Ciencia, Técnica y Posgrado:</strong>
-                                <span style="color: var(--color-text-muted); font-size: 0.95rem;">Dra. Paula SETTE</span>
-                            </li>
-                            <li>
-                                <strong style="color: var(--color-text-dark); display: block; font-size: 1.05rem;">Secretario de Extensión y Vinculación:</strong>
-                                <span style="color: var(--color-text-muted); font-size: 0.95rem;">Ing. Juan VASSALLO</span>
-                            </li>
-                            <li>
-                                <strong style="color: var(--color-text-dark); display: block; font-size: 1.05rem;">Secretario de Bienestar Estudiantil:</strong>
-                                <span style="color: var(--color-text-muted); font-size: 0.95rem;">Enf. Felipe INOSTROZA</span>
-                            </li>
-                        </ul>
+                    <!-- Panel de estadísticas visuales -->
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center; margin-top: 2.5rem;">
+                        <div style="background: var(--color-bg-light); padding: 1.25rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-subtle); border-top: 4px solid var(--color-primary);">
+                            <span style="font-size: 2rem; font-weight: 800; color: var(--color-primary); display: block;">3</span>
+                            <span style="font-size: 0.85rem; font-weight: 600; color: var(--color-text-muted);">Sedes Regionales</span>
+                        </div>
+                        <div style="background: var(--color-bg-light); padding: 1.25rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-subtle); border-top: 4px solid var(--color-secondary);">
+                            <span style="font-size: 2rem; font-weight: 800; color: var(--color-secondary); display: block;">+1500</span>
+                            <span style="font-size: 0.85rem; font-weight: 600; color: var(--color-text-muted);">Estudiantes Activos</span>
+                        </div>
+                        <div style="background: var(--color-bg-light); padding: 1.25rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-subtle); border-top: 4px solid var(--color-primary);">
+                            <span style="font-size: 2rem; font-weight: 800; color: var(--color-primary); display: block;">5</span>
+                            <span style="font-size: 0.85rem; font-weight: 600; color: var(--color-text-muted);">Carreras de Grado</span>
+                        </div>
                     </div>
                 </div>
             </div>
