@@ -620,7 +620,7 @@
                     </a>
                 </div>
                 <div class="info-card-item">
-                    <strong>¿Seguís teniendo problemas?</strong> Podés pedir ayuda técnica escribiendo a: <a href="mailto:soportepedco@facias.uncoma.edu.ar" style="color: #0072b9; font-weight: 700; text-decoration: underline;">soportepedco@facias.uncoma.edu.ar</a>
+                    <strong>¿Seguís teniendo problemas?</strong> Podés pedir ayuda técnica escribiendo a: <a href="mailto:plataforma@facias.uncoma.edu.ar" style="color: #0072b9; font-weight: 700; text-decoration: underline;">plataforma@facias.uncoma.edu.ar</a>
                 </div>
             </div>
 
@@ -736,7 +736,7 @@
                     <strong>Biblioteca de FACIAS:</strong> Sala de lectura silenciosa donde podés pedir libros. No solo es de la Facu propia, sino que hay un catálogo muy completo. Además cuentan con computadoras con conexión Wi-Fi.
                 </div>
                 <div class="info-card-item">
-                    <strong>Departamento de Informática:</strong> Acá podés pedir la recuperación de contraseña de acceso a la PEDCO. Se pueden comunicar por correo electrónico a: <a href="mailto:soportepedco@facias.uncoma.edu.ar" style="color: #0072b9; font-weight: 700; text-decoration: underline;">soportepedco@facias.uncoma.edu.ar</a>.
+                    <strong>Departamento de Informática:</strong> Acá podés pedir la recuperación de contraseña de acceso a la PEDCO. Se pueden comunicar por correo electrónico a: <a href="mailto:plataforma@facias.uncoma.edu.ar" style="color: #0072b9; font-weight: 700; text-decoration: underline;">plataforma@facias.uncoma.edu.ar</a>.
                 </div>
             </div>
         </section>
