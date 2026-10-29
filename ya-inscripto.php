@@ -760,9 +760,6 @@
                     <a href="https://www.instagram.com/ingreso_permanencia_facias/" target="_blank" rel="noopener noreferrer" class="contact-badge">
                         📸 Instagram
                     </a>
-                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="contact-badge outline">
-                        👥 Facebook
-                    </a>
                 </div>
             </div>
 
@@ -770,14 +767,11 @@
             <div class="contacts-group">
                 <h4 class="contacts-group-title">Departamento de Alumnos</h4>
                 <p class="contacts-group-desc">
-                    Para consultas académicas presenciales: <strong>Lunes a viernes de 9 a 13 hs.</strong> Grupo para hacer consultas o correo electrónico:
+                    Para consultas académicas presenciales: <strong>Lunes a viernes de 9 a 13 hs.</strong> Correo electrónico:
                 </p>
                 <div class="contact-pills-row">
-                    <a href="mailto:dptoalumnos@facias.uncoma.edu.ar" class="contact-badge">
-                        ✉️ dptoalumnos@facias.uncoma.edu.ar
-                    </a>
-                    <a href="mailto:dptoalumnosfacias@gmail.com" class="contact-badge outline">
-                        ✉️ dptoalumnosfacias@gmail.com
+                    <a href="mailto:alumnos@facias.uncoma.edu.ar" class="contact-badge">
+                        ✉️ alumnos@facias.uncoma.edu.ar
                     </a>
                 </div>
             </div>
