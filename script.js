@@ -745,20 +745,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 switchView('historia');
                 break;
             case 'consejo':
-                abrirModalInformativo(
-                    "Consejo Directivo",
-                    `
-                    <p style="margin-bottom: 1.25rem;">El Consejo Directivo es el órgano máximo de gobierno de la Facultad de Ciencias del Ambiente y la Salud, integrado por representantes de todos los claustros: Docentes, Estudiantes, Nodocentes y Graduados.</p>
-                    <h4 style="font-weight: 700; margin-bottom: 0.5rem; color: var(--color-primary);">Funciones principales:</h4>
-                    <ul style="padding-left: 1.25rem; margin-bottom: 1.25rem; font-size: 0.95rem; line-height: 1.6;">
-                        <li>Dictar reglamentaciones internas académicas y administrativas.</li>
-                        <li>Aprobar y modificar planes de estudio con acuerdo del Consejo Superior.</li>
-                        <li>Proponer la designación de docentes regulares e interinos.</li>
-                        <li>Aprobar la distribución presupuestaria anual de la facultad.</li>
-                    </ul>
-                    <p style="font-size: 0.9rem; color: var(--color-text-muted);">Las sesiones ordinarias se realizan quincenalmente y son de carácter público.</p>
-                    `
-                );
+                window.location.href = 'consejo-directivo.php';
                 break;
             case 'sedes':
                 switchView('inicio');

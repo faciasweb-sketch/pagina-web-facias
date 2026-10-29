@@ -160,7 +160,7 @@ function get_novedad_meta($item) {
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="#institucional-autoridades" class="dropdown-item" data-action="autoridades">Autoridades</a></li>
-                            <li><a href="#institucional-consejo" class="dropdown-item" data-action="consejo">Consejo Directivo</a></li>
+                            <li><a href="consejo-directivo.php" class="dropdown-item" data-action="consejo">Consejo Directivo</a></li>
                             <li><a href="#institucional-historia" class="dropdown-item" data-action="historia">Nuestra Historia</a></li>
                         </ul>
                     </li>
