@@ -684,12 +684,12 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <li style="display: flex; gap: 0.5rem;"><span style="color: var(--color-secondary); font-weight: bold;">✔</span> <span><strong>1 Fotocopia del Título Analítico Secundario:</strong> Completo y legalizado.</span></li>
                             </ul>
 
-                            <a href="#" class="download-link-box" style="display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; background: var(--color-bg-light); border: 1px solid var(--color-border); border-radius: var(--border-radius-md); text-decoration: none; color: var(--color-text-dark); transition: var(--transition-smooth); font-size: 0.9rem;" onmouseover="this.style.borderColor='var(--color-primary)'; this.style.backgroundColor='var(--color-secondary-light)';" onmouseout="this.style.borderColor='var(--color-border)'; this.style.backgroundColor='var(--color-bg-light)';">
+                            <a href="https://drive.google.com/file/d/1Fnw541Q7qKVEwaLSq3DOBhYlQqbDtT5S/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="download-link-box" style="display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; background: var(--color-bg-light); border: 1px solid var(--color-border); border-radius: var(--border-radius-md); text-decoration: none; color: var(--color-text-dark); transition: var(--transition-smooth); font-size: 0.9rem;" onmouseover="this.style.borderColor='var(--color-primary)'; this.style.backgroundColor='var(--color-secondary-light)';" onmouseout="this.style.borderColor='var(--color-border)'; this.style.backgroundColor='var(--color-bg-light)';">
                                 <span style="font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
                                     <svg width="18" height="18" fill="none" stroke="#2980b9" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M9 17h6M9 13h6M9 9h3"></path></svg>
                                     Modelo de Nota - Cambio de Carrera
                                 </span>
-                                <span style="font-size: 0.75rem; font-weight: 700; color: var(--color-primary);">Descargar Word</span>
+                                <span style="font-size: 0.8rem; font-weight: 700; color: var(--color-primary); background: rgba(0, 114, 185, 0.1); padding: 0.3rem 0.75rem; border-radius: 4px; text-transform: uppercase;">Descargar Modelo de Nota</span>
                             </a>
                         </div>
 
@@ -711,12 +711,12 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <li style="display: flex; gap: 0.5rem;"><span style="color: var(--color-secondary); font-weight: bold;">✔</span> <span><strong>1 Fotocopia del Título Analítico Secundario:</strong> Legalizada.</span></li>
                             </ul>
 
-                            <a href="#" class="download-link-box" style="display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; background: var(--color-bg-light); border: 1px solid var(--color-border); border-radius: var(--border-radius-md); text-decoration: none; color: var(--color-text-dark); transition: var(--transition-smooth); font-size: 0.9rem;" onmouseover="this.style.borderColor='var(--color-primary)'; this.style.backgroundColor='var(--color-secondary-light)';" onmouseout="this.style.borderColor='var(--color-border)'; this.style.backgroundColor='var(--color-bg-light)';">
+                            <a href="https://drive.google.com/file/d/1IdQZrhV_V0RvZkv3YxW5hlRs3AkpsL9C/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="download-link-box" style="display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; background: var(--color-bg-light); border: 1px solid var(--color-border); border-radius: var(--border-radius-md); text-decoration: none; color: var(--color-text-dark); transition: var(--transition-smooth); font-size: 0.9rem;" onmouseover="this.style.borderColor='var(--color-primary)'; this.style.backgroundColor='var(--color-secondary-light)';" onmouseout="this.style.borderColor='var(--color-border)'; this.style.backgroundColor='var(--color-bg-light)';">
                                 <span style="font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
                                     <svg width="18" height="18" fill="none" stroke="#2980b9" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M9 17h6M9 13h6M9 9h3"></path></svg>
                                     Modelo de Nota - Cursado Paralelo
                                 </span>
-                                <span style="font-size: 0.75rem; font-weight: 700; color: var(--color-primary);">Descargar Word</span>
+                                <span style="font-size: 0.8rem; font-weight: 700; color: var(--color-primary); background: rgba(0, 114, 185, 0.1); padding: 0.3rem 0.75rem; border-radius: 4px; text-transform: uppercase;">Descargar Modelo de Nota</span>
                             </a>
                         </div>
 
