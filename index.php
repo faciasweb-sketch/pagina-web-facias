@@ -164,42 +164,17 @@ function get_novedad_meta($item) {
                             <li><a href="#institucional-historia" class="dropdown-item" data-action="historia">Nuestra Historia</a></li>
                         </ul>
                     </li>
-                    <!-- Académica -->
-                    <li class="nav-item dropdown">
-                        <a href="academica.php" class="nav-link dropdown-toggle" id="nav-item-academica">
-                            Académica
-                            <svg class="dropdown-arrow" viewBox="0 0 20 20" fill="currentColor" width="12" height="12">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#academica-carreras" class="dropdown-item" data-action="carreras">Nuestras carreras</a></li>
-                            <li><a href="#academica-departamentos" class="dropdown-item" data-action="departamentos">Departamentos</a></li>
-                            <li><a href="dpto-docente.php" class="dropdown-item">Dpto. Docente</a></li>
-                        </ul>
+                    <!-- Carreras -->
+                    <li class="nav-item">
+                        <a href="#carreras" class="nav-link" id="nav-item-carreras" data-action="carreras">Carreras</a>
                     </li>
-                    <!-- Secretarías -->
-                    <li class="nav-item dropdown">
-                        <a href="#secretarias" class="nav-link dropdown-toggle" id="nav-item-secretarias">
-                            Secretarías
-                            <svg class="dropdown-arrow" viewBox="0 0 20 20" fill="currentColor" width="12" height="12">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#sec-ciencia" class="dropdown-item" data-action="sec-ciencia">Ciencia, Técnica y Posgrado</a></li>
-                            <li><a href="#sec-extension" class="dropdown-item" data-action="sec-extension">Vinculación y Extensión</a></li>
-                            <li><a href="#sec-administrativa" class="dropdown-item" data-action="sec-admin">Administración y Servicios</a></li>
-                            <li><a href="#sec-bienestar" class="dropdown-item" data-action="sec-bienestar">Bienestar</a></li>
-                        </ul>
+                    <!-- Sedes -->
+                    <li class="nav-item">
+                        <a href="sedes.php" class="nav-link" id="nav-item-sedes">Sedes</a>
                     </li>
                     <!-- Contacto -->
                     <li class="nav-item">
                         <a href="#contacto" class="nav-link" id="nav-item-contacto">Contacto</a>
-                    </li>
-                    <!-- Sedes -->
-                    <li class="nav-item">
-                        <a href="#nuestras-sedes" class="nav-link" id="nav-item-sedes" data-action="sedes">Sedes</a>
                     </li>
                 </ul>
             </nav>
@@ -703,6 +678,10 @@ function get_novedad_meta($item) {
         <!-- CARRERAS -->
         <section class="section" id="carreras" style="display:none;">
             <div class="container">
+                <button class="btn-back-home" id="btn-carreras-back-home" style="margin-bottom: 2rem; display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 600; color: var(--color-primary); background: none; border: none; cursor: pointer; padding: 0.5rem 0;">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    Volver al Inicio
+                </button>
                 <h2 class="section-title">Oferta Académica</h2>
                 <p style="text-align: center; max-width: 600px; margin: -1.5rem auto 3rem; color: var(--color-text-muted);">
                     Formaciones académicas que responden a las demandas actuales en sustentabilidad y gestión sanitaria.

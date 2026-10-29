@@ -908,6 +908,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Botón "Volver" en Oferta Académica / Carreras
+    const btnCarrerasBackHome = document.getElementById('btn-carreras-back-home');
+    if (btnCarrerasBackHome) {
+        btnCarrerasBackHome.addEventListener('click', () => {
+            switchView('inicio');
+        });
+    }
+
 
     // ==========================================
     // 3. SELECCIÓN DE SEDES (Sincronización Bidireccional)
