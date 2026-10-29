@@ -833,7 +833,7 @@
                                 Subí tu documentación: <strong>DNI (frente y dorso), título secundario o constancia de título en trámite, y el formulario.</strong>
                             </li>
                         </ol>
-                        <a href="https://siufacias.uncoma.edu.ar/facias/" target="_blank" rel="noopener noreferrer" class="btn-siu-guarani">
+                        <a href="https://preguarani.uncoma.edu.ar/preinscripcion/prefacias/?__o=" target="_blank" rel="noopener noreferrer" class="btn-siu-guarani">
                             Ir a SIU Guaraní
                         </a>
                     </div>
