@@ -299,6 +299,29 @@
             border-color: #dc2626;
         }
 
+        .btn-action-form {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: #e6f4f6;
+            color: #008f9c;
+            border: 1px solid #b2e3e8;
+            border-radius: 9999px;
+            padding: 0.4rem 0.95rem;
+            font-size: 0.88rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            white-space: nowrap;
+        }
+
+        .btn-action-form:hover {
+            background-color: #008f9c;
+            color: #ffffff;
+            border-color: #008f9c;
+            transform: translateY(-1px);
+        }
+
         /* Alertas especiales / Regla de oro */
         .alert-rule-box {
             background-color: #f0f7ff;
@@ -578,8 +601,14 @@
 
             <h3 class="section-subhead teal">¿Tuviste algún problema en la Pedco? Acá te dejamos algunas sugerencias:</h3>
             <div class="cards-list">
-                <div class="info-card-item">
-                    <strong>Si ingresás por primera vez:</strong> Pedí el alta de tu usuario completando el formulario correspondiente. No te asustes por el cartel de que caducó el link: el mail de confirmación puede demorar unos días.
+                <div class="info-card-item with-action">
+                    <div>
+                        <strong>Si ingresás por primera vez:</strong> Pedí el alta de tu usuario completando el formulario correspondiente. El mail de confirmación puede demorar unos días.
+                    </div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScLpW_66JzFXUW_7-JO9IzN1FiuSyXW9YulRUm4U8Lpe0BwqQ/viewform" target="_blank" rel="noopener noreferrer" class="btn-action-form">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        Formulario de alta
+                    </a>
                 </div>
                 <div class="info-card-item with-action">
                     <div>
