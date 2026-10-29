@@ -925,21 +925,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const mapInfoText = document.getElementById('map-info-text');
     const sedeButtons = document.querySelectorAll('.btn-sede-tab');
 
-    // Ubicaciones geográficas (Google Maps Embed Links)
+    // Ubicaciones geográficas (Google Maps Embed Links con coordenadas exactas)
     const mapasSedes = {
         nqn: {
-            url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.7797746411516!2d-68.05837652345885!3d-38.94619427171424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a33c1626c0667%3A0xe2cd2460e65e4ff5!2sFacultad%20de%20Ciencias%20del%20Ambiente%20y%20la%20Salud%20-%20UNCo!5e0!3m2!1ses-419!2sar!4v1719600000000!5m2!1ses-419!2sar",
+            url: "https://maps.google.com/maps?q=-38.94011068852173,-68.0574490914052&hl=es&z=16&output=embed",
             info: "Mostrando ubicación: Sede Neuquén (Buenos Aires 1400)",
             selectorVal: "neuquen"
         },
         allen: {
-            url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3106.3986950293116!2d-67.83173772346294!3d-38.98223687170829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a16ecb1bf5b47%3A0xf6930d6bf4eb1ab8!2sEscuela%20Superior%20de%20Salud%20y%20Ambiente%20-%20Sede%20Allen!5e0!3m2!1ses-419!2sar!4v1719600001000!5m2!1ses-419!2sar",
-            info: "Mostrando ubicación: Sede Allen (B. Rivadavia e/ L. y Planes y M. Quintana)",
+            url: "https://maps.google.com/maps?q=-38.98157698958156,-67.81619510674687&hl=es&z=16&output=embed",
+            info: "Mostrando ubicación: Sede Allen (Güemes y Einstein)",
             selectorVal: "allen"
         },
         choele: {
-            url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.550186938927!2d-65.65651472340664!3d-39.98522327150937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95fa590fcde23bf3%3A0xe54d924d55b4105a!2sUniversidad%20Nacional%20del%20Comahue%20-%20Sede%20Choele%20Choel!5e0!3m2!1ses-419!2sar!4v1719600002000!5m2!1ses-419!2sar",
-            info: "Mostrando ubicación: Sede Choele Choel (Ruta 22 km 998)",
+            url: "https://maps.google.com/maps?q=-39.28709012436284,-65.66247517550015&hl=es&z=16&output=embed",
+            info: "Mostrando ubicación: Sede Choele Choel (Pacheco 460)",
             selectorVal: "choele"
         }
     };

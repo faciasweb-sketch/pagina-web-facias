@@ -1145,7 +1145,7 @@ function get_novedad_meta($item) {
                         
                         <div class="map-view-box" id="map-box">
                             <!-- Mapa de Neuquén por defecto -->
-                            <iframe id="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.7797746411516!2d-68.05837652345885!3d-38.94619427171424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a33c1626c0667%3A0xe2cd2460e65e4ff5!2sFacultad%20de%20Ciencias%20del%20Ambiente%20y%20la%20Salud%20-%20UNCo!5e0!3m2!1ses-419!2sar!4v1719600000000!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe id="map-iframe" src="https://maps.google.com/maps?q=-38.94011068852173,-68.0574490914052&amp;hl=es&amp;z=16&amp;output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             
                             <!-- Capa informativa de carga de mapa -->
                             <div class="map-placeholder-info" id="map-info-text">

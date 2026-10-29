@@ -270,7 +270,7 @@
         <article class="sede-card" id="sede-neuquen">
             <div class="sede-map-col">
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.7797746411516!2d-68.05837652345885!3d-38.94619427171424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a33c1626c0667%3A0xe2cd2460e65e4ff5!2sFacultad%20de%20Ciencias%20del%20Ambiente%20y%20la%20Salud%20-%20UNCo!5e0!3m2!1ses-419!2sar!4v1719600000000!5m2!1ses-419!2sar" 
+                    src="https://maps.google.com/maps?q=-38.94011068852173,-68.0574490914052&amp;hl=es&amp;z=16&amp;output=embed" 
                     allowfullscreen="" 
                     loading="lazy" 
                     referrerpolicy="no-referrer-when-downgrade" 
@@ -296,7 +296,7 @@
                     <li>Licenciatura en Higiene y Seguridad en el Trabajo, Ciclo de Complementación Curricular (2 años)</li>
                 </ul>
 
-                <a href="https://www.google.com/maps/dir/?api=1&destination=Buenos+Aires+1400,+Neuquén" target="_blank" rel="noopener noreferrer" class="btn-como-llegar">
+                <a href="https://www.google.com/maps/dir/?api=1&amp;destination=-38.94011068852173,-68.0574490914052" target="_blank" rel="noopener noreferrer" class="btn-como-llegar">
                     <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                     Cómo llegar
                 </a>
@@ -307,7 +307,7 @@
         <article class="sede-card" id="sede-allen">
             <div class="sede-map-col">
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3106.3986950293116!2d-67.83173772346294!3d-38.98223687170829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a16ecb1bf5b47%3A0xf6930d6bf4eb1ab8!2sEscuela%20Superior%20de%20Salud%20y%20Ambiente%20-%20Sede%20Allen!5e0!3m2!1ses-419!2sar!4v1719600001000!5m2!1ses-419!2sar" 
+                    src="https://maps.google.com/maps?q=-38.98157698958156,-67.81619510674687&amp;hl=es&amp;z=16&amp;output=embed" 
                     allowfullscreen="" 
                     loading="lazy" 
                     referrerpolicy="no-referrer-when-downgrade" 
@@ -329,7 +329,7 @@
                     <li>Licenciatura en Enfermería (5 años), con título intermedio de Enfermero/a</li>
                 </ul>
 
-                <a href="https://www.google.com/maps/dir/?api=1&destination=Güemes+y+Einstein,+Allen,+Río+Negro" target="_blank" rel="noopener noreferrer" class="btn-como-llegar">
+                <a href="https://www.google.com/maps/dir/?api=1&amp;destination=-38.98157698958156,-67.81619510674687" target="_blank" rel="noopener noreferrer" class="btn-como-llegar">
                     <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                     Cómo llegar
                 </a>
@@ -340,7 +340,7 @@
         <article class="sede-card" id="sede-choele-choel">
             <div class="sede-map-col">
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.550186938927!2d-65.65651472340664!3d-39.98522327150937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95fa590fcde23bf3%3A0xe54d924d55b4105a!2sUniversidad%20Nacional%20del%20Comahue%20-%20Sede%20Choele%20Choel!5e0!3m2!1ses-419!2sar!4v1719600002000!5m2!1ses-419!2sar" 
+                    src="https://maps.google.com/maps?q=-39.28709012436284,-65.66247517550015&amp;hl=es&amp;z=16&amp;output=embed" 
                     allowfullscreen="" 
                     loading="lazy" 
                     referrerpolicy="no-referrer-when-downgrade" 
@@ -362,7 +362,7 @@
                     <li>Licenciatura en Enfermería, solo hasta el título intermedio de Enfermero/a (3 años)</li>
                 </ul>
 
-                <a href="https://www.google.com/maps/dir/?api=1&destination=Pacheco+460,+Choele+Choel,+Río+Negro" target="_blank" rel="noopener noreferrer" class="btn-como-llegar">
+                <a href="https://www.google.com/maps/dir/?api=1&amp;destination=-39.28709012436284,-65.66247517550015" target="_blank" rel="noopener noreferrer" class="btn-como-llegar">
                     <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                     Cómo llegar
                 </a>
