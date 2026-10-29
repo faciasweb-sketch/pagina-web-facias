@@ -572,7 +572,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `
         },
         "Cambio de plan de est.": {
-            title: "Cambio de Plan de Estudios",
+            title: "Cambio de Plan de Estudio",
             html: `
                 <div class="tramite-detail-wrapper" style="line-height: 1.7; color: var(--color-text-dark);">
                     
@@ -746,13 +746,14 @@ document.addEventListener('DOMContentLoaded', () => {
     tramitesButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             const tramiteNombre = btn.getAttribute('data-tramite');
+            const data = tramitesData[tramiteNombre];
+
             if (tramiteVacioTitle) {
-                tramiteVacioTitle.textContent = tramiteNombre;
+                tramiteVacioTitle.textContent = (data && data.title) ? data.title : tramiteNombre;
             }
             
             // Cargar contenido correspondiente o mostrar mensaje por defecto
             if (tramiteVacioContent) {
-                const data = tramitesData[tramiteNombre];
                 if (data) {
                     tramiteVacioContent.innerHTML = data.html;
                 } else {
