@@ -539,11 +539,11 @@ if ($is_logged) {
             <form method="POST" action="index.php">
                 <div class="form-group">
                     <label class="form-label" for="username">Usuario (Email institucional)</label>
-                    <input type="email" id="username" name="username" class="form-control" placeholder="facias.videos@gmail.com" required autofocus value="<?php echo htmlspecialchars(isset($_POST['username']) ? $_POST['username'] : ''); ?>">
+                    <input type="email" id="username" name="username" class="form-control" required autofocus value="<?php echo htmlspecialchars(isset($_POST['username']) ? $_POST['username'] : ''); ?>">
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="password">Contraseña</label>
-                    <input type="password" id="password" name="password" class="form-control" placeholder="••••••••••••" required>
+                    <input type="password" id="password" name="password" class="form-control" required>
                 </div>
                 <button type="submit" name="login_submit" class="btn btn-primary" style="width: 100%; justify-content: center; margin-top: 1rem; padding: 0.8rem;">
                     Iniciar Sesión
