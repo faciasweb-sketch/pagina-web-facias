@@ -586,7 +586,7 @@
         <div class="page-header">
             <h1 class="page-title">
                 Consejo Directivo
-                <span class="page-badge">Órgano de Gobierno</span>
+                <span class="page-badge">Órgano de Co-Gobierno</span>
             </h1>
             <p class="page-subtitle">Facultad de Ciencias del Ambiente y la Salud - Universidad Nacional del Comahue</p>
 
@@ -616,6 +616,10 @@
             <a href="#reglamentos" class="section-nav-link">
                 <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                 Reglamentos
+            </a>
+            <a href="https://autogestion.uncoma.edu.ar/idp/module.php/arai/loginuserpass.php?AuthState=_b498734ab025d9af832aa7701cf1dab24788f6236b%3Ahttps%3A%2F%2Fautogestion.uncoma.edu.ar%2Fidp%2Fsaml2%2Fidp%2FSSOService.php%3Fspentityid%3Dhttps%253A%252F%252Franquel.uncoma.edu.ar%252Fdefault-sp%26RelayState%3Dhttps%253A%252F%252Franquel.uncoma.edu.ar%252F%26cookieTime%3D1793388054" target="_blank" rel="noopener noreferrer" class="section-nav-link" style="background: rgba(0, 114, 185, 0.08); color: var(--color-primary); border: 1px solid rgba(0, 114, 185, 0.25);">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                Ranquel (Resoluciones)
             </a>
         </nav>
 
@@ -714,9 +718,6 @@
                     <p style="font-size: 1.05rem; font-weight: 700; color: #1e293b; margin: 0.25rem 0 0 0;">
                         Jueves 03/12
                     </p>
-                    <div class="sesion-nota">
-                        ⚠️ <strong>Observación:</strong> Confirmar si sigue en pie o se modifica la fecha ante la ausencia de consejeros.
-                    </div>
                 </div>
             </div>
         </section>
@@ -1000,6 +1001,23 @@
                 </h2>
             </div>
 
+            <!-- Acceso a Resoluciones en Ranquel -->
+            <div style="background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%); border: 1px solid #bae6fd; border-left: 5px solid var(--color-primary); border-radius: 14px; padding: 1.5rem 1.75rem; margin-bottom: 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.25rem; box-shadow: var(--shadow-subtle);">
+                <div>
+                    <h3 style="margin: 0 0 0.35rem 0; font-size: 1.2rem; font-weight: 800; color: var(--color-primary); display: flex; align-items: center; gap: 0.5rem;">
+                        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        Resoluciones del Consejo Directivo
+                    </h3>
+                    <p style="margin: 0; color: #334155; font-size: 0.95rem; line-height: 1.5;">
+                        Podés consultar y descargar las resoluciones oficiales del cuerpo a través del sistema <strong>Ranquel</strong> de la UNCo.
+                    </p>
+                </div>
+                <a href="https://autogestion.uncoma.edu.ar/idp/module.php/arai/loginuserpass.php?AuthState=_b498734ab025d9af832aa7701cf1dab24788f6236b%3Ahttps%3A%2F%2Fautogestion.uncoma.edu.ar%2Fidp%2Fsaml2%2Fidp%2FSSOService.php%3Fspentityid%3Dhttps%253A%252F%252Franquel.uncoma.edu.ar%252Fdefault-sp%26RelayState%3Dhttps%253A%252F%252Franquel.uncoma.edu.ar%252F%26cookieTime%3D1793388054" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; background: var(--color-primary); color: #ffffff; padding: 0.75rem 1.35rem; border-radius: 8px; font-weight: 700; font-size: 0.95rem; text-decoration: none; transition: var(--transition-smooth); box-shadow: 0 2px 6px rgba(0, 114, 185, 0.25); white-space: nowrap;">
+                    <span>Descargar Resoluciones (Ranquel)</span>
+                    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                </a>
+            </div>
+
             <div class="reglamentos-list">
                 <!-- Reglamento 1 -->
                 <div class="reglamento-card">
@@ -1065,9 +1083,9 @@
                     <h4 style="font-size: 1.05rem; font-weight: 700; color: #0f172a; margin: 0 0 0.25rem 0;">¿Tenés consultas para el Consejo Directivo?</h4>
                     <p style="font-size: 0.92rem; color: #64748b; margin: 0;">Podés comunicarte por correo electrónico con la secretaría del cuerpo.</p>
                 </div>
-                <a href="mailto:consejodirectivofacias@yahoo.com.ar" class="btn-mail">
+                <a href="mailto:consejodirectivofacias26@gmail.com" class="btn-mail">
                     <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                    consejodirectivofacias@yahoo.com.ar
+                    consejodirectivofacias26@gmail.com
                 </a>
             </div>
         </section>
