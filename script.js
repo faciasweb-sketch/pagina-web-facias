@@ -935,6 +935,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Buscador instantáneo en la sección de Contacto
+    const contactoSearch = document.getElementById('contacto-search-box');
+    if (contactoSearch) {
+        contactoSearch.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.contacto-area-card');
+            const sectors = document.querySelectorAll('.contacto-sector-container');
+
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                if (!query || text.includes(query)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            sectors.forEach(sector => {
+                const visibleCards = sector.querySelectorAll('.contacto-area-card:not([style*="display: none"])');
+                sector.style.display = (!query || visibleCards.length > 0) ? 'block' : 'none';
+            });
+        });
+    }
+
     // Botón "Volver" en Autoridades
     const btnAutoridadesBackHome = document.getElementById('btn-autoridades-back-home');
     if (btnAutoridadesBackHome) {
