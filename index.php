@@ -383,7 +383,7 @@ function get_novedad_meta($item) {
                             </div>
                             <h3 class="sec-name">Administración y Servicios</h3>
                             <p class="sec-desc">Presupuesto, mantenimiento edilicio, suministros y soporte logístico de las distintas dependencias.</p>
-                            <a href="#sec-admin" class="sec-link" data-sec="administracion">
+                            <a href="administracion-servicios.php" class="sec-link">
                                 Ver más información
                                 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
                             </a>
