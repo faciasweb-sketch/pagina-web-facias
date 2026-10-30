@@ -1,2 +1,1 @@
-# Priorizar index.php sobre index.html en el servidor web (Hostinger)
 DirectoryIndex index.php index.html

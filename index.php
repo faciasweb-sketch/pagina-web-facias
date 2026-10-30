@@ -165,8 +165,17 @@ function get_novedad_meta($item) {
                         </ul>
                     </li>
                     <!-- Carreras -->
-                    <li class="nav-item">
-                        <a href="#carreras" class="nav-link" id="nav-item-carreras" data-action="carreras">Carreras</a>
+                    <li class="nav-item dropdown">
+                        <a href="#carreras" class="nav-link dropdown-toggle" id="nav-item-carreras">
+                            Carreras
+                            <svg class="dropdown-arrow" viewBox="0 0 20 20" fill="currentColor" width="12" height="12">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#carreras" class="dropdown-item" data-action="carreras">Grado</a></li>
+                            <li><a href="posgrado.php" class="dropdown-item">Posgrado</a></li>
+                        </ul>
                     </li>
                     <!-- Sedes -->
                     <li class="nav-item">

@@ -25,13 +25,15 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinksContainer.classList.toggle('active');
     });
 
-    // Cerrar menú móvil al hacer clic en un enlace
+    // Cerrar menú móvil al hacer clic en un enlace (los dropdowns tienen su propio manejo)
     navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            navToggle.setAttribute('aria-expanded', 'false');
-            navToggle.classList.remove('active');
-            navLinksContainer.classList.remove('active');
-        });
+        if (!link.classList.contains('dropdown-toggle')) {
+            link.addEventListener('click', () => {
+                navToggle.setAttribute('aria-expanded', 'false');
+                navToggle.classList.remove('active');
+                navLinksContainer.classList.remove('active');
+            });
+        }
     });
 
     // ==========================================
