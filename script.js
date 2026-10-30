@@ -806,6 +806,15 @@ document.addEventListener('DOMContentLoaded', () => {
             case 'consejo':
                 window.location.href = 'consejo-directivo.php';
                 break;
+            case 'secretarias':
+                switchView('inicio');
+                setTimeout(() => {
+                    const secEl = document.getElementById('secretarias') || document.getElementById('secretarias-home-section');
+                    if (secEl) {
+                        secEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }, 300);
+                break;
             case 'sedes':
                 switchView('inicio');
                 setTimeout(() => {
@@ -1754,6 +1763,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 switchView('autoridades');
             } else if (hash === 'institucional-historia') {
                 switchView('historia');
+            } else if (hash === 'secretarias' || hash === 'secretarias-home-section') {
+                switchView('inicio');
+                setTimeout(() => {
+                    const secEl = document.getElementById('secretarias') || document.getElementById('secretarias-home-section');
+                    if (secEl) {
+                        secEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }, 300);
             }
         }
     }

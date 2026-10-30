@@ -45,6 +45,11 @@ $header_sticky_style = $is_home_page ? '' : 'position: sticky; top: 0; z-index: 
                     </ul>
                 </li>
 
+                <!-- Secretarías -->
+                <li class="nav-item">
+                    <a href="<?= $home_prefix ?>#secretarias" class="nav-link" id="nav-item-secretarias" data-action="secretarias">Secretarías</a>
+                </li>
+
                 <!-- Sedes -->
                 <li class="nav-item">
                     <a href="sedes.php" class="nav-link" id="nav-item-sedes">Sedes</a>

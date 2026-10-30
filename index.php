@@ -354,7 +354,8 @@ function get_novedad_meta($item) {
             </section>
 
             <!-- 5. SECRETARÍAS (Home) -->
-            <section class="section section-bg-light" id="secretarias-home-section">
+            <section class="section section-bg-light" id="secretarias" style="scroll-margin-top: 80px;">
+                <div id="secretarias-home-section"></div>
                 <div class="container">
                     <h2 class="section-title">Secretarías</h2>
                     <div class="secretaries-grid">
