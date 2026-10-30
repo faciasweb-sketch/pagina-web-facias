@@ -1564,7 +1564,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!bodyHtml && data.body) {
             bodyHtml = data.body
                 .split("\n\n")
-                .map(p => p.trim() ? `<p style="margin-bottom: 1.25rem;">${p.replace(/\n/g, '<br>')}</p>` : '')
+                .map(p => {
+                    let text = p.trim();
+                    if (!text) return '';
+                    let escaped = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+                    escaped = escaped.replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer" style="color: var(--color-primary); text-decoration: underline; font-weight: 600; word-break: break-all;">$1</a>');
+                    escaped = escaped.replace(/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g, '<a href="mailto:$1" style="color: var(--color-primary); text-decoration: underline; font-weight: 600;">$1</a>');
+                    return `<p style="margin-bottom: 1.25rem;">${escaped.replace(/\n/g, '<br>')}</p>`;
+                })
                 .join("");
         }
 

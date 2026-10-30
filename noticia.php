@@ -59,7 +59,21 @@ $body_html = '';
 if (isset($noticia['body'])) {
     $body_html = implode('', array_map(function($p) {
         $p = trim($p);
-        return $p ? '<p style="margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8; color: var(--color-text-dark);">' . nl2br(htmlspecialchars($p)) . '</p>' : '';
+        if (!$p) return '';
+        $text = htmlspecialchars($p);
+        // Convertir URLs a enlaces clicables
+        $text = preg_replace(
+            '/(https?:\/\/[^\s<]+)/i',
+            '<a href="$1" target="_blank" rel="noopener noreferrer" style="color: var(--color-secondary); text-decoration: underline; font-weight: 600; word-break: break-all;">$1</a>',
+            $text
+        );
+        // Convertir correos a mailto
+        $text = preg_replace(
+            '/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/i',
+            '<a href="mailto:$1" style="color: var(--color-secondary); text-decoration: underline; font-weight: 600;">$1</a>',
+            $text
+        );
+        return '<p style="margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8; color: var(--color-text-dark);">' . nl2br($text) . '</p>';
     }, explode("\n\n", $noticia['body'])));
 }
 ?>
