@@ -138,64 +138,8 @@ function get_novedad_meta($item) {
 </head>
 <body>
 
-    <!-- 1. ENCABEZADO (Sticky Header) -->
-    <header class="header" id="main-header">
-        <div class="container header-container">
-            <!-- Logo FACIAS & UNCo -->
-            <a href="#inicio" class="logo" id="header-logo-link">
-                <img src="assets/logo_facias.png" alt="Logo FACIAS" class="logo-img">
-                <img src="assets/logo_unco.png" alt="Logo UNCo" class="logo-img">
-            </a>
-
-            <!-- Menú de Navegación con Dropdowns -->
-            <nav id="nav-navigation" aria-label="Navegación principal">
-                <ul class="nav-menu" id="nav-links">
-                    <!-- Institucional -->
-                    <li class="nav-item dropdown">
-                        <a href="#institucional" class="nav-link dropdown-toggle" id="nav-item-institucional">
-                            Institucional
-                            <svg class="dropdown-arrow" viewBox="0 0 20 20" fill="currentColor" width="12" height="12">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#institucional-autoridades" class="dropdown-item" data-action="autoridades">Autoridades</a></li>
-                            <li><a href="consejo-directivo.php" class="dropdown-item" data-action="consejo">Consejo Directivo</a></li>
-                            <li><a href="#institucional-historia" class="dropdown-item" data-action="historia">Nuestra Historia</a></li>
-                        </ul>
-                    </li>
-                    <!-- Carreras -->
-                    <li class="nav-item dropdown">
-                        <a href="#carreras" class="nav-link dropdown-toggle" id="nav-item-carreras">
-                            Carreras
-                            <svg class="dropdown-arrow" viewBox="0 0 20 20" fill="currentColor" width="12" height="12">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#carreras" class="dropdown-item" data-action="carreras">Grado</a></li>
-                            <li><a href="posgrado.php" class="dropdown-item">Posgrado</a></li>
-                        </ul>
-                    </li>
-                    <!-- Sedes -->
-                    <li class="nav-item">
-                        <a href="sedes.php" class="nav-link" id="nav-item-sedes">Sedes</a>
-                    </li>
-                    <!-- Contacto -->
-                    <li class="nav-item">
-                        <a href="#contacto" class="nav-link" id="nav-item-contacto">Contacto</a>
-                    </li>
-                </ul>
-            </nav>
-
-            <!-- Toggle Menú Móvil -->
-            <button class="nav-toggle" id="nav-menu-toggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </header>
+    <!-- 1. ENCABEZADO INSTITUCIONAL -->
+    <?php include 'header.php'; ?>
 
     <!-- PANEL PRINCIPAL (SPA) -->
     <main>

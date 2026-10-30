@@ -563,15 +563,8 @@
 </head>
 <body style="background-color: var(--color-bg-light);">
 
-    <!-- Header simple con Logos -->
-    <header class="header" style="position: static; box-shadow: var(--shadow-subtle); background: white;">
-        <div class="container header-container" style="justify-content: center; padding: 1rem 0;">
-            <a href="index.php" class="logo" style="display: flex; gap: 1rem;">
-                <img src="assets/logo_facias.png" alt="Logo FACIAS" class="logo-img" style="height: 45px;">
-                <img src="assets/logo_unco.png" alt="Logo UNCo" class="logo-img" style="height: 45px;">
-            </a>
-        </div>
-    </header>
+    <!-- ENCABEZADO INSTITUCIONAL -->
+    <?php include 'header.php'; ?>
 
     <main class="page-container">
         <!-- Botón Volver -->

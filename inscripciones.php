@@ -666,18 +666,8 @@
 </head>
 <body style="background-color: var(--color-bg-light);">
 
-    <!-- Header institucional superior -->
-    <header class="header" style="position: static; box-shadow: var(--shadow-subtle); background: #ffffff;">
-        <div class="container header-container" style="justify-content: space-between; align-items: center; padding: 0.85rem 0;">
-            <a href="index.php" class="logo" style="display: flex; gap: 1rem; align-items: center;">
-                <img src="assets/logo_facias.png" alt="Logo FACIAS" class="logo-img" style="height: 44px;">
-                <img src="assets/logo_unco.png" alt="Logo UNCo" class="logo-img" style="height: 44px;">
-            </a>
-            <a href="index.php" class="btn btn-outline" style="text-decoration: none; font-size: 0.88rem; padding: 0.45rem 1rem;">
-                ← Volver al sitio
-            </a>
-        </div>
-    </header>
+    <!-- ENCABEZADO INSTITUCIONAL -->
+    <?php include 'header.php'; ?>
 
     <main class="page-container">
         <!-- Enlace volver atrás -->

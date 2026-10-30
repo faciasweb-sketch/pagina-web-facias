@@ -43,8 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
         'inicio': document.getElementById('home-view'),
         'institucional': document.getElementById('institucional'),
         'autoridades': document.getElementById('institucional'),
+        'institucional-autoridades': document.getElementById('institucional'),
         'historia': document.getElementById('historia-view'),
+        'institucional-historia': document.getElementById('historia-view'),
         'carreras': document.getElementById('carreras'),
+        'grado': document.getElementById('carreras'),
         'investigacion': document.getElementById('investigacion'),
         'contacto': document.getElementById('contacto'),
         'novedades': document.getElementById('news-panel-view'),
@@ -835,12 +838,14 @@ document.addEventListener('DOMContentLoaded', () => {
             case 'estudiantes-tramites':
                 switchView('tramites');
                 break;
+            case 'contacto':
             case 'consultas':
                 switchView('contacto');
                 break;
 
             // ACADÉMICA
             case 'carreras':
+            case 'grado':
                 switchView('carreras');
                 break;
             case 'calendario':
@@ -1743,8 +1748,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const hash = window.location.hash.replace('#', '');
             if (views[hash]) {
                 switchView(hash);
-            } else if (hash === 'academica-carreras') {
+            } else if (hash === 'academica-carreras' || hash === 'grado') {
                 switchView('carreras');
+            } else if (hash === 'institucional-autoridades') {
+                switchView('autoridades');
+            } else if (hash === 'institucional-historia') {
+                switchView('historia');
             }
         }
     }
