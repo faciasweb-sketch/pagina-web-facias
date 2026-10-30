@@ -608,9 +608,13 @@ function get_novedad_meta($item) {
                             <strong style="color: var(--color-text-dark); display: block; font-size: 1.1rem; margin-bottom: 0.2rem;">Secretario de Extensión y Vinculación:</strong>
                             <span style="color: var(--color-text-muted); font-size: 1.05rem; font-weight: 600;">Ing. Juan VASSALLO</span>
                         </li>
-                        <li>
-                            <strong style="color: var(--color-text-dark); display: block; font-size: 1.1rem; margin-bottom: 0.2rem;">Secretario de Bienestar Estudiantil:</strong>
+                        <li style="border-bottom: 1px solid var(--color-border); padding-bottom: 1rem;">
+                            <strong style="color: var(--color-text-dark); display: block; font-size: 1.1rem; margin-bottom: 0.2rem;">Secretario de Bienestar Estudiantil (Sede Neuquén):</strong>
                             <span style="color: var(--color-text-muted); font-size: 1.05rem; font-weight: 600;">Enf. Felipe INOSTROZA</span>
+                        </li>
+                        <li>
+                            <strong style="color: var(--color-text-dark); display: block; font-size: 1.1rem; margin-bottom: 0.2rem;">Secretaría de Bienestar (Sedes Allen y Choele Choel):</strong>
+                            <span style="color: var(--color-text-muted); font-size: 1.05rem; font-weight: 600;">Lic. Gabriel ARGAT</span>
                         </li>
                     </ul>
                 </div>
