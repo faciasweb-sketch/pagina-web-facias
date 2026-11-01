@@ -142,6 +142,29 @@
             text-decoration: underline;
         }
 
+        .sede-details-sublist {
+            list-style: none;
+            padding: 0;
+            margin: 0.4rem 0 0 0.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+        }
+
+        .sede-details-sublist li {
+            position: relative;
+            padding-left: 1.15rem;
+            font-size: 0.94rem;
+        }
+
+        .sede-details-sublist li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #008f9c;
+            font-weight: 800;
+        }
+
         .badge-confirmar {
             display: inline-block;
             background-color: #fef3c7;
@@ -277,8 +300,13 @@
                     <li><strong>Dirección:</strong> Buenos Aires 1400, Neuquén (CP 8300), Provincia de Neuquén</li>
                     <li><strong>Teléfono:</strong> <a href="tel:02994490300" style="text-decoration: none; color: inherit;">0299-4490300</a></li>
                     <li><strong>Mail:</strong> <a href="mailto:departamento.alumnos@facias.uncoma.edu.ar">departamento.alumnos@facias.uncoma.edu.ar</a></li>
-                    <li><strong>Departamento de Alumnos:</strong> lunes, martes, jueves y viernes de 10 a 13</li>
-                    <li><strong>Inscripciones (Paso 2):</strong> de 9 a 12:30 y de 14 a 16:30, por número</li>
+                    <li>
+                        <strong>Horarios de Atención:</strong>
+                        <ul class="sede-details-sublist">
+                            <li><strong>Durante el período de inscripciones:</strong> de lunes a viernes de 9 a 12:30 y de 14 a 16:30, por número</li>
+                            <li><strong>Fuera del período de inscripciones:</strong> lunes, martes, jueves y viernes de 10 a 13</li>
+                        </ul>
+                    </li>
                 </ul>
 
                 <h3 class="sede-carreras-title">CARRERAS QUE SE DICTAN</h3>
