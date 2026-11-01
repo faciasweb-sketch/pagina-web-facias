@@ -134,7 +134,7 @@ function get_novedad_meta($item) {
     <meta name="author" content="Universidad Nacional del Comahue">
     
     <!-- Hojas de estilo -->
-    <link rel="stylesheet" href="styles.css?v=3.1">
+    <link rel="stylesheet" href="styles.css?v=3.2">
 </head>
 <body>
 
@@ -628,7 +628,7 @@ function get_novedad_meta($item) {
                 
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 2rem;">
                     <!-- Lic. en Saneamiento -->
-                    <div style="background: var(--color-bg-light); border: 1px solid var(--color-border); border-radius: var(--border-radius-md); padding: 2.25rem; display: flex; flex-direction: column;" class="academic-card">
+                    <div class="academic-card academic-card-saneamiento">
                         <span style="font-size: 0.75rem; font-weight: 700; color: var(--color-secondary); text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.5px;">Licenciatura (5 años)</span>
                         <h3 style="color: var(--color-primary); font-size: 1.35rem; font-weight: 700; margin-bottom: 1rem;">Licenciatura en Saneamiento y Protección Ambiental</h3>
                         <p style="font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1;">Forma profesionales dedicados a diagnosticar, planificar y remediar problemas medioambientales, evaluando el impacto ambiental en el sector público y privado.</p>
@@ -639,7 +639,7 @@ function get_novedad_meta($item) {
                     </div>
 
                     <!-- Lic. en Enfermería -->
-                    <div style="background: var(--color-bg-light); border: 1px solid var(--color-border); border-radius: var(--border-radius-md); padding: 2.25rem; display: flex; flex-direction: column;" class="academic-card">
+                    <div class="academic-card">
                         <span style="font-size: 0.75rem; font-weight: 700; color: var(--color-secondary); text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.5px;">Licenciatura (5 años)</span>
                         <h3 style="color: var(--color-primary); font-size: 1.35rem; font-weight: 700; margin-bottom: 1rem;">Licenciatura en Enfermería</h3>
                         <p style="font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1;">Brinda una formación integral humanística, científica y técnica para el cuidado y atención de la salud individual, familiar y comunitaria.</p>
@@ -650,7 +650,7 @@ function get_novedad_meta($item) {
                     </div>
 
                     <!-- Lic. en Higiene y Seguridad -->
-                    <div style="background: var(--color-bg-light); border: 1px solid var(--color-border); border-radius: var(--border-radius-md); padding: 2.25rem; display: flex; flex-direction: column;" class="academic-card">
+                    <div class="academic-card">
                         <span style="font-size: 0.75rem; font-weight: 700; color: var(--color-secondary); text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.5px;">Licenciatura (2 años - Ciclo de Complementación)</span>
                         <h3 style="color: var(--color-primary); font-size: 1.35rem; font-weight: 700; margin-bottom: 1rem;">Licenciatura en Higiene y Seguridad del Trabajo</h3>
                         <p style="font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1;">Destinado a graduados de tecnicaturas afines para profundizar en la prevención de riesgos y gestión integral de la salud laboral.</p>
@@ -661,7 +661,7 @@ function get_novedad_meta($item) {
                     </div>
 
                     <!-- Tecnicatura Higiene y Seguridad -->
-                    <div style="background: var(--color-bg-light); border: 1px solid var(--color-border); border-radius: var(--border-radius-md); padding: 2.25rem; display: flex; flex-direction: column;" class="academic-card">
+                    <div class="academic-card">
                         <span style="font-size: 0.75rem; font-weight: 700; color: var(--color-secondary); text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.5px;">Tecnicatura (3 años)</span>
                         <h3 style="color: var(--color-primary); font-size: 1.35rem; font-weight: 700; margin-bottom: 1rem;">Tecnicatura en Higiene y Seguridad del Trabajo</h3>
                         <p style="font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1;">Capacita para la aplicación de normas, prevención de riesgos laborales y control de ambientes de trabajo seguros y saludables.</p>
