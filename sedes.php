@@ -371,9 +371,8 @@
                 <h2 class="sede-name">Choele Choel</h2>
                 <ul class="sede-details-list">
                     <li><strong>Dirección:</strong> Pacheco 460 (Edificio Perito Moreno), Choele Choel (CP 8360), Provincia de Río Negro</li>
-                    <li><strong>Teléfono:</strong> 2946-443153 <span class="badge-confirmar">a confirmar</span></li>
-                    <li><strong>Mail:</strong> <a href="mailto:vanesale3@hotmail.com">vanesale3@hotmail.com</a> <span class="badge-confirmar">a confirmar</span></li>
-                    <li><strong>Inscripciones (Paso 2):</strong> por número · <span class="badge-confirmar">horario a confirmar</span></li>
+                    <li><strong>Mail:</strong> <span class="badge-confirmar">a confirmar</span></li>
+                    <li><strong>Horarios de Atención:</strong> por número · <span class="badge-confirmar">horario a confirmar</span></li>
                 </ul>
 
                 <h3 class="sede-carreras-title">CARRERA QUE SE DICTA</h3>
