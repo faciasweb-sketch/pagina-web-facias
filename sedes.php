@@ -298,7 +298,6 @@
                 <h2 class="sede-name">Neuquén</h2>
                 <ul class="sede-details-list">
                     <li><strong>Dirección:</strong> Buenos Aires 1400, Neuquén (CP 8300), Provincia de Neuquén</li>
-                    <li><strong>Teléfono:</strong> <a href="tel:02994490300" style="text-decoration: none; color: inherit;">0299-4490300</a></li>
                     <li><strong>Mail:</strong> <a href="mailto:departamento.alumnos@facias.uncoma.edu.ar">departamento.alumnos@facias.uncoma.edu.ar</a></li>
                     <li>
                         <strong>Horarios de Atención:</strong>
@@ -340,9 +339,8 @@
                 <h2 class="sede-name">Allen</h2>
                 <ul class="sede-details-list">
                     <li><strong>Dirección:</strong> Güemes y Einstein, Allen (CP 8328), Provincia de Río Negro</li>
-                    <li><strong>Teléfono:</strong> 0298-4450615 <span class="badge-confirmar">a confirmar</span></li>
                     <li><strong>Mail:</strong> <a href="mailto:coordinacionacademicaallen@hotmail.com">coordinacionacademicaallen@hotmail.com</a> <span class="badge-confirmar">a confirmar</span></li>
-                    <li><strong>Inscripciones (Paso 2):</strong> por número · <span class="badge-confirmar">horario a confirmar</span></li>
+                    <li><strong>Horarios de Atención:</strong> por número · <span class="badge-confirmar">horario a confirmar</span></li>
                 </ul>
 
                 <h3 class="sede-carreras-title">CARRERA QUE SE DICTA</h3>
