@@ -600,18 +600,14 @@ function get_novedad_meta($item) {
                     </div>
                     
                     <!-- Panel de estadísticas visuales -->
-                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center; margin-top: 2.5rem;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; text-align: center; margin-top: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">
                         <div style="background: var(--color-bg-light); padding: 1.25rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-subtle); border-top: 4px solid var(--color-primary);">
                             <span style="font-size: 2rem; font-weight: 800; color: var(--color-primary); display: block;">3</span>
                             <span style="font-size: 0.85rem; font-weight: 600; color: var(--color-text-muted);">Sedes Regionales</span>
                         </div>
                         <div style="background: var(--color-bg-light); padding: 1.25rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-subtle); border-top: 4px solid var(--color-secondary);">
-                            <span style="font-size: 2rem; font-weight: 800; color: var(--color-secondary); display: block;">+1500</span>
-                            <span style="font-size: 0.85rem; font-weight: 600; color: var(--color-text-muted);">Estudiantes Activos</span>
-                        </div>
-                        <div style="background: var(--color-bg-light); padding: 1.25rem; border-radius: var(--border-radius-md); box-shadow: var(--shadow-subtle); border-top: 4px solid var(--color-primary);">
-                            <span style="font-size: 2rem; font-weight: 800; color: var(--color-primary); display: block;">5</span>
-                            <span style="font-size: 0.85rem; font-weight: 600; color: var(--color-text-muted);">Carreras de Grado</span>
+                            <span style="font-size: 2rem; font-weight: 800; color: var(--color-secondary); display: block;">4</span>
+                            <span style="font-size: 0.85rem; font-weight: 600; color: var(--color-text-muted);">Carreras de Grado y Pre-Grado</span>
                         </div>
                     </div>
                 </div>
