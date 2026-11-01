@@ -134,7 +134,49 @@ function get_novedad_meta($item) {
     <meta name="author" content="Universidad Nacional del Comahue">
     
     <!-- Hojas de estilo -->
-    <link rel="stylesheet" href="styles.css?v=3.2">
+    <link rel="stylesheet" href="styles.css?v=3.3">
+    <style>
+        /* Tarjetas de Oferta Académica (Carreras) */
+        .academic-card {
+            position: relative;
+            overflow: hidden;
+            background-color: var(--color-bg-light);
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius-md);
+            padding: 2.25rem;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition-smooth);
+        }
+        .academic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+            border-color: var(--color-primary);
+        }
+        .academic-card > * {
+            position: relative;
+            z-index: 1;
+        }
+        /* Tarjeta: Licenciatura en Saneamiento y Protección Ambiental */
+        .academic-card-saneamiento::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('assets/carrera_saneamiento_bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: transform 0.6s ease;
+            z-index: 0;
+            pointer-events: none;
+        }
+        .academic-card-saneamiento:hover::before {
+            transform: scale(1.06);
+        }
+    </style>
 </head>
 <body>
 
