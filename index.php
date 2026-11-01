@@ -384,7 +384,7 @@ function get_novedad_meta($item) {
                             </div>
                             <h3 class="sec-name">Bienestar</h3>
                             <p class="sec-desc">Programas de becas, comedor, salud estudiantil, deportes y apoyo a la inserción universitaria.</p>
-                            <a href="#sec-bienestar" class="sec-link" data-sec="bienestar">
+                            <a href="bienestar.php" class="sec-link">
                                 Ver más información
                                 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
                             </a>
