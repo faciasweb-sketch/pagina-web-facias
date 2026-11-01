@@ -204,23 +204,8 @@ function get_novedad_meta($item) {
                             </button>
                             <!-- 2. Ya soy Estudiante -->
                             <button class="role-card" id="role-estudiante" aria-haspopup="dialog">
-                                <svg class="role-icon" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <!-- Manija superior -->
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5c0-1.5 1-2.5 3-2.5s3 1 3 2.5v1H9V5z" />
-                                    <!-- Correas de los hombros (fondo) -->
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.5 6C4.5 6 3 8.5 3 11v4M17.5 6C19.5 6 21 8.5 21 11v4" />
-                                    <!-- Domo principal de la mochila -->
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 14c0-4 3-7 7-7s7 3 7 7v4a2 2 0 01-2 2H7a2 2 0 01-2-2v-4z" />
-                                    <!-- Bolsillo inferior -->
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M7 16h10v2a2 2 0 01-2 2H9a2 2 0 01-2-2v-2z" />
-                                    <!-- Tapa del bolsillo inferior -->
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M7 16v-1.5a0.5 0.5 0 010.5-.5h9a0.5 0.5 0 010.5 0.5v1.5" />
-                                    <!-- Hebilla central -->
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M11 16v2h2v-2" />
-                                    <!-- Parche de diamante -->
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 8.5l2.5 2.5-2.5 2.5-2.5-2.5L12 8.5z" />
-                                    <!-- Dos líneas verticales del parche -->
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 10.5v1.5M12.75 10.5v1.5" />
+                                <svg class="role-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
                                 </svg>
                                 <span class="role-name">Ya soy Estudiante</span>
                             </button>
