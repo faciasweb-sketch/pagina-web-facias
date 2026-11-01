@@ -414,7 +414,7 @@ function get_novedad_meta($item) {
                             </div>
                             <h3 class="sec-name">Vinculación y Extensión</h3>
                             <p class="sec-desc">Relación de la universidad con la sociedad, pasantías profesionales, convenios y cursos comunitarios.</p>
-                            <a href="#sec-extension" class="sec-link" data-sec="vinculacion">
+                            <a href="vinculacion-extension.php" class="sec-link">
                                 Ver más información
                                 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
                             </a>
