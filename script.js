@@ -1220,7 +1220,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     <h4 class="modal-section-title">Posgrado y Egresados:</h4>
                     <div class="modal-links-grid">
-                        <a href="#secretarias" class="modal-action-link" id="modal-lnk-posgrado">
+                        <a href="ciencia-tecnica-posgrado.php" class="modal-action-link" id="modal-lnk-posgrado">
                             <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172"></path></svg>
                             Ciencia, Técnica y Posgrado
                         </a>
@@ -1377,9 +1377,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         if (lnkPosgrado) {
             lnkPosgrado.addEventListener('click', (e) => {
-                e.preventDefault();
                 cerrarModalRol();
-                switchView('investigacion');
             });
         }
     }
