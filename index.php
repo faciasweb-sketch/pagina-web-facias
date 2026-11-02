@@ -134,7 +134,7 @@ function get_novedad_meta($item) {
     <meta name="author" content="Universidad Nacional del Comahue">
     
     <!-- Hojas de estilo -->
-    <link rel="stylesheet" href="styles.css?v=3.4">
+    <link rel="stylesheet" href="styles.css?v=3.5">
     <style>
         /* Tarjetas de Oferta Académica (Carreras) */
         .academic-card {
@@ -174,6 +174,25 @@ function get_novedad_meta($item) {
             pointer-events: none;
         }
         .academic-card-saneamiento:hover::before {
+            transform: scale(1.06);
+        }
+        /* Tarjeta: Licenciatura en Enfermería */
+        .academic-card-enfermeria::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('assets/carrera_enfermeria_bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: transform 0.6s ease;
+            z-index: 0;
+            pointer-events: none;
+        }
+        .academic-card-enfermeria:hover::before {
             transform: scale(1.06);
         }
         /* Tarjeta: Higiene y Seguridad del Trabajo (Licenciatura y Tecnicatura) */
@@ -700,7 +719,7 @@ function get_novedad_meta($item) {
                     </div>
 
                     <!-- Lic. en Enfermería -->
-                    <div class="academic-card">
+                    <div class="academic-card academic-card-enfermeria">
                         <span style="font-size: 0.75rem; font-weight: 700; color: var(--color-secondary); text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.5px;">Licenciatura (5 años)</span>
                         <h3 style="color: var(--color-primary); font-size: 1.35rem; font-weight: 700; margin-bottom: 1rem;">Licenciatura en Enfermería</h3>
                         <p style="font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1;">Brinda una formación integral humanística, científica y técnica para el cuidado y atención de la salud individual, familiar y comunitaria.</p>
