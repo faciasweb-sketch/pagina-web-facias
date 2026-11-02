@@ -1,0 +1,41 @@
+name: Deploy Producción - Servidor UNCo
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Despliegue SFTP a faciasweb.uncoma.edu.ar
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar código del repositorio
+        uses: actions/checkout@v4
+
+      - name: Desplegar archivos por SFTP al servidor UNCo
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
+        with:
+          server: ${{ secrets.SFTP_SERVER }}
+          port: ${{ secrets.SFTP_PORT }}
+          username: ${{ secrets.SFTP_USERNAME }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          local_path: './*'
+          remote_path: '/htdocs'
+          sftp_only: true
+          sftpArgs: '-o StrictHostKeyChecking=no'
+          delete_remote_files: false
+
+      - name: Asegurar despliegue de .htaccess
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
+        with:
+          server: ${{ secrets.SFTP_SERVER }}
+          port: ${{ secrets.SFTP_PORT }}
+          username: ${{ secrets.SFTP_USERNAME }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          local_path: './.htaccess'
+          remote_path: '/htdocs/.htaccess'
+          sftp_only: true
+          sftpArgs: '-o StrictHostKeyChecking=no'
+          delete_remote_files: false
