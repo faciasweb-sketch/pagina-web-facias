@@ -134,7 +134,7 @@ function get_novedad_meta($item) {
     <meta name="author" content="Universidad Nacional del Comahue">
     
     <!-- Hojas de estilo -->
-    <link rel="stylesheet" href="styles.css?v=3.3">
+    <link rel="stylesheet" href="styles.css?v=3.4">
     <style>
         /* Tarjetas de Oferta Académica (Carreras) */
         .academic-card {
@@ -174,6 +174,25 @@ function get_novedad_meta($item) {
             pointer-events: none;
         }
         .academic-card-saneamiento:hover::before {
+            transform: scale(1.06);
+        }
+        /* Tarjeta: Higiene y Seguridad del Trabajo (Licenciatura y Tecnicatura) */
+        .academic-card-higiene::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('assets/carrera_higiene_bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: transform 0.6s ease;
+            z-index: 0;
+            pointer-events: none;
+        }
+        .academic-card-higiene:hover::before {
             transform: scale(1.06);
         }
     </style>
@@ -692,7 +711,7 @@ function get_novedad_meta($item) {
                     </div>
 
                     <!-- Lic. en Higiene y Seguridad -->
-                    <div class="academic-card">
+                    <div class="academic-card academic-card-higiene">
                         <span style="font-size: 0.75rem; font-weight: 700; color: var(--color-secondary); text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.5px;">Licenciatura (2 años - Ciclo de Complementación)</span>
                         <h3 style="color: var(--color-primary); font-size: 1.35rem; font-weight: 700; margin-bottom: 1rem;">Licenciatura en Higiene y Seguridad del Trabajo</h3>
                         <p style="font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1;">Destinado a graduados de tecnicaturas afines para profundizar en la prevención de riesgos y gestión integral de la salud laboral.</p>
@@ -703,7 +722,7 @@ function get_novedad_meta($item) {
                     </div>
 
                     <!-- Tecnicatura Higiene y Seguridad -->
-                    <div class="academic-card">
+                    <div class="academic-card academic-card-higiene">
                         <span style="font-size: 0.75rem; font-weight: 700; color: var(--color-secondary); text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.5px;">Tecnicatura (3 años)</span>
                         <h3 style="color: var(--color-primary); font-size: 1.35rem; font-weight: 700; margin-bottom: 1rem;">Tecnicatura en Higiene y Seguridad del Trabajo</h3>
                         <p style="font-size: 0.95rem; margin-bottom: 1.5rem; flex-grow: 1;">Capacita para la aplicación de normas, prevención de riesgos laborales y control de ambientes de trabajo seguros y saludables.</p>
