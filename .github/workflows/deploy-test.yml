@@ -1,0 +1,29 @@
+name: Deploy Test - Hostinger
+
+on:
+  push:
+    branches:
+      - test
+  workflow_dispatch:
+
+jobs:
+  web-deploy:
+    name: Despliegue FTP a Hostinger (Test)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar código del repositorio
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Sincronizar archivos por FTP a Hostinger
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.HOSTINGER_FTP_SERVER }}
+          username: ${{ secrets.HOSTINGER_FTP_USERNAME }}
+          password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+          server-dir: public_html/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            README.md
