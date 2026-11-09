@@ -867,18 +867,18 @@ function get_novedad_meta($item) {
                         <div class="contacto-area-card consulta-item-card" style="background: var(--color-bg-light); padding: 1.25rem 1.4rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid var(--color-primary); display: flex; flex-direction: column; justify-content: space-between;">
                             <strong style="color: var(--color-primary); font-size: 1.05rem; display: block; margin-bottom: 0.65rem;">Decanato</strong>
                             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                                <a href="mailto:decanato@facias.uncoma.edu.ar" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     decanato@facias.uncoma.edu.ar
-                                </a>
-                                <a href="mailto:vicedecanato@facias.uncoma.edu.ar" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                </span>
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     vicedecanato@facias.uncoma.edu.ar
-                                </a>
-                                <a href="mailto:secretaria.privada@facias.uncoma.edu.ar" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                </span>
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     secretaria.privada@facias.uncoma.edu.ar
-                                </a>
+                                </span>
                             </div>
                         </div>
 
@@ -886,14 +886,14 @@ function get_novedad_meta($item) {
                         <div class="contacto-area-card consulta-item-card" style="background: var(--color-bg-light); padding: 1.25rem 1.4rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid var(--color-primary); display: flex; flex-direction: column; justify-content: space-between;">
                             <strong style="color: var(--color-primary); font-size: 1.05rem; display: block; margin-bottom: 0.65rem;">Consejo Directivo</strong>
                             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                                <a href="mailto:consejodirectivofacias26@gmail.com" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     consejodirectivofacias26@gmail.com
-                                </a>
-                                <a href="mailto:consejodirectivo@facias.uncoma.edu.ar" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                </span>
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     consejodirectivo@facias.uncoma.edu.ar
-                                </a>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -913,10 +913,10 @@ function get_novedad_meta($item) {
                         <div class="contacto-area-card consulta-item-card" style="background: var(--color-bg-light); padding: 1.25rem 1.4rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid var(--color-secondary); display: flex; flex-direction: column; justify-content: space-between;">
                             <strong style="color: var(--color-primary); font-size: 1.05rem; display: block; margin-bottom: 0.65rem;">Acad&eacute;mica</strong>
                             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                                <a href="mailto:sacademicanqn@facias.uncoma.edu.ar" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     sacademicanqn@facias.uncoma.edu.ar
-                                </a>
+                                </span>
                             </div>
                         </div>
 
@@ -924,10 +924,10 @@ function get_novedad_meta($item) {
                         <div class="contacto-area-card consulta-item-card" style="background: var(--color-bg-light); padding: 1.25rem 1.4rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid var(--color-secondary); display: flex; flex-direction: column; justify-content: space-between;">
                             <strong style="color: var(--color-primary); font-size: 1.05rem; display: block; margin-bottom: 0.65rem;">Administraci&oacute;n y Servicios</strong>
                             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                                <a href="mailto:secretaria.administrativa@facias.uncoma.edu.ar" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     secretaria.administrativa@facias.uncoma.edu.ar
-                                </a>
+                                </span>
                             </div>
                         </div>
 
@@ -936,14 +936,14 @@ function get_novedad_meta($item) {
                             <div>
                                 <strong style="color: var(--color-primary); font-size: 1.05rem; display: block; margin-bottom: 0.65rem;">Bienestar</strong>
                                 <div style="display: flex; flex-direction: column; gap: 0.35rem; margin-bottom: 0.6rem;">
-                                    <a href="mailto:secretaria.bienestar@facias.uncoma.edu.ar" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                    <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                         <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                         secretaria.bienestar@facias.uncoma.edu.ar
-                                    </a>
-                                    <a href="mailto:secbienestar.facias2026@gmail.com" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                    </span>
+                                    <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                         <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                         secbienestar.facias2026@gmail.com
-                                    </a>
+                                    </span>
                                 </div>
                             </div>
                             <span style="font-size: 0.78rem; color: #b45309; background-color: #fef3c7; border: 1px solid #fde68a; padding: 0.25rem 0.55rem; border-radius: 4px; display: inline-block;">Allen y Choele Choel: [a confirmar]</span>
@@ -953,14 +953,14 @@ function get_novedad_meta($item) {
                         <div class="contacto-area-card consulta-item-card" style="background: var(--color-bg-light); padding: 1.25rem 1.4rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid var(--color-secondary); display: flex; flex-direction: column; justify-content: space-between;">
                             <strong style="color: var(--color-primary); font-size: 1.05rem; display: block; margin-bottom: 0.65rem;">Ciencia, T&eacute;cnica y Posgrado</strong>
                             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                                <a href="mailto:posgrado@facias.uncoma.edu.ar" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     posgrado@facias.uncoma.edu.ar
-                                </a>
-                                <a href="mailto:secretaria.investigacion@facias.uncoma.edu.ar" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                </span>
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     secretaria.investigacion@facias.uncoma.edu.ar
-                                </a>
+                                </span>
                             </div>
                         </div>
 
@@ -968,14 +968,14 @@ function get_novedad_meta($item) {
                         <div class="contacto-area-card consulta-item-card" style="background: var(--color-bg-light); padding: 1.25rem 1.4rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid var(--color-secondary); display: flex; flex-direction: column; justify-content: space-between;">
                             <strong style="color: var(--color-primary); font-size: 1.05rem; display: block; margin-bottom: 0.65rem;">Extensi&oacute;n y Vinculaci&oacute;n</strong>
                             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                                <a href="mailto:secretaria.extension@facias.uncoma.edu.ar" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     secretaria.extension@facias.uncoma.edu.ar
-                                </a>
-                                <a href="mailto:vinculacion@facias.uncoma.edu.ar" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                </span>
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     vinculacion@facias.uncoma.edu.ar
-                                </a>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -995,10 +995,10 @@ function get_novedad_meta($item) {
                         <div class="contacto-area-card consulta-item-card" style="background: var(--color-bg-light); padding: 1.15rem 1.3rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid #0284c7; display: flex; flex-direction: column; justify-content: space-between;">
                             <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.5rem;">&Aacute;rea de Ingreso y Permanencia</strong>
                             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                                <a href="mailto:areaingresofacias@gmail.com" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     areaingresofacias@gmail.com
-                                </a>
+                                </span>
                             </div>
                         </div>
 
@@ -1006,14 +1006,14 @@ function get_novedad_meta($item) {
                         <div class="contacto-area-card consulta-item-card" style="background: var(--color-bg-light); padding: 1.15rem 1.3rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid #0284c7; display: flex; flex-direction: column; justify-content: space-between;">
                             <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.5rem;">Departamento de Alumnos</strong>
                             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                                <a href="mailto:alumnos@facias.uncoma.edu.ar" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     alumnos@facias.uncoma.edu.ar
-                                </a>
-                                <a href="mailto:departamento.alumnos@facias.uncoma.edu.ar" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                </span>
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     departamento.alumnos@facias.uncoma.edu.ar
-                                </a>
+                                </span>
                             </div>
                         </div>
 
@@ -1021,10 +1021,10 @@ function get_novedad_meta($item) {
                         <div class="contacto-area-card consulta-item-card" style="background: var(--color-bg-light); padding: 1.15rem 1.3rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid #0284c7; display: flex; flex-direction: column; justify-content: space-between;">
                             <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.5rem;">Cursado Paralelo y Cambio de Carrera</strong>
                             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                                <a href="mailto:tramites.dptoalumnos@facias.uncoma.edu.ar" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     tramites.dptoalumnos@facias.uncoma.edu.ar
-                                </a>
+                                </span>
                             </div>
                         </div>
 
@@ -1032,10 +1032,10 @@ function get_novedad_meta($item) {
                         <div class="contacto-area-card consulta-item-card" style="background: var(--color-bg-light); padding: 1.15rem 1.3rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid #0284c7; display: flex; flex-direction: column; justify-content: space-between;">
                             <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.5rem;">Equivalencias</strong>
                             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                                <a href="mailto:equivalencia.documentacion@facias.uncoma.edu.ar" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     equivalencia.documentacion@facias.uncoma.edu.ar
-                                </a>
+                                </span>
                             </div>
                         </div>
 
@@ -1043,10 +1043,10 @@ function get_novedad_meta($item) {
                         <div class="contacto-area-card consulta-item-card" style="background: var(--color-bg-light); padding: 1.15rem 1.3rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid #0284c7; display: flex; flex-direction: column; justify-content: space-between;">
                             <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.5rem;">Solicitud Planes de Estudios</strong>
                             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                                <a href="mailto:amenieves64@gmail.com" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     amenieves64@gmail.com
-                                </a>
+                                </span>
                             </div>
                         </div>
 
@@ -1054,10 +1054,10 @@ function get_novedad_meta($item) {
                         <div class="contacto-area-card consulta-item-card" style="background: var(--color-bg-light); padding: 1.15rem 1.3rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid #0284c7; display: flex; flex-direction: column; justify-content: space-between;">
                             <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.5rem;">Cursadas y ex&aacute;menes</strong>
                             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                                <a href="mailto:cursada.examenes@facias.uncoma.edu.ar" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     cursada.examenes@facias.uncoma.edu.ar
-                                </a>
+                                </span>
                             </div>
                         </div>
 
@@ -1065,10 +1065,10 @@ function get_novedad_meta($item) {
                         <div class="contacto-area-card consulta-item-card" style="background: var(--color-bg-light); padding: 1.15rem 1.3rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid #0284c7; display: flex; flex-direction: column; justify-content: space-between;">
                             <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.5rem;">Sedes</strong>
                             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                                <a href="mailto:direccion.academica@facias.uncoma.edu.ar" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     direccion.academica@facias.uncoma.edu.ar
-                                </a>
+                                </span>
                             </div>
                         </div>
 
@@ -1076,10 +1076,10 @@ function get_novedad_meta($item) {
                         <div class="contacto-area-card consulta-item-card" style="background: var(--color-bg-light); padding: 1.15rem 1.3rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid #0284c7; display: flex; flex-direction: column; justify-content: space-between;">
                             <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.5rem;">Alumnos Sede Allen</strong>
                             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                                <a href="mailto:licenciatura.enfermeria.allen@gmail.com" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     licenciatura.enfermeria.allen@gmail.com
-                                </a>
+                                </span>
                             </div>
                         </div>
 
@@ -1087,10 +1087,10 @@ function get_novedad_meta($item) {
                         <div class="contacto-area-card consulta-item-card" style="background: var(--color-bg-light); padding: 1.15rem 1.3rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid #0284c7; display: flex; flex-direction: column; justify-content: space-between;">
                             <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.5rem;">Coordinaci&oacute;n Sede Allen</strong>
                             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                                <a href="mailto:coordinacionacademicaallen@hotmail.com" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     coordinacionacademicaallen@hotmail.com
-                                </a>
+                                </span>
                             </div>
                         </div>
 
@@ -1098,10 +1098,10 @@ function get_novedad_meta($item) {
                         <div class="contacto-area-card consulta-item-card" style="background: var(--color-bg-light); padding: 1.15rem 1.3rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid #0284c7; display: flex; flex-direction: column; justify-content: space-between;">
                             <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.5rem;">Bedel&iacute;a</strong>
                             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                                <a href="mailto:bedelia@facias.uncoma.edu.ar" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     bedelia@facias.uncoma.edu.ar
-                                </a>
+                                </span>
                             </div>
                         </div>
 
@@ -1109,10 +1109,10 @@ function get_novedad_meta($item) {
                         <div class="contacto-area-card consulta-item-card" style="background: var(--color-bg-light); padding: 1.15rem 1.3rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid #0284c7; display: flex; flex-direction: column; justify-content: space-between;">
                             <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.5rem;">Biblioteca</strong>
                             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                                <a href="mailto:biblioteca@facias.uncoma.edu.ar" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     biblioteca@facias.uncoma.edu.ar
-                                </a>
+                                </span>
                             </div>
                         </div>
 
@@ -1120,10 +1120,10 @@ function get_novedad_meta($item) {
                         <div class="contacto-area-card consulta-item-card" style="background: var(--color-bg-light); padding: 1.15rem 1.3rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid #0284c7; display: flex; flex-direction: column; justify-content: space-between;">
                             <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.5rem;">Relaciones Internacionales</strong>
                             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                                <a href="mailto:internacionalesfacias@gmail.com" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     internacionalesfacias@gmail.com
-                                </a>
+                                </span>
                             </div>
                         </div>
 
@@ -1131,14 +1131,14 @@ function get_novedad_meta($item) {
                         <div class="contacto-area-card consulta-item-card" style="background: var(--color-bg-light); padding: 1.15rem 1.3rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid #0284c7; display: flex; flex-direction: column; justify-content: space-between;">
                             <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.5rem;">Auditor&iacute;a (t&iacute;tulos)</strong>
                             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                                <a href="mailto:auditoria.titulos@facias.uncoma.edu.ar" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     auditoria.titulos@facias.uncoma.edu.ar
-                                </a>
-                                <a href="mailto:amenieves64@gmail.com" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                </span>
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     amenieves64@gmail.com
-                                </a>
+                                </span>
                             </div>
                         </div>
 
@@ -1146,10 +1146,10 @@ function get_novedad_meta($item) {
                         <div class="contacto-area-card consulta-item-card" style="background: var(--color-bg-light); padding: 1.15rem 1.3rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid #0284c7; display: flex; flex-direction: column; justify-content: space-between;">
                             <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.5rem;">PEDCO (Plataforma Educativa)</strong>
                             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                                <a href="mailto:plataforma@facias.uncoma.edu.ar" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     plataforma@facias.uncoma.edu.ar
-                                </a>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -1169,10 +1169,10 @@ function get_novedad_meta($item) {
                         <div class="contacto-area-card consulta-item-card" style="background: var(--color-bg-light); padding: 1.15rem 1.3rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid #6366f1; display: flex; flex-direction: column; justify-content: space-between;">
                             <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.5rem;">Direcci&oacute;n de Enfermer&iacute;a</strong>
                             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                                <a href="mailto:departamento.enfermeria@facias.uncoma.edu.ar" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     departamento.enfermeria@facias.uncoma.edu.ar
-                                </a>
+                                </span>
                             </div>
                         </div>
 
@@ -1180,10 +1180,10 @@ function get_novedad_meta($item) {
                         <div class="contacto-area-card consulta-item-card" style="background: var(--color-bg-light); padding: 1.15rem 1.3rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid #6366f1; display: flex; flex-direction: column; justify-content: space-between;">
                             <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.5rem;">Direcci&oacute;n de Ciencias del Ambiente</strong>
                             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                                <a href="mailto:dptocienciasdelambiente@gmail.com" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     dptocienciasdelambiente@gmail.com
-                                </a>
+                                </span>
                             </div>
                         </div>
 
@@ -1191,10 +1191,10 @@ function get_novedad_meta($item) {
                         <div class="contacto-area-card consulta-item-card" style="background: var(--color-bg-light); padding: 1.15rem 1.3rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid #6366f1; display: flex; flex-direction: column; justify-content: space-between;">
                             <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.5rem;">Departamento de Higiene y Seguridad</strong>
                             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                                <a href="mailto:depto.higieneyseguridad@facias.uncoma.edu.ar" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     depto.higieneyseguridad@facias.uncoma.edu.ar
-                                </a>
+                                </span>
                             </div>
                         </div>
 
@@ -1202,14 +1202,14 @@ function get_novedad_meta($item) {
                         <div class="contacto-area-card consulta-item-card" style="background: var(--color-bg-light); padding: 1.15rem 1.3rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid #6366f1; display: flex; flex-direction: column; justify-content: space-between;">
                             <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.5rem;">Departamento Docente</strong>
                             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                                <a href="mailto:concursosdocentesfacias1@gmail.com" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     concursosdocentesfacias1@gmail.com
-                                </a>
-                                <a href="mailto:departamentodocentesfacias@gmail.com" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                </span>
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     departamentodocentesfacias@gmail.com
-                                </a>
+                                </span>
                             </div>
                         </div>
 
@@ -1217,10 +1217,10 @@ function get_novedad_meta($item) {
                         <div class="contacto-area-card consulta-item-card" style="background: var(--color-bg-light); padding: 1.15rem 1.3rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid #6366f1; display: flex; flex-direction: column; justify-content: space-between;">
                             <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.5rem;">Departamento Administrativo</strong>
                             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                                <a href="mailto:departamento.administrativo@facias.uncoma.edu.ar" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     departamento.administrativo@facias.uncoma.edu.ar
-                                </a>
+                                </span>
                             </div>
                         </div>
 
@@ -1228,10 +1228,10 @@ function get_novedad_meta($item) {
                         <div class="contacto-area-card consulta-item-card" style="background: var(--color-bg-light); padding: 1.15rem 1.3rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid #6366f1; display: flex; flex-direction: column; justify-content: space-between;">
                             <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.5rem;">Departamento Contable</strong>
                             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                                <a href="mailto:departamento.contable@facias.uncoma.edu.ar" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     departamento.contable@facias.uncoma.edu.ar
-                                </a>
+                                </span>
                             </div>
                         </div>
 
@@ -1239,10 +1239,10 @@ function get_novedad_meta($item) {
                         <div class="contacto-area-card consulta-item-card" style="background: var(--color-bg-light); padding: 1.15rem 1.3rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid #6366f1; display: flex; flex-direction: column; justify-content: space-between;">
                             <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.5rem;">Departamento Gesti&oacute;n Patrimonial</strong>
                             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                                <a href="mailto:compras@facias.uncoma.edu.ar" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     compras@facias.uncoma.edu.ar
-                                </a>
+                                </span>
                             </div>
                         </div>
 
@@ -1250,10 +1250,10 @@ function get_novedad_meta($item) {
                         <div class="contacto-area-card consulta-item-card" style="background: var(--color-bg-light); padding: 1.15rem 1.3rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid #6366f1; display: flex; flex-direction: column; justify-content: space-between;">
                             <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.5rem;">Espacios de Simulaci&oacute;n de Enfermer&iacute;a</strong>
                             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                                <a href="mailto:esime.facias@gmail.com" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     esime.facias@gmail.com
-                                </a>
+                                </span>
                             </div>
                         </div>
 
@@ -1261,10 +1261,10 @@ function get_novedad_meta($item) {
                         <div class="contacto-area-card consulta-item-card" style="background: var(--color-bg-light); padding: 1.15rem 1.3rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid #6366f1; display: flex; flex-direction: column; justify-content: space-between;">
                             <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.5rem;">Laboratorios de Ense&ntilde;anza I y II</strong>
                             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                                <a href="mailto:laboratorios@facias.uncoma.edu.ar" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     laboratorios@facias.uncoma.edu.ar
-                                </a>
+                                </span>
                             </div>
                         </div>
 
@@ -1272,10 +1272,10 @@ function get_novedad_meta($item) {
                         <div class="contacto-area-card consulta-item-card" style="background: var(--color-bg-light); padding: 1.15rem 1.3rem; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); border-left: 4px solid #6366f1; display: flex; flex-direction: column; justify-content: space-between;">
                             <strong style="color: var(--color-primary); font-size: 1rem; display: block; margin-bottom: 0.5rem;">Soporte T&eacute;cnico</strong>
                             <div style="display: flex; flex-direction: column; gap: 0.35rem;">
-                                <a href="mailto:soporte@facias.uncoma.edu.ar" style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; text-decoration: none; word-break: break-all;">
+                                <span style="display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-secondary); font-weight: 600; font-size: 0.92rem; word-break: break-all; user-select: all; cursor: text;">
                                     <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                                     soporte@facias.uncoma.edu.ar
-                                </a>
+                                </span>
                             </div>
                         </div>
                     </div>
