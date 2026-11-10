@@ -169,12 +169,14 @@ function get_novedad_meta($item) {
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            transition: transform 0.6s ease;
+            opacity: 0.18;
+            transition: transform 0.6s ease, opacity 0.4s ease;
             z-index: 0;
             pointer-events: none;
         }
         .academic-card-saneamiento:hover::before {
             transform: scale(1.06);
+            opacity: 0.35;
         }
         /* Tarjeta: Licenciatura en Enfermería */
         .academic-card-enfermeria::before {
@@ -188,12 +190,14 @@ function get_novedad_meta($item) {
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            transition: transform 0.6s ease;
+            opacity: 0.18;
+            transition: transform 0.6s ease, opacity 0.4s ease;
             z-index: 0;
             pointer-events: none;
         }
         .academic-card-enfermeria:hover::before {
             transform: scale(1.06);
+            opacity: 0.35;
         }
         /* Tarjeta: Higiene y Seguridad del Trabajo (Licenciatura y Tecnicatura) */
         .academic-card-higiene::before {
@@ -207,12 +211,14 @@ function get_novedad_meta($item) {
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            transition: transform 0.6s ease;
+            opacity: 0.18;
+            transition: transform 0.6s ease, opacity 0.4s ease;
             z-index: 0;
             pointer-events: none;
         }
         .academic-card-higiene:hover::before {
             transform: scale(1.06);
+            opacity: 0.35;
         }
     </style>
 </head>
