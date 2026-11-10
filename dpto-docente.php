@@ -127,12 +127,11 @@
             gap: 0.75rem;
         }
 
-        .email-link {
+        .email-text {
             display: inline-flex;
             align-items: center;
             gap: 0.65rem;
             color: var(--color-primary);
-            text-decoration: none;
             font-weight: 600;
             font-size: 0.95rem;
             word-break: break-all;
@@ -140,14 +139,8 @@
             border-radius: 8px;
             background-color: #f8fafc;
             border: 1px solid #e2e8f0;
-            transition: all 0.2s ease;
-        }
-
-        .email-link:hover {
-            background-color: var(--color-secondary-light);
-            color: var(--color-secondary);
-            border-color: rgba(0, 143, 156, 0.3);
-            transform: translateX(4px);
+            user-select: all;
+            cursor: text;
         }
 
         .email-icon {
@@ -328,18 +321,18 @@
                     <h2 class="info-card-title">Contacto</h2>
                 </div>
                 <div class="emails-list">
-                    <a href="mailto:departamentodocentesfacias@gmail.com" class="email-link">
+                    <span class="email-text">
                         <svg class="email-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                         </svg>
                         departamentodocentesfacias@gmail.com
-                    </a>
-                    <a href="mailto:concursosdocentesfacias1@gmail.com" class="email-link">
+                    </span>
+                    <span class="email-text">
                         <svg class="email-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                         </svg>
                         concursosdocentesfacias1@gmail.com
-                    </a>
+                    </span>
                 </div>
             </div>
         </div>
