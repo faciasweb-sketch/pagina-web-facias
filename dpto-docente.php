@@ -346,22 +346,24 @@
             
             <div class="doc-cards-list">
                 <!-- Formulario de Inscripción -->
-                <a href="#" class="download-doc-card" target="_blank" rel="noopener noreferrer">
+                <div class="download-doc-card" style="cursor: default; background: #ffffff;">
                     <div class="download-doc-info">
-                        <svg class="download-doc-icon" width="22" height="22" fill="none" stroke="#e74c3c" stroke-width="2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 17h6M9 13h6M9 9h3"></path>
+                        <svg class="download-doc-icon" width="22" height="22" fill="none" stroke="#008f9c" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                         </svg>
-                        <span class="download-doc-name">Formulario de Inscripción</span>
+                        <div>
+                            <span class="download-doc-name" style="display: block;">Formulario de Inscripción</span>
+                            <span style="font-size: 0.82rem; color: var(--color-text-muted); font-weight: 500;">Es un formulario digital (Google Forms). El enlace se encuentra publicado en cada convocatoria específica.</span>
+                        </div>
                     </div>
-                    <span class="download-doc-btn">
-                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-                        Descargar
+                    <span style="font-size: 0.78rem; font-weight: 700; color: #0284c7; background: #e0f2fe; border: 1px solid #bae6fd; padding: 0.45rem 0.85rem; border-radius: var(--border-radius-pill); white-space: nowrap; display: inline-flex; align-items: center; gap: 0.4rem;">
+                        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Enlace en la publicación del concurso
                     </span>
-                </a>
+                </div>
 
                 <!-- Nota Tipo – Concurso Interino -->
-                <a href="#" class="download-doc-card" target="_blank" rel="noopener noreferrer">
+                <a href="https://drive.google.com/file/d/10lA8l8ifGfVk7hoSWXBAyAJJuog7dVgb/view?usp=sharing" class="download-doc-card" target="_blank" rel="noopener noreferrer">
                     <div class="download-doc-info">
                         <svg class="download-doc-icon" width="22" height="22" fill="none" stroke="#e74c3c" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
@@ -376,7 +378,7 @@
                 </a>
 
                 <!-- Modelo Formato de Programa para la Carrera -->
-                <a href="#" class="download-doc-card" target="_blank" rel="noopener noreferrer">
+                <a href="https://drive.google.com/file/d/1BKv_peFt9oynmAVjRHDKEWKZ5kZNYGVQ/view?usp=sharing" class="download-doc-card" target="_blank" rel="noopener noreferrer">
                     <div class="download-doc-info">
                         <svg class="download-doc-icon" width="22" height="22" fill="none" stroke="#e74c3c" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
@@ -391,7 +393,7 @@
                 </a>
 
                 <!-- Ver Resolución 110/24 -->
-                <a href="#" class="download-doc-card" target="_blank" rel="noopener noreferrer">
+                <a href="https://drive.google.com/file/d/1xRSpEB6PMoCmzu74Jbo6OTcB575PddXe/view?usp=sharing" class="download-doc-card" target="_blank" rel="noopener noreferrer">
                     <div class="download-doc-info">
                         <svg class="download-doc-icon" width="22" height="22" fill="none" stroke="#e74c3c" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
@@ -406,7 +408,7 @@
                 </a>
 
                 <!-- Ver Resolución 109/24 -->
-                <a href="#" class="download-doc-card" target="_blank" rel="noopener noreferrer">
+                <a href="https://drive.google.com/file/d/1MBmpvVgttu1hKe7QEj1qYs5Fj7q1pbpX/view?usp=sharing" class="download-doc-card" target="_blank" rel="noopener noreferrer">
                     <div class="download-doc-info">
                         <svg class="download-doc-icon" width="22" height="22" fill="none" stroke="#e74c3c" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
