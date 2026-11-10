@@ -433,7 +433,7 @@
             
             <div class="doc-cards-list">
                 <!-- ORDENANZA N°728/24 -->
-                <a href="#" class="download-doc-card" target="_blank" rel="noopener noreferrer">
+                <a href="https://drive.google.com/file/d/1uTVAcNza5TIoSNgM4lXE3lB_DmUFpwuw/view?usp=sharing" class="download-doc-card" target="_blank" rel="noopener noreferrer">
                     <div class="download-doc-info">
                         <svg class="download-doc-icon" width="22" height="22" fill="none" stroke="#e74c3c" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
@@ -448,7 +448,7 @@
                 </a>
 
                 <!-- Ver Reglamento de Concursos de Auxiliares de Docencia Interinos -->
-                <a href="#" class="download-doc-card" target="_blank" rel="noopener noreferrer">
+                <a href="https://drive.google.com/file/d/1jrAhkm5Qa14MgFUKXEGd9ugdWHpw45E9/view?usp=sharing" class="download-doc-card" target="_blank" rel="noopener noreferrer">
                     <div class="download-doc-info">
                         <svg class="download-doc-icon" width="22" height="22" fill="none" stroke="#e74c3c" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
@@ -463,7 +463,7 @@
                 </a>
 
                 <!-- Ver Reglamento de Concurso para Profesores Regulares -->
-                <a href="#" class="download-doc-card" target="_blank" rel="noopener noreferrer">
+                <a href="https://drive.google.com/file/d/1856t9gs13sXOirrTccp0m8zFtEOkIwkD/view?usp=sharing" class="download-doc-card" target="_blank" rel="noopener noreferrer">
                     <div class="download-doc-info">
                         <svg class="download-doc-icon" width="22" height="22" fill="none" stroke="#e74c3c" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
@@ -478,7 +478,7 @@
                 </a>
 
                 <!-- Ver Resolución de Nuevos Procedimientos para la cobertura de Cargos -->
-                <a href="#" class="download-doc-card" target="_blank" rel="noopener noreferrer">
+                <a href="https://drive.google.com/file/d/1ONFL8SA0IBw__g8JbTHnDVJgZtMd2ivB/view?usp=sharing" class="download-doc-card" target="_blank" rel="noopener noreferrer">
                     <div class="download-doc-info">
                         <svg class="download-doc-icon" width="22" height="22" fill="none" stroke="#e74c3c" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
