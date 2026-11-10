@@ -563,19 +563,19 @@
                 </a>
 
                 <!-- Resolución CD. Nº234/25 Designaciones Docentes Regulares FACIAS 2026 -->
-                <div class="download-doc-card" style="cursor: default; opacity: 0.85;">
+                <a href="https://drive.google.com/file/d/1FpsQWhjZtD9NTD40eerezq3cXObYUA7-/view?usp=sharing" class="download-doc-card" target="_blank" rel="noopener noreferrer">
                     <div class="download-doc-info">
-                        <svg class="download-doc-icon" width="22" height="22" fill="none" stroke="#94a3b8" stroke-width="2" viewBox="0 0 24 24">
+                        <svg class="download-doc-icon" width="22" height="22" fill="none" stroke="#e74c3c" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 17h6M9 13h6M9 9h3"></path>
                         </svg>
-                        <span class="download-doc-name" style="color: var(--color-text-muted);">Resolución CD. Nº234/25 Designaciones Docentes Regulares FACIAS 2026</span>
+                        <span class="download-doc-name">Resolución CD. Nº234/25 Designaciones Docentes Regulares FACIAS 2026</span>
                     </div>
-                    <span class="download-doc-btn" style="background: #f1f5f9; color: #94a3b8; border-color: #cbd5e1; cursor: not-allowed;" title="Documento aún no disponible">
+                    <span class="download-doc-btn">
                         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
                         Descargar
                     </span>
-                </div>
+                </a>
 
                 <!-- Resolución CD. Nº235/25 Designaciones Docentes Interinos/ Suplentes FACIAS 2026 -->
                 <a href="https://drive.google.com/file/d/1sHqgISnx4QMvz2xRgUZM-Zi_oe3xWXnD/view?usp=sharing" class="download-doc-card" target="_blank" rel="noopener noreferrer">
