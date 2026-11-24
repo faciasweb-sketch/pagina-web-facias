@@ -6,7 +6,7 @@ $ADMIN_USER = 'facias.videos@gmail.com';
 $ADMIN_PASS = '$0p0rt3F4c!@s';
 
 $novedades_dir = __DIR__ . '/../datos/novedades';
-$assets_dir = __DIR__ . '/../Assets';
+$assets_dir = __DIR__ . '/../assets';
 
 if (!is_dir($novedades_dir)) {
     @mkdir($novedades_dir, 0755, true);
@@ -49,6 +49,27 @@ function fecha_espanol_actual() {
     return "$dia de $mes, $anio";
 }
 
+// Helper para inicializar el contenido en el editor Quill
+function preparar_body_para_editor($body) {
+    if (empty($body)) return '';
+    // Si contiene etiquetas HTML, adaptar rutas relativas para el admin (../assets/)
+    if (preg_match('/<[a-z][\s\S]*>/i', $body)) {
+        $body = str_replace('src="assets/', 'src="../assets/', $body);
+        $body = str_replace('src="Assets/', 'src="../assets/', $body);
+        return $body;
+    }
+    // Si es texto plano clásico, convertir saltos de línea a párrafos HTML
+    $paragraphs = explode("\n\n", str_replace("\r\n", "\n", $body));
+    $html = '';
+    foreach ($paragraphs as $p) {
+        $p = trim($p);
+        if ($p !== '') {
+            $html .= '<p>' . nl2br(htmlspecialchars($p)) . '</p>';
+        }
+    }
+    return $html;
+}
+
 // Procesar Logout
 if (isset($_GET['action']) && $_GET['action'] === 'logout') {
     $_SESSION = [];
@@ -81,6 +102,37 @@ $mensaje_exito = '';
 $mensaje_error = '';
 
 if ($is_logged) {
+    // AJAX: Subir imagen insertada en el cuerpo de la novedad
+    if (isset($_GET['action']) && $_GET['action'] === 'upload_inline_image' && $_SERVER['REQUEST_METHOD'] === 'POST') {
+        header('Content-Type: application/json; charset=utf-8');
+        if (!isset($_FILES['image']) || $_FILES['image']['error'] !== UPLOAD_ERR_OK) {
+            echo json_encode(['success' => false, 'error' => 'No se recibió ninguna imagen o ocurrió un error al subirla.']);
+            exit;
+        }
+
+        $ext = strtolower(pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION));
+        $permitidas = ['jpg', 'jpeg', 'png', 'webp', 'gif'];
+        if (!in_array($ext, $permitidas)) {
+            echo json_encode(['success' => false, 'error' => 'Formato no permitido. Solo se aceptan JPG, PNG, WebP o GIF.']);
+            exit;
+        }
+
+        $slug_clean = preg_replace('/[^a-zA-Z0-9]+/', '_', strtolower(pathinfo($_FILES['image']['name'], PATHINFO_FILENAME)));
+        $nombre_img = 'body_' . date('Ymd_His') . '_' . substr($slug_clean, 0, 20) . '.' . $ext;
+        $destino_img = $assets_dir . '/' . $nombre_img;
+
+        if (move_uploaded_file($_FILES['image']['tmp_name'], $destino_img)) {
+            echo json_encode([
+                'success' => true,
+                'url' => 'assets/' . $nombre_img
+            ]);
+            exit;
+        } else {
+            echo json_encode(['success' => false, 'error' => 'No se pudo guardar la imagen en el servidor. Verifica permisos de la carpeta assets.']);
+            exit;
+        }
+    }
+
     // Eliminar noticia
     if (isset($_GET['action']) && $_GET['action'] === 'delete' && isset($_GET['id'])) {
         $del_id = basename($_GET['id']);
@@ -96,16 +148,37 @@ if ($is_logged) {
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save_novedad'])) {
         $edit_id = isset($_POST['edit_id']) ? trim($_POST['edit_id']) : '';
         $titulo = isset($_POST['title']) ? trim($_POST['title']) : '';
-        $publico = isset($_POST['publico']) ? trim($_POST['publico']) : 'Todos';
+        
+        // Procesar Público (Filtro 1) - Soporte múltiple
+        $publico_array = [];
+        if (isset($_POST['publico'])) {
+            if (is_array($_POST['publico'])) {
+                $publico_array = array_values(array_intersect($_POST['publico'], $OPCIONES_PUBLICO));
+            } else {
+                $publico_array = [trim($_POST['publico'])];
+            }
+        }
+        if (in_array('Todos', $publico_array) && count($publico_array) > 1) {
+            $publico_array = array_values(array_diff($publico_array, ['Todos']));
+        }
+        if (empty($publico_array)) {
+            $publico_array = ['Todos'];
+        }
+        $publico = implode(', ', $publico_array);
+
         $tema = isset($_POST['tema']) ? trim($_POST['tema']) : 'Todos';
         $fecha = isset($_POST['fecha']) && !empty(trim($_POST['fecha'])) ? trim($_POST['fecha']) : fecha_espanol_actual();
+        
+        // Contenido / Cuerpo: normalizar rutas relativas para la web
         $cuerpo = isset($_POST['body']) ? trim($_POST['body']) : '';
+        $cuerpo = str_replace(['src="../assets/', 'src="../Assets/'], 'src="assets/', $cuerpo);
+
         $imagen_actual = isset($_POST['imagen_actual']) ? trim($_POST['imagen_actual']) : '';
 
         if (empty($titulo)) {
             $mensaje_error = 'El título de la novedad es obligatorio.';
         } else {
-            // Manejo de imagen
+            // Manejo de imagen de portada
             $ruta_imagen = $imagen_actual;
             if (isset($_FILES['imagen_file']) && $_FILES['imagen_file']['error'] === UPLOAD_ERR_OK) {
                 $ext = strtolower(pathinfo($_FILES['imagen_file']['name'], PATHINFO_EXTENSION));
@@ -115,13 +188,13 @@ if ($is_logged) {
                     $nombre_img = date('Ymd_His') . '_' . substr($slug_img, 0, 30) . '.' . $ext;
                     $destino_img = $assets_dir . '/' . $nombre_img;
                     if (move_uploaded_file($_FILES['imagen_file']['tmp_name'], $destino_img)) {
-                        $ruta_imagen = 'Assets/' . $nombre_img;
+                        $ruta_imagen = 'assets/' . $nombre_img;
                     }
                 }
             }
 
             if (empty($ruta_imagen)) {
-                $ruta_imagen = 'Assets/logo_facias.png';
+                $ruta_imagen = 'assets/logo_facias.png';
             }
 
             // Generar o mantener ID de archivo
@@ -202,6 +275,9 @@ if ($is_logged) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Estilos y Scripts de Quill Editor -->
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
     <style>
         :root {
             --color-primary: #004b87;
@@ -518,6 +594,92 @@ if ($is_logged) {
             background: #ffffff;
             margin-top: auto;
         }
+
+        /* Selector de Público (Filtro 1) Múltiple */
+        .filter-pills-selector {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            padding: 0.35rem 0;
+        }
+
+        .filter-pill-check {
+            cursor: pointer;
+            user-select: none;
+            margin: 0;
+            display: inline-block;
+        }
+
+        .filter-pill-check input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .filter-pill-check span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--color-text-dark);
+            background-color: #f1f5f9;
+            border: 1.5px solid var(--color-border);
+            transition: all 0.2s ease;
+        }
+
+        .filter-pill-check span:hover {
+            border-color: var(--color-primary);
+            background-color: #e0f2fe;
+            color: var(--color-primary);
+        }
+
+        .filter-pill-check input[type="checkbox"]:checked + span {
+            background-color: #0284c7;
+            color: #ffffff;
+            border-color: #0284c7;
+            box-shadow: 0 2px 6px rgba(2, 132, 199, 0.25);
+        }
+
+        .filter-pill-check input[type="checkbox"]:checked + span::before {
+            content: '✓ ';
+            font-weight: 800;
+        }
+
+        /* Estilos de Quill Editor */
+        .ql-toolbar.ql-snow {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            border-color: var(--color-border);
+            background-color: #f8fafc;
+        }
+
+        .ql-container.ql-snow {
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            border-color: var(--color-border);
+            font-family: inherit;
+            font-size: 1rem;
+            background-color: #ffffff;
+        }
+
+        .ql-editor {
+            min-height: 280px;
+            line-height: 1.8;
+            font-size: 1rem;
+            color: var(--color-text-dark);
+        }
+
+        .ql-editor img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 1.25rem auto;
+            display: block;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body>
@@ -604,19 +766,29 @@ if ($is_logged) {
                     </div>
 
                     <div class="form-row">
-                        <!-- FILTRO PÚBLICO -->
-                        <div class="form-group">
-                            <label class="form-label" for="publico">Público Destinatario (Filtro 1) *</label>
-                            <select id="publico" name="publico" class="form-control" required>
+                        <!-- FILTRO PÚBLICO (Soporta múltiples opciones) -->
+                        <div class="form-group" style="grid-column: 1 / -1;">
+                            <label class="form-label">
+                                Público Destinatario (Filtro 1) * 
+                                <span style="font-size: 0.82rem; font-weight: 500; color: var(--color-text-muted);">
+                                    (Podés marcar más de una opción)
+                                </span>
+                            </label>
+                            <div class="filter-pills-selector" id="publico-pills-container">
                                 <?php
                                 $val_pub = $noticia_editando && isset($noticia_editando['publico']) ? $noticia_editando['publico'] : 'Todos';
+                                $val_pub_arr = is_array($val_pub) ? $val_pub : array_map('trim', explode(',', $val_pub));
+                                if (empty($val_pub_arr)) $val_pub_arr = ['Todos'];
+
                                 foreach ($OPCIONES_PUBLICO as $opc):
+                                    $checked = in_array($opc, $val_pub_arr) ? 'checked' : '';
                                 ?>
-                                    <option value="<?php echo htmlspecialchars($opc); ?>" <?php echo ($val_pub === $opc) ? 'selected' : ''; ?>>
-                                        <?php echo htmlspecialchars($opc); ?>
-                                    </option>
+                                    <label class="filter-pill-check">
+                                        <input type="checkbox" name="publico[]" value="<?php echo htmlspecialchars($opc); ?>" class="input-pub-check" data-val="<?php echo htmlspecialchars($opc); ?>" <?php echo $checked; ?>>
+                                        <span><?php echo htmlspecialchars($opc); ?></span>
+                                    </label>
                                 <?php endforeach; ?>
-                            </select>
+                            </div>
                         </div>
 
                         <!-- FILTRO TEMA -->
@@ -633,33 +805,50 @@ if ($is_logged) {
                                 <?php endforeach; ?>
                             </select>
                         </div>
-                    </div>
 
-                    <div class="form-row">
                         <!-- FECHA -->
                         <div class="form-group">
                             <label class="form-label" for="fecha">Fecha de Publicación</label>
                             <input type="text" id="fecha" name="fecha" class="form-control" placeholder="Ej: <?php echo fecha_espanol_actual(); ?>" value="<?php echo htmlspecialchars($noticia_editando && isset($noticia_editando['fecha']) ? $noticia_editando['fecha'] : fecha_espanol_actual()); ?>">
                         </div>
-
-                        <!-- IMAGEN -->
-                        <div class="form-group">
-                            <label class="form-label" for="imagen_file">Imagen de Portada (Subir archivo JPG/PNG/WebP)</label>
-                            <input type="file" id="imagen_file" name="imagen_file" class="form-control" accept="image/*">
-                            <?php if ($noticia_editando && !empty($noticia_editando['imagen'])): ?>
-                                <small style="display:block; margin-top:0.35rem; color: var(--color-text-muted);">
-                                    Imagen actual: <code><?php echo htmlspecialchars($noticia_editando['imagen']); ?></code>
-                                </small>
-                            <?php endif; ?>
-                        </div>
                     </div>
 
+                    <!-- IMAGEN DE PORTADA -->
                     <div class="form-group">
-                        <label class="form-label" for="body">Contenido / Cuerpo de la Novedad</label>
-                        <textarea id="body" name="body" class="form-control" rows="8" placeholder="Escribí aquí los detalles de la noticia. Podés separar párrafos con un renglón en blanco..."><?php echo htmlspecialchars($noticia_editando && isset($noticia_editando['body']) ? $noticia_editando['body'] : ''); ?></textarea>
+                        <label class="form-label" for="imagen_file">Imagen de Portada (Tarjeta principal en la web)</label>
+                        <input type="file" id="imagen_file" name="imagen_file" class="form-control" accept="image/*">
+                        <?php if ($noticia_editando && !empty($noticia_editando['imagen'])): ?>
+                            <small style="display:block; margin-top:0.35rem; color: var(--color-text-muted);">
+                                Imagen actual: <code><?php echo htmlspecialchars($noticia_editando['imagen']); ?></code>
+                            </small>
+                        <?php endif; ?>
                     </div>
 
-                    <div style="display:flex; justify-content:flex-end; gap: 1rem; margin-top: 1rem;">
+                    <!-- CUERPO DE LA NOVEDAD CON QUILL EDITOR E IMÁGENES -->
+                    <div class="form-group">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
+                            <label class="form-label" style="margin-bottom: 0;">
+                                Contenido / Cuerpo de la Novedad *
+                            </label>
+                            <button type="button" class="btn btn-outline btn-sm" id="btn-insert-image" style="color: var(--color-primary); border-color: var(--color-primary); background: #f0f9ff; font-weight: 700;">
+                                📷 Insertar Imagen en el texto
+                            </button>
+                        </div>
+                        
+                        <div id="editor-container">
+                            <?php 
+                            if ($noticia_editando && isset($noticia_editando['body'])) {
+                                echo preparar_body_para_editor($noticia_editando['body']);
+                            }
+                            ?>
+                        </div>
+                        <input type="hidden" name="body" id="body-hidden-input">
+                        <small style="display: block; margin-top: 0.5rem; color: var(--color-text-muted);">
+                            💡 <strong>Tip:</strong> Podés usar el botón <strong>📷 Insertar Imagen</strong> o el icono de imagen en la barra superior para colocar fotos en cualquier parte de la noticia. También podés formatear títulos, listas, negritas y enlaces.
+                        </small>
+                    </div>
+
+                    <div style="display:flex; justify-content:flex-end; gap: 1rem; margin-top: 1.5rem;">
                         <?php if ($noticia_editando): ?>
                             <a href="index.php" class="btn btn-outline">Cancelar</a>
                         <?php endif; ?>
@@ -696,19 +885,25 @@ if ($is_logged) {
                             </thead>
                             <tbody>
                                 <?php foreach ($lista_novedades as $nov):
-                                    $img_src = !empty($nov['imagen']) ? '../' . ltrim($nov['imagen'], '/') : '../Assets/logo_facias.png';
+                                    $img_src = !empty($nov['imagen']) ? '../' . ltrim($nov['imagen'], '/') : '../assets/logo_facias.png';
                                     $pub = isset($nov['publico']) && !empty($nov['publico']) ? $nov['publico'] : (isset($nov['categoria']) ? $nov['categoria'] : 'Todos');
                                     $tem = isset($nov['tema']) && !empty($nov['tema']) ? $nov['tema'] : 'Todos';
                                 ?>
                                     <tr>
                                         <td>
-                                            <img src="<?php echo htmlspecialchars($img_src); ?>" alt="Preview" class="thumb" onerror="this.src='../Assets/logo_facias.png'">
+                                            <img src="<?php echo htmlspecialchars($img_src); ?>" alt="Preview" class="thumb" onerror="this.src='../assets/logo_facias.png'">
                                         </td>
                                         <td>
                                             <strong><?php echo htmlspecialchars($nov['title']); ?></strong>
                                         </td>
                                         <td>
-                                            <span class="badge badge-publico"><?php echo htmlspecialchars($pub); ?></span>
+                                            <?php 
+                                            $pubs = is_array($pub) ? $pub : array_map('trim', explode(',', $pub));
+                                            foreach ($pubs as $p):
+                                                if (empty($p)) continue;
+                                            ?>
+                                                <span class="badge badge-publico" style="margin: 2px 2px 2px 0;"><?php echo htmlspecialchars($p); ?></span>
+                                            <?php endforeach; ?>
                                         </td>
                                         <td>
                                             <span class="badge badge-tema"><?php echo htmlspecialchars($tem); ?></span>
@@ -741,6 +936,136 @@ if ($is_logged) {
         <footer class="footer">
             Facultad de Ciencias del Ambiente y la Salud &bull; Universidad Nacional del Comahue &bull; Panel de Gestión Directa
         </footer>
+
+        <script>
+            // Lógica de selección múltiple de Público
+            document.addEventListener('DOMContentLoaded', function() {
+                const checks = document.querySelectorAll('.input-pub-check');
+                const todosCheck = document.querySelector('.input-pub-check[data-val="Todos"]');
+
+                checks.forEach(chk => {
+                    chk.addEventListener('change', function() {
+                        const val = this.getAttribute('data-val');
+                        if (val === 'Todos') {
+                            if (this.checked) {
+                                // Desmarcar los demás
+                                checks.forEach(c => {
+                                    if (c !== todosCheck) c.checked = false;
+                                });
+                            }
+                        } else {
+                            if (this.checked) {
+                                // Si se marca uno específico, desmarcar 'Todos'
+                                if (todosCheck) todosCheck.checked = false;
+                            } else {
+                                // Si se desmarcó todo, volver a marcar 'Todos'
+                                const anyChecked = Array.from(checks).some(c => c !== todosCheck && c.checked);
+                                if (!anyChecked && todosCheck) {
+                                    todosCheck.checked = true;
+                                }
+                            }
+                        }
+                    });
+                });
+
+                // Inicialización de Quill Editor
+                const editorElem = document.getElementById('editor-container');
+                if (editorElem) {
+                    const toolbarOptions = [
+                        [{ 'header': [1, 2, 3, false] }],
+                        ['bold', 'italic', 'underline', 'strike'],
+                        [{ 'color': [] }, { 'background': [] }],
+                        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+                        ['link', 'image'],
+                        ['clean']
+                    ];
+
+                    const quill = new Quill('#editor-container', {
+                        theme: 'snow',
+                        placeholder: 'Escribí aquí los detalles de la noticia. Podés insertar imágenes en el texto, dar formato, crear listas y enlaces...',
+                        modules: {
+                            toolbar: toolbarOptions
+                        }
+                    });
+
+                    // Función para subir imagen e insertarla en la posición del cursor en Quill
+                    function uploadAndInsertImage() {
+                        const fileInput = document.createElement('input');
+                        fileInput.type = 'file';
+                        fileInput.accept = 'image/png, image/jpeg, image/jpg, image/webp, image/gif';
+                        fileInput.click();
+
+                        fileInput.onchange = async function() {
+                            const file = fileInput.files[0];
+                            if (!file) return;
+
+                            // Insertar texto temporal de carga
+                            const range = quill.getSelection(true) || { index: quill.getLength() };
+                            quill.insertText(range.index, '⏳ Subiendo imagen...', { 'italic': true, 'color': '#0284c7' });
+
+                            const formData = new FormData();
+                            formData.append('image', file);
+
+                            try {
+                                const res = await fetch('index.php?action=upload_inline_image', {
+                                    method: 'POST',
+                                    body: formData
+                                });
+                                const data = await res.json();
+                                
+                                // Remover texto temporal
+                                quill.deleteText(range.index, 19);
+
+                                if (data.success && data.url) {
+                                    // En el editor de admin la ruta es ../assets/...
+                                    quill.insertEmbed(range.index, 'image', '../' + data.url);
+                                    quill.setSelection(range.index + 1);
+                                } else {
+                                    alert(data.error || 'Error al subir la imagen.');
+                                }
+                            } catch (err) {
+                                quill.deleteText(range.index, 19);
+                                alert('Hubo un error de conexión al subir la imagen.');
+                            }
+                        };
+                    }
+
+                    // Asignar al botón de imagen de la barra de herramientas de Quill
+                    quill.getModule('toolbar').addHandler('image', function() {
+                        uploadAndInsertImage();
+                    });
+
+                    // Asignar al botón destacado "Insertar Imagen"
+                    const btnInsertImg = document.getElementById('btn-insert-image');
+                    if (btnInsertImg) {
+                        btnInsertImg.addEventListener('click', function() {
+                            uploadAndInsertImage();
+                        });
+                    }
+
+                    // Al enviar el formulario, sincronizar HTML al input oculto
+                    const formCard = document.querySelector('form[action="index.php"]');
+                    if (formCard) {
+                        formCard.addEventListener('submit', function() {
+                            let html = quill.root.innerHTML;
+                            if (html === '<p><br></p>') {
+                                html = '';
+                            }
+                            // Normalizar rutas relativas de '../assets/' a 'assets/' para la web pública
+                            html = html.replace(/src="\.\.\/assets\//g, 'src="assets/');
+                            html = html.replace(/src="\.\.\/Assets\//g, 'src="assets/');
+                            document.getElementById('body-hidden-input').value = html;
+
+                            // Validar que al menos un público esté seleccionado
+                            const hasPub = Array.from(checks).some(c => c.checked);
+                            if (!hasPub && todosCheck) {
+                                todosCheck.checked = true;
+                            }
+                        });
+                    }
+                }
+            });
+        </script>
     <?php endif; ?>
 
 </body>

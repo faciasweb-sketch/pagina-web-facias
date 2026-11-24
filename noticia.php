@@ -54,27 +54,36 @@ if ($tema === 'Todos' && isset($noticia['title'])) {
 
 $cat_pretty = ($tema !== 'Todos') ? $tema : (($publico !== 'Todos') ? $publico : (isset($categoria_map[$noticia['categoria']]) ? $categoria_map[$noticia['categoria']] : 'Institucional'));
 
-// Formatear el contenido del body a párrafos HTML
+// Formatear el contenido del body (soporte para HTML rico con imágenes y texto plano clásico)
 $body_html = '';
 if (isset($noticia['body'])) {
-    $body_html = implode('', array_map(function($p) {
-        $p = trim($p);
-        if (!$p) return '';
-        $text = htmlspecialchars($p);
-        // Convertir URLs a enlaces clicables
-        $text = preg_replace(
-            '/(https?:\/\/[^\s<]+)/i',
-            '<a href="$1" target="_blank" rel="noopener noreferrer" style="color: var(--color-secondary); text-decoration: underline; font-weight: 600; word-break: break-all;">$1</a>',
-            $text
-        );
-        // Convertir correos a mailto
-        $text = preg_replace(
-            '/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/i',
-            '<a href="mailto:$1" style="color: var(--color-secondary); text-decoration: underline; font-weight: 600;">$1</a>',
-            $text
-        );
-        return '<p style="margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8; color: var(--color-text-dark);">' . nl2br($text) . '</p>';
-    }, explode("\n\n", $noticia['body'])));
+    $body_raw = $noticia['body'];
+    // Detectar si el contenido contiene etiquetas HTML (generadas por el editor Quill)
+    if (preg_match('/<(p|img|div|h[1-6]|ul|ol|li|blockquote|strong|em|br|a)[^>]*>/i', $body_raw)) {
+        // Es HTML rico: normalizar rutas relativas de imágenes
+        $body_html = str_replace('../assets/', 'assets/', $body_raw);
+        $body_html = str_replace('../Assets/', 'assets/', $body_html);
+    } else {
+        // Es texto plano tradicional: procesar párrafos con enlaces como antes
+        $body_html = implode('', array_map(function($p) {
+            $p = trim($p);
+            if (!$p) return '';
+            $text = htmlspecialchars($p);
+            // Convertir URLs a enlaces clicables
+            $text = preg_replace(
+                '/(https?:\/\/[^\s<]+)/i',
+                '<a href="$1" target="_blank" rel="noopener noreferrer" style="color: var(--color-secondary); text-decoration: underline; font-weight: 600; word-break: break-all;">$1</a>',
+                $text
+            );
+            // Convertir correos a mailto
+            $text = preg_replace(
+                '/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/i',
+                '<a href="mailto:$1" style="color: var(--color-secondary); text-decoration: underline; font-weight: 600;">$1</a>',
+                $text
+            );
+            return '<p style="margin-bottom: 1.5rem; font-size: 1.1rem; line-height: 1.8; color: var(--color-text-dark);">' . nl2br($text) . '</p>';
+        }, explode("\n\n", $body_raw)));
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -138,6 +147,37 @@ if (isset($noticia['body'])) {
             font-size: 1.15rem;
             color: var(--color-text-dark);
             line-height: 1.8;
+        }
+        .article-body p {
+            margin-bottom: 1.5rem;
+            font-size: 1.15rem;
+            line-height: 1.8;
+        }
+        .article-body img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius-md);
+            margin: 2rem auto;
+            display: block;
+            box-shadow: var(--shadow-md);
+        }
+        .article-body h2, .article-body h3, .article-body h4 {
+            color: var(--color-primary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+        .article-body ul, .article-body ol {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+        }
+        .article-body li {
+            margin-bottom: 0.5rem;
+        }
+        .article-body a {
+            color: var(--color-secondary);
+            text-decoration: underline;
+            font-weight: 600;
         }
         .btn-back {
             display: inline-flex;
